@@ -1,0 +1,47 @@
+
+.toggled {
+    max-width: 38.4375rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    float: right;
+    position: fixed;
+        top: 0;
+        right: 0;
+    // background: rgba(0,0,0, 0.95);
+    background: url("http://portfolio-3.local/wp-content/uploads/2022/06/julian-henke-2vfphhP9dVc-unsplash-scaled.jpg");
+    background-size: auto 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    z-index: 9999999;
+    .menu-item {
+        margin: 2.2rem 0;
+        width: 100%;
+        height: 100%;
+        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4)) !important;
+        a {
+            font-size: 1.5rem !important;
+            &:hover {
+                box-shadow: 0 0px 10px $primary inset !important;
+            }
+        }
+    }
+}
+.menu-toggle {
+    position: fixed;
+        top: 4rem;
+        right: 2rem;
+    float: right;
+    background: transparent;
+    border: 2px solid #ff00ff;
+    border-radius: 0px;
+    color: #ff00ff;
+    &:hover {
+        cursor: pointer;
+        border: 2px solid #ff00ff;
+        color: #ff00ff;
+    }
+}

@@ -621,6 +621,7 @@ textarea {
 --------------------------------------------- */
 body {
   font-family: "Roboto Flex", sans-serif;
+  color: #fff;
   background: linear-gradient(-30deg, #000000 0%, #090814 50%, #090814 50%, #000000 100%);
   background-size: 100%;
   background-position: center;
@@ -688,7 +689,7 @@ body .site-title {
   display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 74.95em) {
   .menu-toggle {
     display: none;
   }
@@ -719,43 +720,215 @@ body .site-title {
   flex: 1 0 50%;
 }
 
-.menu-toggle {
-  display: none;
-}
-
 .site-header {
   width: 100vw;
-  height: 7vh;
-  border: 1px solid red;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 .site-header .site-branding {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
-  width: 25vw;
-}
-.site-header .site-branding p {
-  margin: 0.5rem 1rem;
+  padding: 0 2rem;
 }
 .site-header .site-branding .site-title a {
-  font-size: 2rem;
+  font-size: calc(100% + 1rem);
   text-decoration: none;
 }
-.site-header .main-navigation {
+.site-header .site-branding .site-description {
+  display: none;
+}
+.site-header .main-navigation .menu {
+  gap: 0.5rem;
+}
+.site-header .main-navigation .menu .menu-item {
+  text-align: center;
+  overflow: hidden;
+  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
+}
+.site-header .main-navigation .menu .menu-item a {
+  padding: 1rem 5rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  width: calc(100% - 25vw);
-  border: 1px solid green;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(30deg, transparent, rgba(0, 0, 0, 0.5), transparent);
+  transition: 0.5s;
+}
+.site-header .main-navigation .menu .menu-item a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+}
+.site-header .main-navigation .menu .menu-item a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(30deg, transparent, rgba(255, 0, 255, 0.4), transparent);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.site-header .main-navigation .menu .menu-item a:hover:after {
+  left: 100%;
+  background: linear-gradient(30deg, transparent, rgba(255, 0, 255, 0.4), transparent);
+}
+.site-header .main-navigation .menu .menu-item a span {
+  position: absolute;
+  display: block;
+  transition: 0.5s ease;
+}
+.site-header .main-navigation .menu .menu-item a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ff00ff;
+}
+.site-header .main-navigation .menu .menu-item a span:nth-child(2) {
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 0;
+  background: #ff00ff;
+}
+.site-header .main-navigation .menu .menu-item a span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background: #ff00ff;
+}
+.site-header .main-navigation .menu .menu-item a span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 0;
+  background: #ff00ff;
+}
+.site-header .main-navigation .menu .menu-item a span {
+  position: absolute;
+  display: block;
+  transition: 0.5s ease-in-out;
+}
+.site-header .main-navigation .menu .menu-item a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ff00ff;
+}
+.site-header .main-navigation .menu .menu-item a span:nth-child(2) {
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 0;
+  background: #ff00ff;
+}
+.site-header .main-navigation .menu .menu-item a span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background: #ff00ff;
+}
+.site-header .main-navigation .menu .menu-item a span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 0;
+  background: #ff00ff;
+}
+.site-header .main-navigation .menu .menu-item a .link-text {
+  font-weight: normal;
+  color: #ff00ff;
+  transition-delay: 0.5s;
+}
+.site-header .main-navigation .menu .menu-item a:hover {
+  transition-delay: 0.5s;
+  box-shadow: 0 0px 5px #ff00ff inset;
+}
+.site-header .main-navigation .menu .menu-item a:hover .link-text {
+  color: #ff00ff;
+  font-weight: bold;
+}
+.site-header .main-navigation .menu .menu-item a:hover span:nth-child(1) {
+  width: 100%;
+  transform: translateX(100%);
+  background: #ff00ff;
+}
+.site-header .main-navigation .menu .menu-item a:hover span:nth-child(2) {
+  height: 100%;
+  transform: translateY(100%);
+  background: #ff00ff;
+}
+.site-header .main-navigation .menu .menu-item a:hover span:nth-child(3) {
+  width: 100%;
+  transform: translateX(-100%);
+  background: #ff00ff;
+}
+.site-header .main-navigation .menu .menu-item a:hover span:nth-child(4) {
+  height: 100%;
+  transform: translateY(-100%);
+  background: #ff00ff;
+}
+
+.toggled {
+  max-width: 38.4375rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  float: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: url("http://portfolio-3.local/wp-content/uploads/2022/06/julian-henke-2vfphhP9dVc-unsplash-scaled.jpg");
+  background-size: auto 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+  z-index: 9999999;
+}
+.toggled .menu-item {
+  margin: 2.2rem 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)) !important;
+}
+.toggled .menu-item a {
+  font-size: 1.5rem !important;
+}
+.toggled .menu-item a:hover {
+  box-shadow: 0 0px 10px #ff00ff inset !important;
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 4rem;
+  right: 2rem;
+  float: right;
+  background: transparent;
+  border: 2px solid #ff00ff;
+  border-radius: 0px;
+  color: #ff00ff;
+}
+.menu-toggle:hover {
+  cursor: pointer;
+  border: 2px solid #ff00ff;
+  color: #ff00ff;
 }
 
 /* Posts and pages

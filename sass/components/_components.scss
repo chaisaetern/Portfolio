@@ -1,10 +1,16 @@
+/* Custom
+--------------------------------------------- */
+@import "content/custom-body";
+
 /* Navigation
 --------------------------------------------- */
 @import "navigation/navigation";
+@import "navigation/custom-navigation";
 
 /* Posts and pages
 --------------------------------------------- */
 @import "content/posts-and-pages";
+@import "content/page-home";
 
 /* Comments
 --------------------------------------------- */
@@ -25,3 +31,7 @@
 /* Galleries
 --------------------------------------------- */
 @import "media/galleries";
+
+/* Footer
+--------------------------------------------- */
+@import "content/custom-footer";

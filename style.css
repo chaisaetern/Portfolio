@@ -617,6 +617,29 @@ textarea {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
+/* Custom
+--------------------------------------------- */
+body {
+  font-family: "Roboto Flex", sans-serif;
+  background: linear-gradient(-30deg, #000000 0%, #090814 50%, #090814 50%, #000000 100%);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: hidden;
+}
+body h1, body h2, body h3, body h4 {
+  font-family: "Comforter Brush", cursive;
+}
+body .site-title {
+  font-family: "Comforter Brush", cursive;
+}
+
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
@@ -694,6 +717,45 @@ textarea {
 .post-navigation .nav-next {
   text-align: end;
   flex: 1 0 50%;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.site-header {
+  width: 100vw;
+  height: 7vh;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.site-header .site-branding {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 25vw;
+}
+.site-header .site-branding p {
+  margin: 0.5rem 1rem;
+}
+.site-header .site-branding .site-title a {
+  font-size: 2rem;
+  text-decoration: none;
+}
+.site-header .main-navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: calc(100% - 25vw);
+  border: 1px solid green;
 }
 
 /* Posts and pages
@@ -824,6 +886,14 @@ textarea {
 
 .gallery-caption {
   display: block;
+}
+
+/* Footer
+--------------------------------------------- */
+.site-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 /*--------------------------------------------------------------

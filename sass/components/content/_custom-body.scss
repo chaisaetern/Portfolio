@@ -1,0 +1,26 @@
+body {
+    font-family: 'Roboto Flex', sans-serif;
+    background: 
+        linear-gradient(-30deg, #000000 0%, #090814 50%, 
+        #090814 50%, #000000 100%);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+    
+    h1, h2, h3, h4 {
+        font-family: "Comforter Brush", cursive;
+    }
+
+    .site-title {
+        font-family: "Comforter Brush", cursive;
+    }
+}
+
+

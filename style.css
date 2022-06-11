@@ -950,7 +950,7 @@ body .site-title {
   width: 100%;
 }
 .site-header .site-branding .site-title a {
-  color: #fff;
+  color: red;
   font-size: calc(100% + 1rem);
   text-decoration: none;
   text-shadow: 0 0 3px red;
@@ -988,7 +988,7 @@ body .site-title {
   left: 0;
   width: 50%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.3);
 }
 .site-header .main-navigation .menu .menu-item a::after {
   content: "";
@@ -1162,7 +1162,6 @@ body .site-title {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: 2s;
 }
 .main-container .main-wrapper {
   display: flex;
@@ -1177,7 +1176,7 @@ body .site-title {
   color: black;
   text-shadow: 0 0 5px red;
   letter-spacing: 5px;
-  animation: fade 5s ease-in;
+  animation: fade 2.5s ease-in;
 }
 .main-container .main-wrapper .bg-container {
   height: 100%;
@@ -1194,16 +1193,18 @@ body .site-title {
   height: auto;
   transition: 2s;
   mix-blend-mode: lighten;
-  filter: brightness(0.35) opacity(0.5);
+  filter: brightness(0.75) opacity(1);
   animation: scaleUpDown 15s ease-in-out infinite;
 }
 
 @keyframes fade {
   0% {
     opacity: 0;
+    filter: blur(10px);
   }
   100% {
     opacity: 1;
+    filter: blur(0px);
   }
 }
 @keyframes scaleUpDown {

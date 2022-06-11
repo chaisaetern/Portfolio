@@ -1045,7 +1045,7 @@ body .site-title {
 }
 .site-header .main-navigation .menu .menu-item a:hover {
   transition-delay: 0.5s;
-  box-shadow: 5px 0px 0px red inset;
+  box-shadow: 180px 0px 0px red inset;
   background: rgba(255, 0, 0, 0.35);
 }
 .site-header .main-navigation .menu .menu-item a:hover .link-text {

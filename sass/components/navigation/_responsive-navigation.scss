@@ -1,7 +1,7 @@
 
 .toggled {
     max-width: 38.4375rem;
-    height: 50vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,8 +10,8 @@
     position: fixed;
         top: 0;
         right: 0;
-    // background: rgba(0,0,0, 0.95);
-    background: url("http://portfolio-3.local/wp-content/uploads/2022/06/julian-henke-2vfphhP9dVc-unsplash-Copy-3-1-scaled.jpg");
+    background: rgba(0,0,0, 0.8);
+    // background: url("http://portfolio-3.local/wp-content/uploads/2022/06/julian-henke-2vfphhP9dVc-unsplash-Copy-3-1-scaled.jpg");
     background-size: auto 100%;
     background-position: top;
     background-repeat: no-repeat;
@@ -39,12 +39,12 @@
         right: 2rem;
     float: right;
     background: transparent;
-    border: 2px solid #ff00ff;
+    border: 2px solid #f00;
     border-radius: 0px;
-    color: #ff00ff;
+    color: #f00;
     &:hover {
         cursor: pointer;
-        border: 2px solid #ff00ff;
-        color: #ff00ff;
+        border: 2px solid #f00;
+        color: #f00;
     }
 }

@@ -629,6 +629,9 @@ body {
   justify-content: flex-start;
   align-items: center;
   overflow-x: hidden;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body h1, body h2, body h3, body h4 {
   font-family: "Comforter Brush", cursive;
@@ -930,8 +933,10 @@ body .site-title {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 2rem 2rem;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 99999;
 }
 .site-header .site-branding {
@@ -941,15 +946,20 @@ body .site-title {
   align-items: center;
   padding: 0 2rem;
 }
+.site-header .site-branding .site-title {
+  width: 100%;
+}
 .site-header .site-branding .site-title a {
+  color: #fff;
   font-size: calc(100% + 1rem);
   text-decoration: none;
+  text-shadow: 0 0 3px red;
 }
 .site-header .site-branding .site-description {
   display: none;
 }
 .site-header .main-navigation {
-  width: 50%;
+  width: 100%;
 }
 .site-header .main-navigation .menu {
   gap: 0.5rem;
@@ -957,7 +967,7 @@ body .site-title {
 .site-header .main-navigation .menu .menu-item {
   text-align: center;
   overflow: hidden;
-  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
+  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
 }
 .site-header .main-navigation .menu .menu-item a {
   padding: 1rem 5rem;
@@ -965,7 +975,7 @@ body .site-title {
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
-  text-shadow: 0 0 3px blue;
+  text-shadow: 0 0 3px red;
   text-transform: uppercase;
   letter-spacing: 2px;
   background: linear-gradient(30deg, transparent, rgba(0, 0, 0, 0.5), transparent);
@@ -987,13 +997,13 @@ body .site-title {
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(30deg, transparent, rgba(0, 0, 255, 0.35), transparent);
+  background: linear-gradient(30deg, transparent, rgba(255, 0, 0, 0.35), transparent);
   transition: 0.5s;
   transition-delay: 0.5s;
 }
 .site-header .main-navigation .menu .menu-item a:hover:after {
   left: 100%;
-  background: linear-gradient(30deg, transparent, rgba(0, 0, 255, 0.35), transparent);
+  background: linear-gradient(30deg, transparent, rgba(255, 0, 0, 0.35), transparent);
 }
 .site-header .main-navigation .menu .menu-item a span {
   position: absolute;
@@ -1005,63 +1015,63 @@ body .site-title {
   left: 0;
   width: 0;
   height: 1px;
-  background: blue;
+  background: red;
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(2) {
   top: 0;
   left: 0;
   width: 1px;
   height: 0;
-  background: blue;
+  background: red;
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(3) {
   bottom: 0;
   right: 0;
   width: 0;
   height: 1px;
-  background: blue;
+  background: red;
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(4) {
   bottom: 0;
   right: 0;
   width: 1px;
   height: 0;
-  background: blue;
+  background: red;
 }
 .site-header .main-navigation .menu .menu-item a .link-text {
   font-weight: normal;
-  color: blue;
+  color: red;
   transition-delay: 0.5s;
 }
 .site-header .main-navigation .menu .menu-item a:hover {
   transition-delay: 0.5s;
-  box-shadow: 0 0px 5px blue inset;
-  background: rgba(0, 0, 255, 0.35);
+  box-shadow: 0 0px 5px red inset;
+  background: rgba(255, 0, 0, 0.35);
 }
 .site-header .main-navigation .menu .menu-item a:hover .link-text {
-  color: blue;
-  text-shadow: 0 0 5px blue;
+  color: red;
+  text-shadow: 0 0 5px red;
   font-weight: bold;
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(1) {
   width: 100%;
   transform: translateX(100%);
-  background: blue;
+  background: red;
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(2) {
   height: 100%;
   transform: translateY(100%);
-  background: blue;
+  background: red;
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(3) {
   width: 100%;
   transform: translateX(-100%);
-  background: blue;
+  background: red;
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(4) {
   height: 100%;
   transform: translateY(-100%);
-  background: blue;
+  background: red;
 }
 
 @keyframes fade {
@@ -1074,7 +1084,7 @@ body .site-title {
 }
 .toggled {
   max-width: 38.4375rem;
-  height: 50vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1083,7 +1093,7 @@ body .site-title {
   position: fixed;
   top: 0;
   right: 0;
-  background: url("http://portfolio-3.local/wp-content/uploads/2022/06/julian-henke-2vfphhP9dVc-unsplash-Copy-3-1-scaled.jpg");
+  background: rgba(0, 0, 0, 0.8);
   background-size: auto 100%;
   background-position: top;
   background-repeat: no-repeat;
@@ -1101,7 +1111,7 @@ body .site-title {
   font-size: 1.5rem !important;
 }
 .toggled .menu-item a:hover {
-  box-shadow: 0 0px 5px blue inset !important;
+  box-shadow: 0 0px 5px red inset !important;
 }
 
 .menu-toggle {
@@ -1110,14 +1120,14 @@ body .site-title {
   right: 2rem;
   float: right;
   background: transparent;
-  border: 2px solid #ff00ff;
+  border: 2px solid #f00;
   border-radius: 0px;
-  color: #ff00ff;
+  color: #f00;
 }
 .menu-toggle:hover {
   cursor: pointer;
-  border: 2px solid #ff00ff;
-  color: #ff00ff;
+  border: 2px solid #f00;
+  color: #f00;
 }
 
 /* Posts and pages
@@ -1149,10 +1159,10 @@ body .site-title {
 .main-container {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(-30deg, #000000 0%, #090814 50%, #090814 50%, #000000 100%);
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: 2s;
 }
 .main-container .main-wrapper {
   display: flex;
@@ -1163,25 +1173,49 @@ body .site-title {
   height: 100%;
 }
 .main-container .main-wrapper .banner-container .banner-title {
-  font-size: 10rem;
-  color: #fff;
-  text-shadow: 0 0 5px #fff;
+  font-size: calc(3rem + 12.5vw);
+  color: black;
+  text-shadow: 0 0 5px red;
   letter-spacing: 5px;
+  animation: fade 5s ease-in;
 }
 .main-container .main-wrapper .bg-container {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   position: absolute;
+  top: 0;
+  left: 0;
 }
 .main-container .main-wrapper .bg-container .bg-img {
-  width: 65%;
-  height: 100%;
+  width: 100%;
+  height: auto;
   transition: 2s;
-  mix-blend-mode: hard-light;
-  filter: brightness(0.7) opacity(0.5);
+  mix-blend-mode: lighten;
+  filter: brightness(0.35) opacity(0.5);
+  animation: scaleUpDown 15s ease-in-out infinite;
 }
 
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scaleUpDown {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.5;
+  }
+}
 /* Comments
 --------------------------------------------- */
 .comment-content a {

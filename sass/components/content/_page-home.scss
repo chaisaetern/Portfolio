@@ -2,12 +2,13 @@
 .main-container {
     height: 100vh;
     width: 100vw;
-    background: 
-        linear-gradient(-30deg, #000000 0%, #090814 50%, 
-        #090814 50%, #000000 100%);
-    background-size: 100%;
+    // background: 
+    //     linear-gradient(0deg, #000000 0%, #140808 50%, 
+    //     #140808 50%, #000000 100%);
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: 2s;
     .main-wrapper {
         display: flex;
         flex-direction: column;
@@ -17,24 +18,51 @@
         height: 100%;
         .banner-container {
             .banner-title {
-                font-size: 10rem;
-                color: #fff;
-                text-shadow: 0 0 5px #fff;
+                font-size: calc(3rem + 12.5vw);
+                color: black;
+                text-shadow: 0 0 5px red;
                 letter-spacing: 5px;
+                animation: fade 5s ease-in;
             }
         }
         .bg-container {
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
             position: absolute;
+                top: 0;
+                left: 0;
             .bg-img {
-                width: 65%;
-                height: 100%;
+                width: 100%;
+                height: auto;
                 transition: 2s;
-                mix-blend-mode: hard-light;
-                filter: brightness(0.7) opacity(0.5);
+                mix-blend-mode: lighten;
+                filter: brightness(0.35) opacity(0.5);
+                animation: scaleUpDown 15s ease-in-out infinite;
             }
         }
+    }
+}
+
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUpDown {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.15);
+        opacity: 0.5;
     }
 }

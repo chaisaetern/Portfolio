@@ -5,7 +5,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    // transition: 2s;
+    transition: 2s;
     .main-wrapper {
         display: flex;
         flex-direction: column;
@@ -18,9 +18,10 @@
                 font-size: calc(3rem + 12.5vw);
                 color: black;
                 text-shadow: 0 0 5px red;
-                // filter: blur(5px);
                 letter-spacing: 5px;
-                animation: fade 2.5s ease-in;
+                animation: fade 2s ease-in;
+                position: relative;
+                    top: 10rem;
             }
         }
         .bg-container {
@@ -37,7 +38,7 @@
                 height: auto;
                 transition: 2s;
                 mix-blend-mode: lighten;
-                filter: brightness(0.75) opacity(1);
+                filter: brightness(0.75) opacity(0.8);
                 animation: scaleUpDown 15s ease-in-out infinite;
             }
         }
@@ -63,6 +64,6 @@
     }
     50% {
         transform: scale(1.15);
-        opacity: 0.5;
+        opacity: 0.35;
     }
 }

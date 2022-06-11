@@ -63,7 +63,7 @@ $primary_rgba: rgba(255, 0, 0, 0.35);
                         left: 0;
                         width: 50%;
                         height: 100%;
-                        background: transparentize($color: rgba(0,0,0,0.65), $amount: 0.35);
+                        background: transparentize($color: rgba(0,0,0,0.75), $amount: 0.25);
                     }
                     &::after {
                         content: '';
@@ -122,11 +122,11 @@ $primary_rgba: rgba(255, 0, 0, 0.35);
                     }
                     &:hover {
                         transition-delay: 0.5s;
-                        box-shadow: 0 0px 5px $primary inset;
+                        box-shadow: 5px 0px 0px $primary inset;
                         background: $primary_rgba;
                         .link-text {
                             color: $primary;
-                            text-shadow: 0 0 5px $primary;
+                            text-shadow: 0 0 2px #000;
                             font-weight: bold;
                         }
                         span {

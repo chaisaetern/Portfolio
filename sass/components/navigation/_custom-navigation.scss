@@ -1,16 +1,21 @@
 
 // $primary: #08fdd8;
-$primary: #ff00ff;
-$primary_rgba: rgba(255, 0, 255, 0.4);
+$primary: blue;
+$primary_rgba: rgba(0, 0, 255, 0.35);
 
 
 .site-header {
+    // animation-delay: 5s;
+    animation: fade 2s ease-in-out;
     width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    // flex-wrap: wrap;
+    padding: 0 2rem;
+    position: fixed;
+    z-index: 99999;
+        // right: 1rem;
     .site-branding {
         width: 100%;
         display: flex;
@@ -21,6 +26,7 @@ $primary_rgba: rgba(255, 0, 255, 0.4);
             a {
                 font-size: calc(100% + 1rem);
                 text-decoration: none;
+                // text-shadow: 0 0 3px $primary;
             }
         }
         .site-description {
@@ -29,6 +35,7 @@ $primary_rgba: rgba(255, 0, 255, 0.4);
     }
 
     .main-navigation {
+        width: 50%;
         .menu {
             gap: 0.5rem;
             .menu-item {
@@ -41,6 +48,7 @@ $primary_rgba: rgba(255, 0, 255, 0.4);
                     justify-content: center;
                     align-items: center;
                     font-size: 1.1rem;
+                    text-shadow: 0 0 3px $primary;
                     text-transform: uppercase;
                     letter-spacing: 2px;
                     background: linear-gradient(30deg, transparent, 
@@ -113,9 +121,10 @@ $primary_rgba: rgba(255, 0, 255, 0.4);
                     &:hover {
                         transition-delay: 0.5s;
                         box-shadow: 0 0px 5px $primary inset;
-                        background: #ff00ff;
+                        background: $primary_rgba;
                         .link-text {
-                            color: #000;
+                            color: $primary;
+                            text-shadow: 0 0 5px $primary;
                             font-weight: bold;
                         }
                         span {
@@ -144,5 +153,14 @@ $primary_rgba: rgba(255, 0, 255, 0.4);
                 }
             }
         }
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

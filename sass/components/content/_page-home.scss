@@ -1,0 +1,40 @@
+
+.main-container {
+    height: 100vh;
+    width: 100vw;
+    background: 
+        linear-gradient(-30deg, #000000 0%, #090814 50%, 
+        #090814 50%, #000000 100%);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    .main-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        .banner-container {
+            .banner-title {
+                font-size: 10rem;
+                color: #fff;
+                text-shadow: 0 0 5px #fff;
+                letter-spacing: 5px;
+            }
+        }
+        .bg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            .bg-img {
+                width: 65%;
+                height: 100%;
+                transition: 2s;
+                mix-blend-mode: hard-light;
+                filter: brightness(0.7) opacity(0.5);
+            }
+        }
+    }
+}

@@ -622,10 +622,6 @@ textarea {
 body {
   font-family: "Roboto Flex", sans-serif;
   color: #fff;
-  background: linear-gradient(-30deg, #000000 0%, #090814 50%, #090814 50%, #000000 100%);
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -641,6 +637,213 @@ body .site-title {
   font-family: "Comforter Brush", cursive;
 }
 
+/* ===================================
+    Glass Morphism hover effect
+=================================== 
+*/
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.projects-container h2 {
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0, 0, 5px, #fff;
+}
+.projects-container .projects-title {
+  font-size: 3rem;
+  font-family: "Comforter Brush", cursive;
+  z-index: 2;
+  position: relative;
+  top: 8rem;
+}
+.projects-container .projects-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+}
+.projects-container .projects-wrapper .project {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px 30px;
+  transition: 0.5s;
+}
+.projects-container .projects-wrapper .project::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  border-radius: 100px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+}
+.projects-container .projects-wrapper .project::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+  filter: blur(30px);
+  transition: 0.5s;
+}
+.projects-container .projects-wrapper .project:hover::before {
+  content: "";
+  transform: skewX(0deg);
+  left: 20px;
+  width: calc(100% - 90px);
+}
+.projects-container .projects-wrapper .project:hover::after {
+  content: "";
+  transform: skewX(0deg);
+  left: 20px;
+  width: calc(100% - 90px);
+}
+.projects-container .projects-wrapper .project:hover span::before {
+  content: "";
+  top: -50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+.projects-container .projects-wrapper .project:hover span::after {
+  content: "";
+  bottom: -50px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+.projects-container .projects-wrapper .project:hover .project-content {
+  left: -25px;
+  padding: 60px 40px;
+}
+.projects-container .projects-wrapper .project span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  pointer-events: none;
+}
+.projects-container .projects-wrapper .project span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(30px);
+  opacity: 0;
+  transition: 0.5s;
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 0 2px #fff inset;
+}
+.projects-container .projects-wrapper .project span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(30px);
+  opacity: 0;
+  transition: 0.5s;
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 0 2px #fff inset;
+  animation-delay: -1s;
+}
+.projects-container .projects-wrapper .project .project-content {
+  position: relative;
+  left: 0;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 2px #fff inset;
+  backdrop-filter: blur(15px);
+  z-index: 1;
+  transition: 0.5s;
+  color: #fff;
+}
+.projects-container .projects-wrapper .project .project-content:hover {
+  box-shadow: 0 0 2px blue inset;
+}
+.projects-container .projects-wrapper .project .project-content h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.projects-container .projects-wrapper .project .project-content p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  line-height: 1.4rem;
+}
+.projects-container .projects-wrapper .project .project-content a {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.025);
+  padding: 10px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 5px;
+  transition: 0.5s;
+  transform: rotate(355deg);
+  box-shadow: 0 0 2px #fff inset;
+}
+.projects-container .projects-wrapper .project .project-content a:hover {
+  background: rgba(65, 105, 225, 0.25);
+  box-shadow: 0 0 2px blue inset;
+}
+.projects-container .projects-wrapper .project:nth-child(1)::before {
+  background: linear-gradient(315deg, #ffbc00, #ff0058);
+}
+.projects-container .projects-wrapper .project:nth-child(1)::after {
+  background: linear-gradient(315deg, #ffbc00, #ff0058);
+}
+.projects-container .projects-wrapper .project:nth-child(2)::before {
+  background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+.projects-container .projects-wrapper .project:nth-child(2)::after {
+  background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+.projects-container .projects-wrapper .project:nth-child(3)::before {
+  background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+.projects-container .projects-wrapper .project:nth-child(3)::after {
+  background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+
+@keyframes animate {
+  0%, 100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
@@ -721,11 +924,15 @@ body .site-title {
 }
 
 .site-header {
+  animation: fade 2s ease-in-out;
   width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 0 2rem;
+  position: fixed;
+  z-index: 99999;
 }
 .site-header .site-branding {
   width: 100%;
@@ -741,6 +948,9 @@ body .site-title {
 .site-header .site-branding .site-description {
   display: none;
 }
+.site-header .main-navigation {
+  width: 50%;
+}
 .site-header .main-navigation .menu {
   gap: 0.5rem;
 }
@@ -755,6 +965,7 @@ body .site-title {
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
+  text-shadow: 0 0 3px blue;
   text-transform: uppercase;
   letter-spacing: 2px;
   background: linear-gradient(30deg, transparent, rgba(0, 0, 0, 0.5), transparent);
@@ -776,13 +987,13 @@ body .site-title {
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(30deg, transparent, rgba(255, 0, 255, 0.4), transparent);
+  background: linear-gradient(30deg, transparent, rgba(0, 0, 255, 0.35), transparent);
   transition: 0.5s;
   transition-delay: 0.5s;
 }
 .site-header .main-navigation .menu .menu-item a:hover:after {
   left: 100%;
-  background: linear-gradient(30deg, transparent, rgba(255, 0, 255, 0.4), transparent);
+  background: linear-gradient(30deg, transparent, rgba(0, 0, 255, 0.35), transparent);
 }
 .site-header .main-navigation .menu .menu-item a span {
   position: absolute;
@@ -794,64 +1005,73 @@ body .site-title {
   left: 0;
   width: 0;
   height: 1px;
-  background: #ff00ff;
+  background: blue;
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(2) {
   top: 0;
   left: 0;
   width: 1px;
   height: 0;
-  background: #ff00ff;
+  background: blue;
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(3) {
   bottom: 0;
   right: 0;
   width: 0;
   height: 1px;
-  background: #ff00ff;
+  background: blue;
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(4) {
   bottom: 0;
   right: 0;
   width: 1px;
   height: 0;
-  background: #ff00ff;
+  background: blue;
 }
 .site-header .main-navigation .menu .menu-item a .link-text {
   font-weight: normal;
-  color: #ff00ff;
+  color: blue;
   transition-delay: 0.5s;
 }
 .site-header .main-navigation .menu .menu-item a:hover {
   transition-delay: 0.5s;
-  box-shadow: 0 0px 5px #ff00ff inset;
-  background: #ff00ff;
+  box-shadow: 0 0px 5px blue inset;
+  background: rgba(0, 0, 255, 0.35);
 }
 .site-header .main-navigation .menu .menu-item a:hover .link-text {
-  color: #000;
+  color: blue;
+  text-shadow: 0 0 5px blue;
   font-weight: bold;
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(1) {
   width: 100%;
   transform: translateX(100%);
-  background: #ff00ff;
+  background: blue;
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(2) {
   height: 100%;
   transform: translateY(100%);
-  background: #ff00ff;
+  background: blue;
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(3) {
   width: 100%;
   transform: translateX(-100%);
-  background: #ff00ff;
+  background: blue;
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(4) {
   height: 100%;
   transform: translateY(-100%);
-  background: #ff00ff;
+  background: blue;
 }
 
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .toggled {
   max-width: 38.4375rem;
   height: 50vh;
@@ -881,7 +1101,7 @@ body .site-title {
   font-size: 1.5rem !important;
 }
 .toggled .menu-item a:hover {
-  box-shadow: 0 0px 5px #ff00ff inset !important;
+  box-shadow: 0 0px 5px blue inset !important;
 }
 
 .menu-toggle {
@@ -924,6 +1144,42 @@ body .site-title {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(-30deg, #000000 0%, #090814 50%, #090814 50%, #000000 100%);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main-container .main-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.main-container .main-wrapper .banner-container .banner-title {
+  font-size: 10rem;
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
+  letter-spacing: 5px;
+}
+.main-container .main-wrapper .bg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.main-container .main-wrapper .bg-container .bg-img {
+  width: 65%;
+  height: 100%;
+  transition: 2s;
+  mix-blend-mode: hard-light;
+  filter: brightness(0.7) opacity(0.5);
 }
 
 /* Comments
@@ -1032,12 +1288,6 @@ body .site-title {
 
 /* Footer
 --------------------------------------------- */
-.site-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

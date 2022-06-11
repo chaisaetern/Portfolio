@@ -1,0 +1,215 @@
+
+/* ===================================
+    Glass Morphism hover effect
+=================================== 
+*/
+.projects-container {
+    // height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    h2 {
+        letter-spacing: 2px;
+        color: #fff;
+        text-shadow: 0,0,5px, #fff;
+    }
+    .projects-title {
+        font-size: 3rem;
+        font-family: "Comforter Brush", cursive;
+        z-index: 2;
+        position: relative;
+            top: 8rem;
+    }
+    .projects-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        // padding: 40px 0;
+        position: absolute;
+        .project {
+            position: relative;
+            width: 320px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 40px 30px;
+            transition: 0.5s;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50px;
+                width: 50%;
+                height: 100%;
+                border-radius: 100px;
+                transform: skewX(15deg);
+                transition: 0.5s;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50px;
+                width: 50%;
+                height: 100%;
+                background: #fff;
+                border-radius: 8px;
+                transform: skewX(15deg);
+                transition: 0.5s;
+                filter: blur(30px);
+                transition: 0.5s;
+            }
+            &:hover {
+                &::before {
+                    content: '';
+                    transform: skewX(0deg);
+                    left: 20px;
+                    width: calc(100% - 90px);
+                }
+                &::after {
+                    content: '';
+                    transform: skewX(0deg);
+                    left: 20px;
+                    width: calc(100% - 90px);
+                }
+                span {
+                    &::before {
+                        content: '';
+                        top: -50px;
+                        left: 50px;
+                        width: 100px;
+                        height: 100px;
+                        opacity: 1;
+                    }
+                    &::after {
+                        content: '';
+                        bottom: -50px;
+                        right: 50px;
+                        width: 100px;
+                        height: 100px;
+                        opacity: 1;
+                    }
+                }
+                .project-content {
+                    left: -25px;
+                    padding: 60px 40px;
+                }
+            }
+            span {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 50;
+                pointer-events: none;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background: rgba(0,0,0,0.15);
+                    backdrop-filter: blur(30px);
+                    opacity: 0;
+                    transition: 0.5s;
+                    animation: animate 2s ease-in-out infinite;
+                    box-shadow: 0 0 2px #fff inset;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,0.15);
+                    backdrop-filter: blur(30px);
+                    opacity: 0;
+                    transition: 0.5s;
+                    animation: animate 2s ease-in-out infinite;
+                    box-shadow: 0 0 2px #fff inset;
+                    animation-delay: -1s;
+                }
+            }
+            .project-content {
+                position: relative;
+                left: 0;
+                padding: 20px 40px;
+                background: rgba(0,0,0,0.5);
+                box-shadow: 0 0 2px #fff inset;
+                backdrop-filter: blur(15px);
+                z-index: 1;
+                transition: 0.5s;
+                color: #fff;
+                &:hover {
+                    box-shadow: 0 0 2px blue inset;
+                }
+                h2 {
+                    font-size: 2rem;
+                    color: #fff;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 1.1rem;
+                    margin-bottom: 10px;
+                    line-height: 1.4rem;
+                }
+                a {
+                    display: inline-block;
+                    font-size: 1.1rem;
+                    color: #fff;
+                    background: rgba(0,0,0,0.025);
+                    padding: 10px;
+                    border-radius: 2px;
+                    text-decoration: none;
+                    font-weight: 700;
+                    margin-top: 5px;
+                    transition: 0.5s;
+                    transform: rotate(355deg);
+                    box-shadow: 0 0 2px #fff inset;
+                    &:hover {
+                        background: rgba(65, 105, 225, 0.25);
+                        box-shadow: 0 0 2px blue inset;
+                    }
+                }
+            }
+            &:nth-child(1)::before {
+                background: linear-gradient(315deg, #ffbc00, #ff0058);
+            }
+            &:nth-child(1)::after {
+                background: linear-gradient(315deg, #ffbc00, #ff0058);
+            }
+            &:nth-child(2)::before {
+                background: linear-gradient(315deg, #03a9f4, #ff0058);
+            }
+            &:nth-child(2)::after {
+                background: linear-gradient(315deg, #03a9f4, #ff0058);
+            }
+            &:nth-child(3)::before {
+                background: linear-gradient(315deg, #4dff03, #00d0ff);
+            }
+            &:nth-child(3)::after {
+                background: linear-gradient(315deg, #4dff03, #00d0ff);
+            }
+        }
+    }
+}
+
+
+@keyframes animate {
+    0%, 100% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}

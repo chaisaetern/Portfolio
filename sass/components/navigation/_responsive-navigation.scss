@@ -39,12 +39,13 @@
         right: 2rem;
     float: right;
     background: transparent;
-    border: 2px solid #f00;
-    border-radius: 0px;
+    // border: 1px solid #f00;
+    border: none;
+    border-radius: 5px;
     color: #f00;
     &:hover {
         cursor: pointer;
-        border: 2px solid #f00;
+        border-radius: 5px;
         color: #f00;
     }
 }

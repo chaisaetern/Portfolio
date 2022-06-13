@@ -936,7 +936,7 @@ body .site-title {
   align-items: center;
   padding: 2rem 2rem;
   position: fixed;
-  top: 0;
+  top: 1.25rem;
   left: 0;
   z-index: 99999;
 }
@@ -1121,13 +1121,13 @@ body .site-title {
   right: 2rem;
   float: right;
   background: transparent;
-  border: 2px solid #f00;
-  border-radius: 0px;
+  border: none;
+  border-radius: 5px;
   color: #f00;
 }
 .menu-toggle:hover {
   cursor: pointer;
-  border: 2px solid #f00;
+  border-radius: 5px;
   color: #f00;
 }
 
@@ -1187,10 +1187,11 @@ body .site-title {
   top: 10rem;
 }
 .main-container .main-wrapper .banner-container .banner-title .typed-out {
-  width: calc(100% + 1vw);
+  width: calc(100% + 1.25vw);
+  letter-spacing: 5px;
   overflow: hidden;
   white-space: nowrap;
-  font-size: calc(5rem + 15vh);
+  font-size: calc(5rem + 12.5vw);
   color: #000;
   text-shadow: 0 0 5px red;
   animation: typing 3.5s steps(100000), blink 0.5s step-end infinite alternate;

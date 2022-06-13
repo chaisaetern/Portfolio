@@ -25,10 +25,11 @@
                 position: relative;
                     top: 10rem;
                 .typed-out {
-                    width: calc(100% + 1vw);
+                    width: calc(100% + 1.25vw);
+                    letter-spacing: 5px;
                     overflow: hidden;
                     white-space: nowrap;
-                    font-size: calc(5rem + 15vh);
+                    font-size: calc(5rem + 12.5vw);
                     color: #000;
                     text-shadow: 0 0 5px red;
                     animation: typing 3.5s steps(100000), blink .5s step-end infinite alternate;
@@ -69,7 +70,7 @@
 // Blinking cursor animation
 @keyframes blink {
     50% {
-        border-color: transparent
+        border-color: transparent;
     }
 }
 

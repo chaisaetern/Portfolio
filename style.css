@@ -632,6 +632,7 @@ body {
   background-color: #000;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: 2s;
 }
 body h1, body h2, body h3, body h4 {
   font-family: "Comforter Brush", cursive;
@@ -950,10 +951,10 @@ body .site-title {
   width: 100%;
 }
 .site-header .site-branding .site-title a {
-  color: red;
+  color: rgb(255, 0, 0);
   font-size: calc(100% + 1rem);
   text-decoration: none;
-  text-shadow: 0 0 3px red;
+  text-shadow: 0 0 3px rgb(255, 0, 0);
 }
 .site-header .site-branding .site-description {
   display: none;
@@ -975,7 +976,7 @@ body .site-title {
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
-  text-shadow: 0 0 3px red;
+  text-shadow: 0 0 3px rgb(255, 0, 0);
   text-transform: uppercase;
   letter-spacing: 2px;
   background: linear-gradient(30deg, transparent, rgba(0, 0, 0, 0.5), transparent);
@@ -988,7 +989,7 @@ body .site-title {
   left: 0;
   width: 50%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
 }
 .site-header .main-navigation .menu .menu-item a::after {
   content: "";
@@ -1015,63 +1016,63 @@ body .site-title {
   left: 0;
   width: 0;
   height: 1px;
-  background: red;
+  background: rgb(255, 0, 0);
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(2) {
   top: 0;
   left: 0;
   width: 1px;
   height: 0;
-  background: red;
+  background: rgb(255, 0, 0);
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(3) {
   bottom: 0;
   right: 0;
   width: 0;
   height: 1px;
-  background: red;
+  background: rgb(255, 0, 0);
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(4) {
   bottom: 0;
   right: 0;
   width: 1px;
   height: 0;
-  background: red;
+  background: rgb(255, 0, 0);
 }
 .site-header .main-navigation .menu .menu-item a .link-text {
   font-weight: normal;
-  color: red;
+  color: rgb(255, 0, 0);
   transition-delay: 0.5s;
 }
 .site-header .main-navigation .menu .menu-item a:hover {
   transition-delay: 0.5s;
-  box-shadow: 180px 0px 0px red inset;
+  box-shadow: 180px 0px 0px rgb(255, 0, 0) inset;
   background: rgba(255, 0, 0, 0.35);
 }
 .site-header .main-navigation .menu .menu-item a:hover .link-text {
-  color: red;
-  text-shadow: 0 0 3px #000;
+  color: #000;
+  text-shadow: 0 0 5px #000;
   font-weight: bold;
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(1) {
   width: 100%;
   transform: translateX(100%);
-  background: red;
+  background: rgb(255, 0, 0);
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(2) {
   height: 100%;
   transform: translateY(100%);
-  background: red;
+  background: rgb(255, 0, 0);
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(3) {
   width: 100%;
   transform: translateX(-100%);
-  background: red;
+  background: rgb(255, 0, 0);
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(4) {
   height: 100%;
   transform: translateY(-100%);
-  background: red;
+  background: rgb(255, 0, 0);
 }
 
 @keyframes fade {
@@ -1111,7 +1112,7 @@ body .site-title {
   font-size: 1.5rem !important;
 }
 .toggled .menu-item a:hover {
-  box-shadow: 0 0px 5px red inset !important;
+  box-shadow: 0 0px 5px rgb(255, 0, 0) inset !important;
 }
 
 .menu-toggle {
@@ -1173,15 +1174,27 @@ body .site-title {
   height: 100%;
 }
 .main-container .main-wrapper .banner-container {
-  display: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 .main-container .main-wrapper .banner-container .banner-title {
-  font-size: calc(3rem + 12.5vw);
-  color: black;
-  letter-spacing: 5px;
-  animation: shine 20s ease infinite;
+  display: inline-block;
+  width: 100%;
   position: relative;
   top: 10rem;
+}
+.main-container .main-wrapper .banner-container .banner-title .typed-out {
+  width: calc(100% + 1vw);
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: calc(5rem + 15vh);
+  color: #000;
+  text-shadow: 0 0 5px red;
+  animation: typing 3.5s steps(100000), blink 0.5s step-end infinite alternate;
+  border-right: 5px solid darkred;
 }
 .main-container .main-wrapper .bg-container {
   height: 100%;
@@ -1197,41 +1210,33 @@ body .site-title {
   width: 100%;
   height: auto;
   transition: 2s;
-  mix-blend-mode: lighten;
-  filter: brightness(0.75) opacity(0.8);
-  animation: scaleUpDown 20s ease-in-out infinite;
+  mix-blend-mode: difference;
+  animation: scaleUpDown 15s ease-in-out infinite;
 }
 
-@keyframes fade {
-  0% {
-    opacity: 0;
-    filter: blur(10px);
+@keyframes typing {
+  from {
+    width: 0;
   }
-  100% {
-    opacity: 1;
-    filter: blur(0px);
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
 }
 @keyframes scaleUpDown {
   0%, 100% {
     transform: scale(1);
-    filter: blur(0px);
-    opacity: 0.5;
+    filter: brightness(0.55) opacity(0.8) blur(0px);
+    opacity: 1;
   }
   50% {
     transform: scale(1.1);
-    filter: blur(3px);
-    opacity: 0.25;
-  }
-}
-@keyframes shine {
-  0%, 100% {
-    opacity: 0;
-    text-shadow: 0 0 3px red;
-  }
-  50% {
-    opacity: 1;
-    text-shadow: 0 0 3px red;
+    filter: brightness(0.65) opacity(0.8) blur(1px);
+    opacity: 0.5;
   }
 }
 /* Comments

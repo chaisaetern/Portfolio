@@ -57,7 +57,7 @@
 }
 
 
-
+// Typing animation
 @keyframes typing {
     from {
         width: 0;
@@ -66,23 +66,15 @@
         width: 100%;
     }
 }
-
+// Blinking cursor animation
 @keyframes blink {
     50% {
         border-color: transparent
     }
 }
 
-// @keyframes blink {
-//     0%, 100% {
-//         opacity: 0;
-//     }
-//     50% {
-//         opacity: 1;
-//     }
-// }
 
-
+// Scales the background image animation
 @keyframes scaleUpDown {
     0%, 100% {
         transform: scale(1);

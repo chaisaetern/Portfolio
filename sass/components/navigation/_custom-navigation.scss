@@ -55,7 +55,7 @@ $primary_rgba: rgba(255, 0, 0, 0.35);
                     letter-spacing: 2px;
                     background: linear-gradient(30deg, transparent, 
                     rgba(0, 0, 0, 0.5), transparent);
-                    transition: 0.5s;
+                    transition: 1.5s;
                     &::before {
                         content: '';
                         position: absolute;
@@ -126,7 +126,7 @@ $primary_rgba: rgba(255, 0, 0, 0.35);
                         background: $primary_rgba;
                         .link-text {
                             color: $primary;
-                            text-shadow: 0 0 2px #000;
+                            text-shadow: 0 0 3px #000;
                             font-weight: bold;
                         }
                         span {

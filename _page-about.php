@@ -10,13 +10,7 @@
 
     <div class="about-container">
 
-        <div class="about-bg-container">
-            <div class="loading-screen-container">
-                <!-- <img src="<?php the_field("loading_screen"); ?>" alt="" class="loading-screen"> -->
-                <!-- <img src="<?php the_field("loading"); ?>" alt="" class="loading"> -->
-    
-            </div>
-        </div>
+        <?php get_template_part('template-parts/loading') ?>
 
         <!-- <div class="intro">
             <h2>Hello.</h2>

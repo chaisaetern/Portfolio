@@ -1251,6 +1251,14 @@ body .site-title {
   justify-content: center;
   align-items: center;
 }
+.about-container .about-bg-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
 .about-container .intro {
   width: 100%;
   height: 100%;
@@ -1268,27 +1276,27 @@ body .site-title {
 .about-container .intro h2:nth-child(3n+1) {
   opacity: 0;
   color: #ff3333;
-  animation: story 2s ease-in both;
-  animation-delay: 11s;
+  animation: story 3s ease-in both;
+  animation-delay: 10s;
 }
 .about-container .intro h2:nth-child(3n+2) {
   opacity: 0;
   color: #ff6666;
-  animation: story 2s ease-in both;
-  animation-delay: 21s;
+  animation: story 3s ease-in both;
+  animation-delay: 20s;
 }
 .about-container .intro h2:nth-child(3n+3) {
   opacity: 0;
   color: #ff9999;
-  animation: story 2s ease-in both;
-  animation-delay: 31s;
+  animation: story 3s ease-in both;
+  animation-delay: 30s;
 }
 
 @keyframes story {
-  0%, 100% {
-    display: none;
+  0% {
+    opacity: 0;
   }
-  50% {
+  100% {
     opacity: 1;
   }
 }

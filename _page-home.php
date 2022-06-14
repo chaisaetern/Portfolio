@@ -16,9 +16,7 @@
                 <!-- <?php the_field("banner_title"); ?> -->
                 <div class="typed-out">Nevershine</div>
             </h2>
-            <div class="banner-wrapper">
-                <!-- <?php get_template_part('template-parts/projects-showcase') ?> -->
-            </div>
+
         </div>
 
         <div class="bg-container">

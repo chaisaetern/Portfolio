@@ -1,5 +1,5 @@
 <div class="projects-container">
-    <h2 class="projects-title">My Projects</h2>
+    <!-- <h2 class="projects-title">My Projects</h2> -->
     <div class="projects-wrapper">
         <div class="project">
             <span></span>

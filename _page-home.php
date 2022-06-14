@@ -25,7 +25,6 @@
             <img class="bg-img" src="<?php the_field("background_image_1"); ?>" alt="">
         </div>
     </div>
-
 </div>
 
 <?php get_footer(); ?>

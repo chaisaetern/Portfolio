@@ -963,6 +963,9 @@ body .site-title {
   width: 100%;
 }
 .site-header .main-navigation .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 0.5rem;
 }
 .site-header .main-navigation .menu .menu-item {
@@ -1160,10 +1163,10 @@ body .site-title {
 .main-container {
   height: 100vh;
   width: 100vw;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   transition: 2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main-container .main-wrapper {
   display: flex;
@@ -1194,8 +1197,7 @@ body .site-title {
   font-size: calc(5rem + 12.5vw);
   color: #000;
   text-shadow: 0 0 5px red;
-  animation: typing 3.5s steps(100000), blink 0.5s step-end infinite alternate;
-  border-right: 5px solid darkred;
+  animation: smoothTyping 3.5s steps(100000), blink 0.5s step-end infinite alternate;
 }
 .main-container .main-wrapper .bg-container {
   height: 100%;
@@ -1215,17 +1217,12 @@ body .site-title {
   animation: scaleUpDown 15s ease-in-out infinite;
 }
 
-@keyframes typing {
+@keyframes smoothTyping {
   from {
     width: 0;
   }
   to {
     width: 100%;
-  }
-}
-@keyframes blink {
-  50% {
-    border-color: transparent;
   }
 }
 @keyframes scaleUpDown {
@@ -1346,6 +1343,12 @@ body .site-title {
 
 /* Footer
 --------------------------------------------- */
+.site-footer {
+  width: 100%;
+  background: transparent;
+  text-align: center;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

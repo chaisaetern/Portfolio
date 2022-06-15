@@ -23,8 +23,11 @@ $primary_rgba: rgba(255, 0, 0, 0.35);
         justify-content: flex-start;
         align-items: center;
         padding: 0 2rem;
-        .custom-logo {
-            width: 7rem;
+        .custom-logo-link {
+            display: flex;
+            .custom-logo {
+                width: 7rem;
+            }
         }
         .site-title {
             width: 100%;

@@ -16,14 +16,10 @@
         </h2>
 
         <div class="progress"> 
-            <div class="progressbar" 
-                role="progressbar"
-                aria-valuenow="0"
-                aria-valuemin="0"
-                aria-valuemax="100"
-            ></div>
-            <div class="numericbar">
-                
+            <div class="progress-bar"></div>
+
+            <div class="progress-info">
+                <img src="https://i.giphy.com/media/kuWN0iF9BLQKk/giphy.webp" alt="">
             </div>
         </div>
   

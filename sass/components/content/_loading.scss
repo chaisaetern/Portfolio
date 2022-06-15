@@ -28,7 +28,7 @@
             font-size: calc(3rem + 2vh);
             padding: 0 2rem;
             color: black;
-            text-shadow: 0 0 2px red;
+            text-shadow: 0 0 4px yellow;
             span {
                 @for $i from 1 through 10 {
                     &:nth-child(3n + #{$i}) {
@@ -41,20 +41,38 @@
         }
 
         .progress {
+            // overflow: hidden;
             margin: 50px auto;
             padding: 2px;
             width: 100%;
             max-width: 500px;
-            border: 3px solid red;
+            border: 3px solid gold;
             // border-radius: 5px;
             height: 30px;
             position: relative;
                 top: 5rem;
-            .progressbar {
+            .progress-bar {
                 height: 100%;
                 width: 0%;
-                background-color: red;
+                background: repeating-linear-gradient(
+                    45deg,
+                    rgb(255, 215, 0, 0.8),
+                    rgb(255, 215, 0, 0.6) 10px,
+                    rgb(0, 0, 0) 10px,
+                    rgb(0, 0, 0) 20px
+                  );
                 animation: fill-bar 2s infinite;
+            }
+            .progress-info {
+                position: absolute;
+                top: 0;
+                left: 0;
+                text-align: center;
+                color: #fff;
+                animation: fill-bar-200 2s infinite;
+                img {
+                    width: 5rem;
+                }
             }
         }
         
@@ -64,6 +82,11 @@
 @keyframes fill-bar {
     from {width: 0%;}
     to {width: 100%;}
+}
+
+@keyframes fill-bar-200 {
+    from {width: 0%;}
+    to {width: 195%;}
 }
 
 

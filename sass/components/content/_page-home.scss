@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     .main-wrapper {
         display: flex;
         flex-direction: column;
@@ -13,6 +14,10 @@
         align-items: center;
         width: 100%;
         height: 100%;
+        opacity: 0;
+        animation: fade-in 2s ease-in both;
+        animation-delay: 2s;
+        position: absolute;
         .banner-container {
             display: flex;
             flex-direction: row;
@@ -33,6 +38,7 @@
                     color: #000;
                     text-shadow: 0 0 5px red;
                     animation: smoothTyping 3.5s steps(100000), blink .5s step-end infinite alternate;
+                    animation-delay: 2.5s;
                 }
             }
         }
@@ -56,6 +62,15 @@
     }
 }
 
+// Page fade into view
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 // Typing animation
 @keyframes smoothTyping {
@@ -70,12 +85,12 @@
 // Scales the background image animation
 @keyframes scaleUpDown {
     0%, 100% {
-        transform: scale(1);
+        transform: scale(1) skew(-0.5deg, 1deg);
         filter: brightness(0.55) opacity(0.8) blur(0px);
         opacity: 1;
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1.1) skew(1deg, -0.5deg);
         filter: brightness(0.65) opacity(0.8) blur(1px);
         opacity: 0.5;
     }

@@ -9,7 +9,7 @@
 <?php get_header(); ?>
 
     <div class="about-container">
-
+        <!-- <img src="<?php the_field("about_bg") ?>" alt="" class="about-bg"> -->
         <?php get_template_part('template-parts/loading') ?>
 
         <!-- <div class="intro">

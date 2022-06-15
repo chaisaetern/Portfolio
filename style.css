@@ -854,56 +854,100 @@ body .site-title {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: vanish 1ms ease-in-out both;
+  animation-delay: 2s;
 }
 .loading-container .loading-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 15vh;
-  transition: 2s;
+  width: 50%;
+  transition: 1s;
+  position: relative;
 }
 .loading-container .loading-wrapper h2 {
-  animation: loading-bar 5s ease-in both;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation-delay: 1s;
   position: absolute;
   font-family: "Kaushan Script", cursive;
   font-size: calc(3rem + 2vh);
-  transition: 2s;
-  animation-delay: 2s;
   padding: 0 2rem;
   color: black;
+  text-shadow: 0 0 2px red;
 }
 .loading-container .loading-wrapper h2 span:nth-child(3n+1) {
-  opacity: 0;
-  animation: pulse 1s infinite;
-  animation-delay: 4s;
+  letter-spacing: 2px;
+  animation: bounce 2s ease-in-out infinite;
+  animation-delay: 0.1s;
 }
 .loading-container .loading-wrapper h2 span:nth-child(3n+2) {
-  opacity: 0;
-  animation: pulse 1s infinite;
-  animation-delay: 5s;
+  letter-spacing: 2px;
+  animation: bounce 2s ease-in-out infinite;
+  animation-delay: 0.2s;
 }
 .loading-container .loading-wrapper h2 span:nth-child(3n+3) {
-  opacity: 0;
-  animation: pulse 1s infinite;
-  animation-delay: 6s;
+  letter-spacing: 2px;
+  animation: bounce 2s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+.loading-container .loading-wrapper h2 span:nth-child(3n+4) {
+  letter-spacing: 2px;
+  animation: bounce 2s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+.loading-container .loading-wrapper h2 span:nth-child(3n+5) {
+  letter-spacing: 2px;
+  animation: bounce 2s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+.loading-container .loading-wrapper h2 span:nth-child(3n+6) {
+  letter-spacing: 2px;
+  animation: bounce 2s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+.loading-container .loading-wrapper h2 span:nth-child(3n+7) {
+  letter-spacing: 2px;
+  animation: bounce 2s ease-in-out infinite;
+  animation-delay: 0.7s;
+}
+.loading-container .loading-wrapper h2 span:nth-child(3n+8) {
+  letter-spacing: 2px;
+  animation: bounce 2s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+.loading-container .loading-wrapper h2 span:nth-child(3n+9) {
+  letter-spacing: 2px;
+  animation: bounce 2s ease-in-out infinite;
+  animation-delay: 0.9s;
+}
+.loading-container .loading-wrapper h2 span:nth-child(3n+10) {
+  letter-spacing: 2px;
+  animation: bounce 2s ease-in-out infinite;
+  animation-delay: 1s;
 }
 
-@keyframes pulse {
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
+@keyframes vanish {
+  0% {
     opacity: 1;
   }
-}
-@keyframes loading-bar {
-  0% {
-    box-shadow: 0 0 0 darkred inset;
-  }
   100% {
-    box-shadow: 100vw 0 0 darkred inset;
+    opacity: 0;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  80%, 100% {
+    transform: translateY(0px);
   }
 }
 /* Navigation
@@ -1004,6 +1048,9 @@ body .site-title {
   justify-content: flex-start;
   align-items: center;
   padding: 0 2rem;
+}
+.site-header .site-branding .custom-logo {
+  width: 7rem;
 }
 .site-header .site-branding .site-title {
   width: 100%;
@@ -1231,6 +1278,7 @@ body .site-title {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .main-container .main-wrapper {
   display: flex;
@@ -1239,6 +1287,10 @@ body .site-title {
   align-items: center;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  animation: fade-in 2s ease-in both;
+  animation-delay: 2s;
+  position: absolute;
 }
 .main-container .main-wrapper .banner-container {
   display: flex;
@@ -1262,6 +1314,7 @@ body .site-title {
   color: #000;
   text-shadow: 0 0 5px red;
   animation: smoothTyping 3.5s steps(100000), blink 0.5s step-end infinite alternate;
+  animation-delay: 2.5s;
 }
 .main-container .main-wrapper .bg-container {
   height: 100%;
@@ -1281,6 +1334,14 @@ body .site-title {
   animation: scaleUpDown 15s ease-in-out infinite;
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes smoothTyping {
   from {
     width: 0;
@@ -1291,12 +1352,12 @@ body .site-title {
 }
 @keyframes scaleUpDown {
   0%, 100% {
-    transform: scale(1);
+    transform: scale(1) skew(-0.5deg, 1deg);
     filter: brightness(0.55) opacity(0.8) blur(0px);
     opacity: 1;
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.1) skew(1deg, -0.5deg);
     filter: brightness(0.65) opacity(0.8) blur(1px);
     opacity: 0.5;
   }

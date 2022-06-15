@@ -9,6 +9,9 @@
 <?php get_header(); ?>
 
 <div class="main-container">
+
+    <?php get_template_part('template-parts/loading') ?>
+
     <div class="main-wrapper">
 
         <div class="banner-container">
@@ -26,3 +29,4 @@
 </div>
 
 <?php get_footer(); ?>
+

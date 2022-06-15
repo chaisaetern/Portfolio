@@ -16,8 +16,6 @@ $base-color: rgb(255, 0, 0);
         align-items: center;
         position: absolute;
 
-     
-        
     }
     .intro {
         width: 100%;
@@ -34,7 +32,6 @@ $base-color: rgb(255, 0, 0);
             @for $i from 1 through 3 {
                 &:nth-child(3n + #{$i}) {
                     opacity: 0;
-                    // display: none;
                     color: lighten($base-color, $i * 10%);
                     animation: story 3s ease-in both;
                     animation-delay: #{$i} + 0s;
@@ -47,10 +44,8 @@ $base-color: rgb(255, 0, 0);
 @keyframes story {
     0% {
         opacity: 0;
-        // display: none;
     }
     100% {
         opacity: 1;
-        // display: block;
     }
 }

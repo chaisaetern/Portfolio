@@ -9,14 +9,16 @@
 <?php get_header(); ?>
 
     <div class="about-container">
-        <!-- <img src="<?php the_field("about_bg") ?>" alt="" class="about-bg"> -->
-        <?php get_template_part('template-parts/loading') ?>
 
-        <!-- <div class="intro">
-            <h2>Hello.</h2>
-            <h2>Welcome!</h2>
-            <h2>My name is Chai.</h2>
-        </div> -->
+        <!-- <?php get_template_part('template-parts/loading') ?> -->
+
+        <div class="intro">
+            <div class="story-section">Hello</div>
+            <div class="story-section">My name is Chai</div>
+            <div class="story-section">Thanks...</div>
+            <div class="story-section">for checking me out</div>
+            <div class="story-section">&amp; Welcome!</div>
+        </div>
 
     </div>
 

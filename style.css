@@ -931,12 +931,19 @@ body .site-title {
   animation: bounce 2s ease-in-out infinite;
   animation-delay: 1s;
 }
+.loading-container .loading-wrapper h2 span img {
+  width: 5rem;
+  position: relative;
+  top: 1rem;
+}
 .loading-container .loading-wrapper .progress {
   margin: 50px auto;
   padding: 2px;
   width: 100%;
-  max-width: 500px;
-  border: 3px solid gold;
+  max-width: 750px;
+  border: 1px solid gold;
+  box-shadow: 0 0 5px gold;
+  border-radius: 2px;
   height: 30px;
   position: relative;
   top: 5rem;
@@ -944,10 +951,14 @@ body .site-title {
 .loading-container .loading-wrapper .progress .progress-bar {
   height: 100%;
   width: 0%;
-  background: repeating-linear-gradient(45deg, rgba(255, 215, 0, 0.8), rgba(255, 215, 0, 0.6) 10px, rgb(0, 0, 0) 10px, rgb(0, 0, 0) 20px);
+  background: repeating-linear-gradient(45deg, rgba(255, 215, 0, 0.75), rgb(255, 215, 0) 15px, rgb(0, 0, 0) 10px, rgb(0, 0, 0) 20px);
   animation: fill-bar 2s infinite;
 }
 .loading-container .loading-wrapper .progress .progress-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -957,6 +968,7 @@ body .site-title {
 }
 .loading-container .loading-wrapper .progress .progress-info img {
   width: 5rem;
+  -webkit-box-reflect: below 0 linear-gradient(transparent, white);
 }
 
 @keyframes fill-bar {

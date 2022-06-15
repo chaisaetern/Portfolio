@@ -1,8 +1,18 @@
-
+<?php
+/**
+ * Template Name: Loading Template Part Page
+ *
+ * @package Portfolio
+ *
+ */
+?>
 <div class="loading-container">
     <div class="loading-wrapper">
 
         <h2>
+            <span>
+                <img src="https://assets.bigcartel.com/product_images/321147522/giphy-3.gif?auto=format&fit=max&w=1200" alt="">
+            </span>
             <span>L</span>
             <span>o</span>
             <span>a</span>

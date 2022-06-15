@@ -12,7 +12,9 @@
 
     .blend {
         border-radius: 5px;
-        width: 15rem;
+        width: 100%;
+        max-width: 20rem;
+        filter: brightness(0.75);
         position: relative;
             bottom: -5rem;
     }

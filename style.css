@@ -861,7 +861,9 @@ body .site-title {
 }
 .loading-container .blend {
   border-radius: 5px;
-  width: 15rem;
+  width: 100%;
+  max-width: 20rem;
+  filter: brightness(0.75);
   position: relative;
   bottom: -5rem;
 }
@@ -1011,6 +1013,68 @@ body .site-title {
   }
   80%, 100% {
     transform: translateY(0px);
+  }
+}
+/* Animation property */
+.socials {
+  z-index: 99;
+  animation: fade-in 2s ease;
+  overflow: hidden;
+  position: absolute;
+  left: 3rem;
+  top: calc(50% - 2rem);
+  height: 4rem;
+  width: 5rem;
+  letter-spacing: 1px;
+  background: linear-gradient(30deg, transparent, rgba(0, 0, 0, 0.5), transparent);
+  border: none;
+  border-top: 3px solid red;
+  border-bottom: 3px solid red;
+  border-radius: 0.2rem;
+  color: red;
+  font-size: 1.2rem;
+  transform-origin: 50% 5rem;
+}
+.socials span {
+  position: absolute;
+  top: 1.25rem;
+  left: 0;
+  animation: wiggle 2s linear infinite;
+  animation-delay: 3s;
+  width: 100%;
+  height: 100%;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-10deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+@keyframes fade-in {
+  0%, 90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /* Navigation
@@ -1429,72 +1493,62 @@ body .site-title {
   }
 }
 .about-container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  background: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.about-container .about-bg-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-}
-.about-container .intro {
-  color: red;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.about-container .intro .story-section {
-  font-family: "Courier New", Courier, monospace;
-  font-size: calc(5rem + 2vw);
-  position: absolute;
-}
-.about-container .intro .story-section:nth-child(3n+1) {
-  opacity: 0;
-  animation: story 2.5s ease-out both;
-  animation-delay: 2.2222222222s;
-}
-.about-container .intro .story-section:nth-child(3n+2) {
-  opacity: 0;
-  animation: story 2.5s ease-out both;
-  animation-delay: 4.4444444444s;
-}
-.about-container .intro .story-section:nth-child(3n+3) {
-  opacity: 0;
-  animation: story 2.5s ease-out both;
-  animation-delay: 6.6666666667s;
-}
-.about-container .intro .story-section:nth-child(3n+4) {
-  opacity: 0;
-  animation: story 2.5s ease-out both;
-  animation-delay: 8.8888888889s;
-}
-.about-container .intro .story-section:nth-child(3n+5) {
-  opacity: 0;
-  animation: story 2.5s ease-out both;
-  animation-delay: 11.1111111111s;
-}
-.about-container .intro .story-section:nth-child(3n+6) {
-  opacity: 0;
-  animation: story 2.5s ease-out both;
-  animation-delay: 13.3333333333s;
+  background: #000;
+  overflow: hidden;
 }
 
-@keyframes story {
-  0%, 100% {
-    opacity: 0;
+.fade {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  top: -25px;
+  background-image: linear-gradient(0deg, transparent, black 75%);
+  z-index: 1;
+}
+
+.star-wars {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 800px;
+  color: #feda4a;
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: justify;
+}
+
+.crawl {
+  position: relative;
+  top: 99999px;
+  transform-origin: 50% 100%;
+  animation: crawl 60s linear;
+  animation-delay: 3s;
+}
+
+.crawl > .title {
+  font-size: 90%;
+  text-align: center;
+}
+
+.crawl > .title h1 {
+  margin: 0 0 100px;
+  text-transform: uppercase;
+}
+
+@keyframes crawl {
+  0% {
+    top: 500px;
+    transform: rotateX(20deg) translateZ(0);
   }
-  25% {
-    opacity: 1;
+  100% {
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
   }
 }
 .contact-container {

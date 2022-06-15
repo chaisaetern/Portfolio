@@ -11,6 +11,7 @@
     <div class="contact-container">
 
         <?php get_template_part('template-parts/loading') ?>
+        <?php get_template_part('template-parts/socials') ?>
         
     </div>
     

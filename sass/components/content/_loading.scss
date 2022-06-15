@@ -7,6 +7,7 @@
     align-items: center;
     animation: vanish 1ms ease-in-out both;
     animation-delay: 2s;
+    position: absolute;
     .loading-wrapper {
         display: flex;
         flex-direction: row;
@@ -38,29 +39,48 @@
                 }
             }
         }
+
+        .progress {
+            margin: 50px auto;
+            padding: 2px;
+            width: 100%;
+            max-width: 500px;
+            border: 3px solid red;
+            // border-radius: 5px;
+            height: 30px;
+            position: relative;
+                top: 5rem;
+            .progressbar {
+                height: 100%;
+                width: 0%;
+                background-color: red;
+                animation: fill-bar 2s infinite;
+            }
+        }
+        
     }
 }
 
+@keyframes fill-bar {
+    from {width: 0%;}
+    to {width: 100%;}
+}
 
 
 @keyframes vanish {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+    0% {opacity: 1;}
+    100% {opacity: 0;}
 }
 
 @keyframes bounce {
     0% {
-      transform: translateY(0px);
+        transform: translateY(0px);
     }
     40% {
-      transform: translateY(-20px);
+        transform: translateY(-20px);
     }
     80%,
     100% {
-      transform: translateY(0px);
+        transform: translateY(0px);
     }
-  }
+}

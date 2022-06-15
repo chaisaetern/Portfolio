@@ -8,9 +8,9 @@
 ?>
 <?php get_header(); ?>
 
-    <div class="about-container">
+    <?php get_template_part('template-parts/loading') ?>
 
-        <!-- <?php get_template_part('template-parts/loading') ?> -->
+    <div class="about-container">
 
         <div class="intro">
             <div class="story-section">Hello</div>

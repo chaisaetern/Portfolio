@@ -14,6 +14,18 @@
             <span>.</span>
             <span>.</span>
         </h2>
-        
+
+        <div class="progress"> 
+            <div class="progressbar" 
+                role="progressbar"
+                aria-valuenow="0"
+                aria-valuemin="0"
+                aria-valuemax="100"
+            ></div>
+            <div class="numericbar">
+                
+            </div>
+        </div>
+  
     </div>
 </div>

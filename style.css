@@ -856,6 +856,7 @@ body .site-title {
   align-items: center;
   animation: vanish 1ms ease-in-out both;
   animation-delay: 2s;
+  position: absolute;
 }
 .loading-container .loading-wrapper {
   display: flex;
@@ -930,7 +931,31 @@ body .site-title {
   animation: bounce 2s ease-in-out infinite;
   animation-delay: 1s;
 }
+.loading-container .loading-wrapper .progress {
+  margin: 50px auto;
+  padding: 2px;
+  width: 100%;
+  max-width: 500px;
+  border: 3px solid red;
+  height: 30px;
+  position: relative;
+  top: 5rem;
+}
+.loading-container .loading-wrapper .progress .progressbar {
+  height: 100%;
+  width: 0%;
+  background-color: red;
+  animation: fill-bar 2s infinite;
+}
 
+@keyframes fill-bar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 @keyframes vanish {
   0% {
     opacity: 1;
@@ -1302,7 +1327,7 @@ body .site-title {
 .main-container .main-wrapper .banner-container .banner-title {
   display: inline-block;
   width: 100%;
-  animation: wobble 5s infinite both;
+  animation: fade-in 2s ease both;
   animation-delay: 3s;
   position: relative;
   bottom: -15rem;
@@ -1324,46 +1349,6 @@ body .site-title {
   margin: 0;
   padding: 0;
 }
-.main-container .main-wrapper .banner-container .banner-title .typed-out .letter:nth-child(3n+1) {
-  animation: fade-in 0.5s ease both;
-  animation-delay: 1.8571428571s;
-}
-.main-container .main-wrapper .banner-container .banner-title .typed-out .letter:nth-child(3n+2) {
-  animation: fade-in 0.5s ease both;
-  animation-delay: 4.7142857143s;
-}
-.main-container .main-wrapper .banner-container .banner-title .typed-out .letter:nth-child(3n+3) {
-  animation: fade-in 0.5s ease both;
-  animation-delay: 7.5714285714s;
-}
-.main-container .main-wrapper .banner-container .banner-title .typed-out .letter:nth-child(3n+4) {
-  animation: fade-in 0.5s ease both;
-  animation-delay: 10.4285714286s;
-}
-.main-container .main-wrapper .banner-container .banner-title .typed-out .letter:nth-child(3n+5) {
-  animation: fade-in 0.5s ease both;
-  animation-delay: 13.2857142857s;
-}
-.main-container .main-wrapper .banner-container .banner-title .typed-out .letter:nth-child(3n+6) {
-  animation: fade-in 0.5s ease both;
-  animation-delay: 16.1428571429s;
-}
-.main-container .main-wrapper .banner-container .banner-title .typed-out .letter:nth-child(3n+7) {
-  animation: fade-in 0.5s ease both;
-  animation-delay: 19s;
-}
-.main-container .main-wrapper .banner-container .banner-title .typed-out .letter:nth-child(3n+8) {
-  animation: fade-in 0.5s ease both;
-  animation-delay: 21.8571428571s;
-}
-.main-container .main-wrapper .banner-container .banner-title .typed-out .letter:nth-child(3n+9) {
-  animation: fade-in 0.5s ease both;
-  animation-delay: 24.7142857143s;
-}
-.main-container .main-wrapper .banner-container .banner-title .typed-out .letter:nth-child(3n+10) {
-  animation: fade-in 0.5s ease both;
-  animation-delay: 27.5714285714s;
-}
 .main-container .main-wrapper .bg-container {
   height: 100%;
   display: flex;
@@ -1382,14 +1367,6 @@ body .site-title {
   animation: scaleUpDown 15s ease-in-out infinite;
 }
 
-@keyframes wobble {
-  0%, 100% {
-    transform: scale(0.98);
-  }
-  50% {
-    transform: scale(1);
-  }
-}
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -1427,6 +1404,7 @@ body .site-title {
   position: absolute;
 }
 .about-container .intro {
+  color: red;
   width: 100%;
   height: 100%;
   display: flex;
@@ -1438,37 +1416,36 @@ body .site-title {
   font-family: "Courier New", Courier, monospace;
   font-size: calc(5rem + 2vw);
   position: absolute;
-  display: block;
 }
 .about-container .intro .story-section:nth-child(3n+1) {
   opacity: 0;
   animation: story 2.5s ease-out both;
-  animation-delay: 2s;
+  animation-delay: 2.2222222222s;
 }
 .about-container .intro .story-section:nth-child(3n+2) {
   opacity: 0;
   animation: story 2.5s ease-out both;
-  animation-delay: 4s;
+  animation-delay: 4.4444444444s;
 }
 .about-container .intro .story-section:nth-child(3n+3) {
   opacity: 0;
   animation: story 2.5s ease-out both;
-  animation-delay: 6s;
+  animation-delay: 6.6666666667s;
 }
 .about-container .intro .story-section:nth-child(3n+4) {
   opacity: 0;
   animation: story 2.5s ease-out both;
-  animation-delay: 8s;
+  animation-delay: 8.8888888889s;
 }
 .about-container .intro .story-section:nth-child(3n+5) {
   opacity: 0;
   animation: story 2.5s ease-out both;
-  animation-delay: 10s;
+  animation-delay: 11.1111111111s;
 }
 .about-container .intro .story-section:nth-child(3n+6) {
   opacity: 0;
   animation: story 2.5s ease-out both;
-  animation-delay: 12s;
+  animation-delay: 13.3333333333s;
 }
 
 @keyframes story {

@@ -1,7 +1,7 @@
 
 // $primary: #08fdd8;
-$primary: rgba(255, 0, 0, 1);
-$primary_rgba: rgba(255, 0, 0, 0.35);
+$primary: rgba(255, 217, 0, 1);
+$primary_rgba: rgba(255, 217, 0, 0.95);
 
 
 .site-header {
@@ -131,11 +131,11 @@ $primary_rgba: rgba(255, 0, 0, 0.35);
                     }
                     &:hover {
                         transition-delay: 0.5s;
-                        box-shadow: 180px 0px 0px $primary inset;
+                        // box-shadow: 180px 0px 0px $primary inset;
                         background: $primary_rgba;
                         .link-text {
                             color: #000;
-                            text-shadow: 0 0 5px #000;
+                            text-shadow: 0 0 1px #000;
                             font-weight: bold;
                         }
                         span {

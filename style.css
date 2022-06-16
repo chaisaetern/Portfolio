@@ -1060,10 +1060,9 @@ body .site-title {
   padding: 0;
 }
 .socials-container .socials:hover {
-  border-top: 3px solid rgba(255, 217, 0, 0.5);
-  border-bottom: 3px solid rgba(255, 217, 0, 0.5);
-  color: rgba(255, 217, 0, 0.5);
-  text-shadow: 0 0 1px rgba(255, 217, 0, 0.5);
+  border-top: 3px solid rgba(255, 0, 0, 0.5);
+  border-bottom: 3px solid rgba(255, 0, 0, 0.5);
+  text-shadow: 0 0 1px rgba(255, 0, 0, 0.5);
   transition: 1s;
   height: 100%;
   transition-delay: 0.25s;
@@ -1074,7 +1073,6 @@ body .site-title {
   transition: 1s;
   transition-delay: 1s;
   height: 100%;
-  box-shadow: 0 0 5px gold inset;
 }
 .socials-container .socials .socials-icons {
   display: flex;
@@ -1094,6 +1092,7 @@ body .site-title {
 }
 .socials-container .socials .socials-icons i:hover {
   transform: scale(1.75);
+  color: rgba(255, 0, 0, 0.5);
 }
 
 /* Keyframes */

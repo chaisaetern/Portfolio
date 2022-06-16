@@ -888,7 +888,7 @@ body .site-title {
   font-size: calc(3rem + 2vh);
   padding: 0 2rem;
   color: black;
-  text-shadow: 0 0 4px yellow;
+  text-shadow: 0 0 5px yellow;
 }
 .loading-container .loading-wrapper h2 span:nth-child(3n+1) {
   letter-spacing: 2px;
@@ -940,27 +940,22 @@ body .site-title {
   animation: bounce 2s ease-in-out infinite;
   animation-delay: 1s;
 }
-.loading-container .loading-wrapper h2 span img {
-  width: 5rem;
-  position: relative;
-  top: 1rem;
-}
 .loading-container .loading-wrapper .progress {
   margin: 50px auto;
   padding: 2px;
   width: 100%;
-  max-width: 750px;
+  max-width: 500px;
   border: 1px solid gold;
   box-shadow: 0 0 5px gold;
   border-radius: 2px;
-  height: 30px;
+  height: 25px;
   position: relative;
   top: 5rem;
 }
 .loading-container .loading-wrapper .progress .progress-bar {
   height: 100%;
   width: 0%;
-  background: repeating-linear-gradient(45deg, rgba(255, 215, 0, 0.75), rgb(255, 215, 0) 15px, rgb(0, 0, 0) 10px, rgb(0, 0, 0) 20px);
+  background: repeating-linear-gradient(45deg, rgba(255, 215, 0, 0.5), rgb(255, 215, 0) 10px, rgba(255, 0, 0, 0.5) 10px, rgba(255, 0, 0, 0.5) 20px);
   animation: fill-bar 2s infinite;
 }
 .loading-container .loading-wrapper .progress .progress-info {
@@ -1015,34 +1010,90 @@ body .site-title {
     transform: translateY(0px);
   }
 }
-/* Animation property */
-.socials {
+.socials-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: calc(50% - 7rem);
+  left: 1rem;
+  opacity: 1;
   z-index: 99;
-  animation: fade-in 2s ease;
-  overflow: hidden;
+  height: 35vh;
+}
+.socials-container .socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  left: 3rem;
-  top: calc(50% - 2rem);
-  height: 4rem;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  animation: fade-in 2s ease;
+  transition: 0.5s;
+  height: 0vh;
   width: 5rem;
   letter-spacing: 1px;
   background: linear-gradient(30deg, transparent, rgba(0, 0, 0, 0.5), transparent);
   border: none;
-  border-top: 3px solid red;
-  border-bottom: 3px solid red;
+  border-top: 3px solid gold;
+  border-bottom: 3px solid gold;
   border-radius: 0.2rem;
-  color: red;
+  color: gold;
+  text-shadow: 0 0 1px gold;
   font-size: 1.2rem;
   transform-origin: 50% 5rem;
 }
-.socials span {
+.socials-container .socials p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 1.25rem;
+  top: 0;
   left: 0;
   animation: wiggle 2s linear infinite;
   animation-delay: 3s;
   width: 100%;
+  margin: 0.25rem 0;
+  padding: 0;
+}
+.socials-container .socials:hover {
+  border-top: 3px solid rgba(255, 217, 0, 0.5);
+  border-bottom: 3px solid rgba(255, 217, 0, 0.5);
+  color: rgba(255, 217, 0, 0.5);
+  text-shadow: 0 0 1px rgba(255, 217, 0, 0.5);
+  transition: 1s;
   height: 100%;
+  transition-delay: 0.25s;
+  cursor: crosshair;
+}
+.socials-container .socials:hover .socials-icons {
+  width: 100%;
+  transition: 1s;
+  transition-delay: 1s;
+  height: 100%;
+  box-shadow: 0 0 5px gold inset;
+}
+.socials-container .socials .socials-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  transition: 1s;
+  width: 100%;
+  height: 0;
+  padding-bottom: 1rem;
+}
+.socials-container .socials .socials-icons i {
+  margin: 1rem 0;
+  transition: 0.5s;
+  transform: scale(1.5);
+}
+.socials-container .socials .socials-icons i:hover {
+  transform: scale(1.75);
 }
 
 /* Keyframes */
@@ -1174,7 +1225,6 @@ body .site-title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 2rem;
 }
 .site-header .site-branding .custom-logo-link {
   display: flex;
@@ -1492,14 +1542,6 @@ body .site-title {
     opacity: 0.5;
   }
 }
-.about-container {
-  width: 100%;
-  height: 100vh;
-  background: #000;
-  overflow: hidden;
-  display: none;
-}
-
 .about-container {
   width: 100vw;
   height: 100vh;

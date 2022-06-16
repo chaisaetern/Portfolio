@@ -1,35 +1,96 @@
-/* Animation property */
-.socials {
-    z-index: 99;
-    animation: fade-in 2s ease;
-    overflow: hidden;
-    position: absolute;
-        left: 3rem;
-        top: calc(50% - 2rem);
-    
-    height: 4rem;
-    width: 5rem;
-    letter-spacing: 1px;
-    
-    background: linear-gradient(30deg, transparent, 
-    rgba(0, 0, 0, 0.5), transparent);
 
-    border: none;
-    border-top: 3px solid red;
-    border-bottom: 3px solid red;
-    border-radius: 0.2rem;
-    color: red;
-    font-size: 1.2rem;
-    transform-origin: 50% 5rem;
-    span {
+
+.socials-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+        top: calc(50% - 7rem);
+        left: 1rem;
+    opacity: 1;
+    z-index: 99;
+    height: 35vh;
+    .socials {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: absolute;
-            top: 1.25rem;
+            top: 0;
             left: 0;
-        animation: wiggle 2s linear infinite;
-        animation-delay: 3s;
-        width: 100%;
-        height: 100%;
+        z-index: 999;
+        animation: fade-in 2s ease;
+        transition: 0.5s;
+        
+        // height: 3.75vh;
+        height: 0vh;
+        width: 5rem;
+        letter-spacing: 1px;
+        
+        background: linear-gradient(30deg, transparent, 
+        rgba(0, 0, 0, 0.5), transparent);
+        
+        border: none;
+        border-top: 3px solid gold;
+        border-bottom: 3px solid gold;
+        border-radius: 0.2rem;
+        color: gold;
+        text-shadow: 0 0 1px gold;
+        font-size: 1.2rem;
+        transform-origin: 50% 5rem;
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+                top: 0;
+                left: 0;
+            animation: wiggle 2s linear infinite;
+            animation-delay: 3s;
+            width: 100%;
+            margin: 0.25rem 0;
+            padding: 0;
+        }
+        &:hover {
+            border-top: 3px solid rgba(255, 217, 0, 0.5);
+            border-bottom: 3px solid rgba(255, 217, 0, 0.5);
+            color:rgba(255, 217, 0, 0.5);
+            text-shadow: 0 0 1px rgba(255, 217, 0, 0.5);;
+            transition: 1s;
+            height: 100%;
+            transition-delay: 0.25s;
+            cursor: crosshair;
+            .socials-icons {
+                width: 100%;
+                transition: 1s;
+                transition-delay: 1s;
+                height: 100%;
+                // border: 1px solid gold;
+                box-shadow: 0 0 5px gold inset;
+            }
+        }
+        .socials-icons {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            overflow: hidden;
+            transition: 1s;
+            width: 100%;
+            height: 0;
+            padding-bottom: 1rem;
+            i {
+                margin: 1rem 0;
+                transition: 0.5s;
+                transform: scale(1.5);
+                &:hover {
+                    transform: scale(1.75);
+                }
+            }
+        }
     }
+
 }
   
   /* Keyframes */

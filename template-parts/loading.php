@@ -8,15 +8,12 @@
 ?>
 <div class="loading-container">
 
-    <img class="blend" src="https://c.tenor.com/nUYItKfH8IQAAAAd/detective-pikachu-coffee.gif" alt="">
+    <img class="blend" src="<?php the_field('loading_icon'); ?>" alt="">
     
     <div class="loading-wrapper">
 
 
-        <!-- <h2>
-            <span>
-                <img src="https://assets.bigcartel.com/product_images/321147522/giphy-3.gif?auto=format&fit=max&w=1200" alt="">
-            </span>
+        <h2>
             <span>L</span>
             <span>o</span>
             <span>a</span>
@@ -27,13 +24,13 @@
             <span>.</span>
             <span>.</span>
             <span>.</span>
-        </h2> -->
+        </h2>
 
         <div class="progress"> 
             <div class="progress-bar"></div>
 
             <div class="progress-info">
-                <img src="https://i.giphy.com/media/kuWN0iF9BLQKk/giphy.webp" alt="">
+                <img src="<?php the_field('loading_bar_icon'); ?>" alt="">
             </div>
         </div>
   

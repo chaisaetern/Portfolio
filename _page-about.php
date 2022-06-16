@@ -9,12 +9,10 @@
 <?php get_header(); ?>
 
     <?php get_template_part('template-parts/loading') ?>
-
+    <?php get_template_part('template-parts/socials') ?>
     
     <div class="about-container">
-        
-        <?php get_template_part('template-parts/socials') ?>
-
+            
     </div>
 
 <?php get_footer(); ?>

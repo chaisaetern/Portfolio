@@ -46,12 +46,6 @@
                     .letter {
                         margin: 0;
                         padding: 0;
-                        // @for $i from 1 through 10 {
-                        //     &:nth-child(3n + #{$i}) {
-                        //         animation: wobble 0.5s infinite alternate;
-                        //         animation-delay: calc($i / 0.35) + -1s;
-                        //     }
-                        // }
                     }
                 }
             }
@@ -75,15 +69,6 @@
         }
     }
 }
-
-// @keyframes wobble {
-//     0%, 100% {
-//         transform: scale(0.98);
-//     }
-//     50% {
-//         transform: scale(1);
-//     }
-// }
 
 // Page fade into view
 @keyframes fade-in {

@@ -7,4 +7,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fade-in 1s ease-in-out both;
+    animation-delay: 2s;
+    transition: 2s;
+    transition-delay: 2.25s;
+    letter-spacing: 2px;
+    padding: 2rem;
+    .about-bg {
+        width: fit-content;
+        max-width: 35vw;
+        height: 50vh;
+        max-height: 50vh;
+        // border: 1px solid red;
+    }
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 5rem;
+        .about-info {
+            width: 35vw;
+            display: flex;
+        }
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

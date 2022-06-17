@@ -1,9 +1,10 @@
 
+
 .socials-container {
-    @include flex;
-    @include flex-direction(row);
-    @include justify-content(center);
-    @include align-items(center);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     position: fixed;
         top: calc(50% - 7rem);
         left: 1rem;
@@ -11,10 +12,10 @@
     z-index: 99;
     height: 345px;
     .socials {
-        @include flex;
-        @include flex-direction(column);
-        @include justify-content(center);
-        @include align-items(center);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: absolute;
             top: 0;
             left: 0;
@@ -40,9 +41,9 @@
         transform-origin: 50% 5rem;
         p {
             text-align: center;
-            @include flex;
-            @include justify-content(center);
-            @include align-items(center);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: absolute;
                 top: 0;
                 left: 0;
@@ -93,10 +94,10 @@
             }
         }
         .socials-icon-wrapper {
-            @include flex;
-            @include flex-direction(column);
-            @include justify-content(center);
-            @include align-items(center);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             transition: 1s;
             width: 100%;
             height: 100%;
@@ -106,9 +107,9 @@
            .socials-icon {
                 margin: 1rem 0;
                 z-index: 999;
-                @include flex;
-                @include justify-content(center);
-                @include align-items(center);
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 width: 100%;
                 overflow: hidden;
                 .socials-desc {
@@ -121,10 +122,10 @@
                         left: 4rem;
                 }
                 .socials-link {
-                    @include flex;
-                    @include flex-direction(row);
-                    @include justify-content(center);
-                    @include align-items(center);
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
                     color: gold;
                     width: 100%;
                     height: 0;

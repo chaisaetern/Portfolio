@@ -955,7 +955,7 @@ body .site-title {
 .loading-container .loading-wrapper .progress .progress-bar {
   height: 100%;
   width: 0%;
-  background: repeating-linear-gradient(45deg, rgba(255, 215, 0, 0.5), rgb(255, 215, 0) 10px, rgba(255, 0, 0, 0.5) 10px, rgba(255, 0, 0, 0.5) 20px);
+  background: repeating-linear-gradient(45deg, rgba(255, 215, 0, 0.5), rgb(255, 215, 0) 15px, rgba(0, 0, 0, 0.5) 10px, rgba(0, 0, 0, 0.5) 20px);
   animation: fill-bar 2s ease both;
 }
 .loading-container .loading-wrapper .progress .progress-info {
@@ -1062,7 +1062,8 @@ body .site-title {
   margin: 0.25rem 0;
   padding: 0;
   opacity: 1;
-  transition: 1s;
+  transition: 0.5s;
+  transition-delay: 0.5s;
 }
 .socials-container .socials:hover {
   height: 100%;
@@ -1073,10 +1074,12 @@ body .site-title {
 .socials-container .socials:hover .socials-icon {
   height: 100%;
   transition: 1s;
+  transition-delay: 2s;
 }
 .socials-container .socials:hover .socials-icon:hover .socials-desc {
   opacity: 1;
-  display: block;
+  display: inline-block;
+  width: 7rem;
   transition: 0.5s;
   letter-spacing: 5px;
   animation: letter-space 1s ease both;
@@ -1095,6 +1098,7 @@ body .site-title {
 }
 .socials-container .socials:hover p {
   opacity: 0;
+  transition: 0.25s;
 }
 .socials-container .socials .socials-icon-wrapper {
   display: flex;
@@ -1121,7 +1125,6 @@ body .site-title {
   font-family: "Kaushan Script", cursive;
   opacity: 0;
   display: none;
-  width: 7rem;
   font-size: 0.8rem;
   position: absolute;
   left: 4rem;
@@ -1403,6 +1406,7 @@ body .site-title {
 }
 .site-header .main-navigation .menu .menu-item a:hover {
   transition-delay: 0.5s;
+  box-shadow: 180px 0px 0px rgb(255, 217, 0) inset;
   background: rgba(255, 217, 0, 0.95);
 }
 .site-header .main-navigation .menu .menu-item a:hover .link-text {

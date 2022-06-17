@@ -53,7 +53,8 @@
             margin: 0.25rem 0;
             padding: 0;
             opacity: 1;
-            transition: 1s;
+            transition: 0.5s;
+            transition-delay: 0.5s;
         }
         &:hover {
             height: 100%;
@@ -63,10 +64,12 @@
             .socials-icon {
                 height: 100%;
                 transition: 1s;
+                transition-delay: 2s;
                 &:hover {
                     .socials-desc {
                         opacity: 1;
-                        display: block;
+                        display: inline-block;
+                        width: 7rem;
                         transition: 0.5s;
                         letter-spacing: 5px;
                         animation: letter-space 1s ease both;
@@ -87,6 +90,7 @@
             }
             p {
                 opacity: 0;
+                transition: 0.25s;
             }
         }
         .socials-icon-wrapper {
@@ -112,7 +116,7 @@
                     font-family: 'Kaushan Script', cursive;
                     opacity: 0;
                     display: none;
-                    width: 7rem;
+                    // width: 7rem;
                     font-size: 0.8rem;
                     position: absolute;
                         left: 4rem;

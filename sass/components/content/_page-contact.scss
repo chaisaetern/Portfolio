@@ -6,6 +6,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fade-in 1s ease-in-out both;
+    animation-delay: 2s;
+    transition: 2s;
+    transition-delay: 0.5s;
+    letter-spacing: 2px;
+    // padding: 2rem;
+    .contact-bg {
+        width: 100%;
+        height: auto;
+        min-width: 1600px;
+        filter: brightness(0.5);
+        position: fixed;
+    }
     .coming-soon {
         width: 100%;
         height: 100%;
@@ -14,12 +27,26 @@
         justify-content: center;
         align-items: center;
         gap: 2rem;
+        position: absolute;
+            top: 7.5rem;
+        mix-blend-mode: overlay;
         .coming {
-            font-size: 10rem;
+            font-family: 'Kaushan Script', cursive;
+            font-size: calc(1rem + 5vw);
+            text-shadow: 0 0 5px #fff;
             color: #fff;
             &:nth-child(2) {
-                color: #f00;
+                color: gold;
             }
         }
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

@@ -8,10 +8,12 @@
 ?>
 <?php get_header(); ?>
 
+    <?php get_template_part('template-parts/loading'); ?>
+    <?php get_template_part('template-parts/socials'); ?>
+
     <div class="contact-container">
 
-        <?php get_template_part('template-parts/loading') ?>
-        <?php get_template_part('template-parts/socials') ?>
+        <img src="<?php the_field('contact_bg'); ?>" alt="" class="contact-bg">
         
         <div class="coming-soon">
             <h2 class="coming">COMING</h2>

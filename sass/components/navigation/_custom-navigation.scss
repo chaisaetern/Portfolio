@@ -5,6 +5,7 @@ $primary_rgba: rgba(255, 217, 0, 0.95);
 
 
 .site-header {
+    mix-blend-mode: exclusion;
     // animation: fade 2s ease-in-out;
     animation: slide-down 1s ease-in-out both, fade 1.5s ease-in;
     width: 100vw;

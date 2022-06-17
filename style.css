@@ -1069,11 +1069,12 @@ body .site-title {
   height: 100%;
   transition: 1s;
   transition-delay: 0.25s;
-  cursor: crosshair;
 }
 .socials-container .socials:hover .socials-icon {
   height: 100%;
-  transition: 1s;
+  animation: fade-in 2s ease both;
+  animation-delay: 1s;
+  transition: 0.5s;
   transition-delay: 2s;
 }
 .socials-container .socials:hover .socials-icon:hover .socials-desc {
@@ -1283,6 +1284,7 @@ body .site-title {
 }
 
 .site-header {
+  mix-blend-mode: exclusion;
   animation: slide-down 1s ease-in-out both, fade 1.5s ease-in;
   width: 100vw;
   display: flex;
@@ -1665,6 +1667,18 @@ body .site-title {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fade-in 1s ease-in-out both;
+  animation-delay: 2s;
+  transition: 2s;
+  transition-delay: 0.5s;
+  letter-spacing: 2px;
+}
+.contact-container .contact-bg {
+  width: 100%;
+  height: auto;
+  min-width: 1600px;
+  filter: brightness(0.5);
+  position: fixed;
 }
 .contact-container .coming-soon {
   width: 100%;
@@ -1674,15 +1688,28 @@ body .site-title {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  position: absolute;
+  top: 7.5rem;
+  mix-blend-mode: overlay;
 }
 .contact-container .coming-soon .coming {
-  font-size: 10rem;
+  font-family: "Kaushan Script", cursive;
+  font-size: calc(1rem + 5vw);
+  text-shadow: 0 0 5px #fff;
   color: #fff;
 }
 .contact-container .coming-soon .coming:nth-child(2) {
-  color: #f00;
+  color: gold;
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* Comments
 --------------------------------------------- */
 .comment-content a {

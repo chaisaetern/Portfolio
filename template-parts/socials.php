@@ -11,7 +11,7 @@
     
     <div class="socials">
 
-        <p>"Hey!"</p>
+        <p>"Hover Me!"</p>
 
         <div class="socials-icon-wrapper">
 

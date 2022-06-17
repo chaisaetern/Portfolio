@@ -1284,7 +1284,6 @@ body .site-title {
 }
 
 .site-header {
-  mix-blend-mode: exclusion;
   animation: slide-down 1s ease-in-out both, fade 1.5s ease-in;
   width: 100vw;
   display: flex;
@@ -1323,6 +1322,7 @@ body .site-title {
 }
 .site-header .main-navigation {
   width: 100%;
+  mix-blend-mode: exclusion;
 }
 .site-header .main-navigation .menu {
   gap: 0.5rem;
@@ -1454,6 +1454,7 @@ body .site-title {
   }
 }
 .toggled {
+  mix-blend-mode: normal;
   max-width: 38.4375rem;
   height: 100vh;
   display: flex;
@@ -1464,13 +1465,12 @@ body .site-title {
   position: fixed;
   top: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.95) !important;
   background-size: auto 100%;
   background-position: top;
   background-repeat: no-repeat;
   transition: 0.5s;
-  z-index: 9999999;
-  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  z-index: 9999999 !important;
 }
 .toggled .menu-item {
   margin: 4rem 0;
@@ -1630,17 +1630,19 @@ body .site-title {
   animation: fade-in 1s ease-in-out both;
   animation-delay: 2s;
   transition: 2s;
-  transition-delay: 2.25s;
+  transition-delay: 0.25s;
   letter-spacing: 2px;
   padding: 2rem;
 }
 .about-container .about-bg {
-  width: fit-content;
-  max-width: 35vw;
+  min-width: 600px;
   height: 50vh;
   max-height: 50vh;
+  position: absolute;
+  filter: brightness(0.55);
 }
 .about-container .about-content {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1670,13 +1672,12 @@ body .site-title {
   animation: fade-in 1s ease-in-out both;
   animation-delay: 2s;
   transition: 2s;
-  transition-delay: 0.5s;
   letter-spacing: 2px;
 }
 .contact-container .contact-bg {
   width: 100%;
   height: auto;
-  min-width: 1600px;
+  min-width: calc(112.5rem + 2vh);
   filter: brightness(0.5);
   position: fixed;
 }
@@ -1688,7 +1689,7 @@ body .site-title {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  position: absolute;
+  position: fixed;
   top: 7.5rem;
   mix-blend-mode: overlay;
 }

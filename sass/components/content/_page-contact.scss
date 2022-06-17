@@ -9,13 +9,13 @@
     animation: fade-in 1s ease-in-out both;
     animation-delay: 2s;
     transition: 2s;
-    transition-delay: 0.5s;
+    // transition-delay: 0.25s;
     letter-spacing: 2px;
-    // padding: 2rem;
     .contact-bg {
         width: 100%;
         height: auto;
-        min-width: 1600px;
+        // min-height: 800px;
+        min-width: calc(112.5rem + 2vh);
         filter: brightness(0.5);
         position: fixed;
     }
@@ -27,7 +27,7 @@
         justify-content: center;
         align-items: center;
         gap: 2rem;
-        position: absolute;
+        position: fixed;
             top: 7.5rem;
         mix-blend-mode: overlay;
         .coming {

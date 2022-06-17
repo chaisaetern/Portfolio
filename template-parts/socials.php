@@ -13,12 +13,39 @@
 
         <p>"Hey!"</p>
 
-        <div class="socials-icons">
-            <i class="fa-brands fa-steam-square"></i>
-            <i class="fa-brands fa-discord"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-github-square"></i>
-            <i class="fa-solid fa-envelope-open-text"></i>
+        <div class="socials-icon-wrapper">
+
+            <div class="socials-icon">
+                <span class="socials-desc">Steam</span>
+                <a class="socials-link" href="#">
+                    <i class="fa-brands fa-steam-square"></i>
+                </a>
+            </div>
+            <div class="socials-icon">
+                <span class="socials-desc">Discord</span>
+                <a class="socials-link" href="#">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+            </div>
+            <div class="socials-icon">
+                <span class="socials-desc">Linked In</span>
+                <a class="socials-link" href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="socials-icon">
+                <span class="socials-desc">Github</span>
+                <a class="socials-link" href="#">
+                    <i class="fa-brands fa-github-square"></i>
+                </a>
+            </div>
+            <div class="socials-icon">
+                <span class="socials-desc">Email</span>
+                <a class="socials-link" href="#">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                </a>
+            </div>
+
         </div>
 
     </div>

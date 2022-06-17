@@ -8,7 +8,7 @@
 ?>
 <div class="loading-container">
 
-    <img class="blend" src="<?php the_field('loading_icon'); ?>" alt="">
+    <img class="loading-icon" src="<?php the_field('loading_icon'); ?>" alt="">
     
     <div class="loading-wrapper">
 
@@ -30,7 +30,7 @@
             <div class="progress-bar"></div>
 
             <div class="progress-info">
-                <img src="<?php the_field('loading_bar_icon'); ?>" alt="">
+                <img class="loading-bar-icon" src="<?php the_field('loading_bar_icon'); ?>" alt="">
             </div>
         </div>
   

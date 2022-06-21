@@ -1408,7 +1408,6 @@ body .site-title {
 }
 .site-header .main-navigation .menu .menu-item a:hover {
   transition-delay: 0.5s;
-  box-shadow: 180px 0px 0px rgb(255, 217, 0) inset;
   background: rgba(255, 217, 0, 0.95);
 }
 .site-header .main-navigation .menu .menu-item a:hover .link-text {
@@ -1632,26 +1631,48 @@ body .site-title {
   transition: 2s;
   transition-delay: 0.25s;
   letter-spacing: 2px;
-  padding: 2rem;
+  padding: 0 5rem;
 }
 .about-container .about-bg {
-  min-width: 600px;
-  height: 50vh;
-  max-height: 50vh;
-  position: absolute;
-  filter: brightness(0.55);
+  width: 100%;
+  position: fixed;
+  filter: brightness(0.25);
 }
 .about-container .about-content {
   z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  padding: 0 5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  transition: 0.5s;
 }
 .about-container .about-content .about-info {
-  width: 35vw;
   display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  height: auto;
+}
+.about-container .about-content .about-info .about-info-content {
+  width: calc(40vw + 10rem);
+  max-width: 40vw;
+  text-align: center;
+}
+.about-container .about-content .about-info .about-img-portfolio {
+  width: calc(25vw + 10rem);
+  max-width: 25vw;
+  height: auto;
+  border-radius: 8px;
+}
+.about-container .about-content .about-info .about-img-portfolio .about-img {
+  width: 100%;
+  height: auto;
 }
 
 @keyframes fade-in {

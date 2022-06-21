@@ -132,7 +132,7 @@ $primary_rgba: rgba(255, 217, 0, 0.95);
                     }
                     &:hover {
                         transition-delay: 0.5s;
-                        box-shadow: 180px 0px 0px $primary inset;
+                        // box-shadow: 180px 0px 0px $primary inset;
                         background: $primary_rgba;
                         .link-text {
                             color: #000;

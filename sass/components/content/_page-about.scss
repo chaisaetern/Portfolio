@@ -12,26 +12,46 @@
     transition: 2s;
     transition-delay: 0.25s;
     letter-spacing: 2px;
-    padding: 2rem;
+    padding: 0 5rem;
     .about-bg {
-        // width: calc(25vw + 5rem);
-        min-width: 600px;
-        height: 50vh;
-        max-height: 50vh;
-        position: absolute;
-        // border: 1px solid red;
-        filter: brightness(0.55);
+        width: 100%;
+        position: fixed;
+        filter: brightness(0.25);
     }
     .about-content {
         z-index: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
-        padding: 0 5rem;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        transition: 0.5s;
         .about-info {
-            width: 35vw;
             display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            width: 100%;
+            height: auto;
+            .about-info-content {
+                width: calc(40vw + 10rem);
+                max-width: 40vw;
+                text-align: center;
+            }
+            .about-img-portfolio {
+                width: calc(25vw + 10rem);
+                max-width: 25vw;
+                height: auto;
+                border-radius: 8px;
+                .about-img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
     }
 }

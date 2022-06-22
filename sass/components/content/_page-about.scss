@@ -5,52 +5,45 @@
     height: 100vh;
     background: transparent;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     animation: fade-in 1s ease-in-out both;
     animation-delay: 2s;
-    transition: 2s;
+    transition: 0.5s;
     transition-delay: 0.25s;
     letter-spacing: 2px;
-    padding: 0 5rem;
-    .about-bg {
-        width: 100%;
-        position: fixed;
-        filter: brightness(0.25);
+    padding-top: 12rem;
+    position: relative;
+        top: 0;
+        left: -1rem;
+    
+    .about-quote-block {
+        width: calc(35vw + 10rem);
+        background: rgba($color: #000000, $alpha: 0.75);
+        // border-radius: 8px;
+        text-align: center;
+        color: rgb(0, 255, 242);
+        font-size: 0.9rem;
+        padding-left: 1.25rem;
+        // box-shadow: 0 0 5px rgb(0, 255, 242) inset;
+        h2 {
+            font-family: 'Kaushan Script', cursive;
+        }
     }
-    .about-content {
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+    .about {
+        margin-top: 3rem;
         width: 100%;
-        height: auto;
-        transition: 0.5s;
-        .about-info {
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            width: 100%;
-            height: auto;
-            .about-info-content {
-                width: calc(40vw + 10rem);
-                max-width: 40vw;
-                text-align: center;
-            }
-            .about-img-portfolio {
-                width: calc(25vw + 10rem);
-                max-width: 25vw;
+        height: 40vh;
+        .about-img-container {
+            max-width: 30rem;
+            // height: inherit;
+            position: relative;
+            .about-img {
+                width: 100%;
                 height: auto;
                 border-radius: 8px;
-                .about-img {
-                    width: 100%;
-                    height: auto;
-                }
+                box-shadow: 0 0 5px rgb(0, 0, 0);
             }
         }
     }

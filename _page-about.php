@@ -12,21 +12,16 @@
     <?php get_template_part('template-parts/socials') ?>
     
     <div class="about-container">
-
-        <img src="<?php the_field('about_bg'); ?>" alt="" class="about-bg">
-
-        <div class="about-content">
-            <div class="about-info">
-                <div class="about-img-portfolio">
-                    <img src="<?php the_field('about_img'); ?>" alt="" class="about-img">
-                </div>
-                <div class="about-info-content">
-                    <h2 class="about-title">About Me</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor facilis qui reiciendis placeat cupiditate, illo provident nam maxime odit quaerat ex consequuntur error. Illo omnis culpa, voluptatibus dolore et repellendus!</p>
-                </div>
-            </div>
+        
+        <div class="about-quote-block">
+            <h2 class="about-quote">"My life is a movie even Hollywood can't produce."</h2>
         </div>
 
+        <div class="about">
+            <div class="about-img-container">
+                <img src="<?php the_field('about_img'); ?>" alt="" class="about-img">
+            </div>
+        </div>
     </div>
 
 <?php get_footer(); ?>

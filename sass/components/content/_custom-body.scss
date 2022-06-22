@@ -8,11 +8,18 @@ body {
     justify-content: flex-start;
     align-items: center;
     overflow-x: hidden;
-    background-color: #000;
+    background: linear-gradient(
+        45deg,
+        rgba(0,0,0,1),
+        rgb(2, 3, 12),
+        rgba(0,0,0,1),
+        rgba(0,0,0,1)
+    );
     background-repeat: no-repeat;
     background-size: cover;
     transition: 2s;
-    
+    top: 0;
+    left: 0;
     h1, h2, h3, h4 {
         font-family: "Roboto Flex", sans-serif;
     }

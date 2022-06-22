@@ -13,12 +13,13 @@ body {
     align-items: center;
     overflow-x: hidden;
     margin-bottom: 0 !important;
-    background: linear-gradient(
-        75deg,
-        $primary,
-        $secondary,
-        $tertiary,
-    );
+    // background: linear-gradient(
+    //     75deg,
+    //     $primary,
+    //     $secondary,
+    //     $tertiary,
+    // );
+    background: #000;
     background-repeat: no-repeat;
     background-size: cover;
     transition: 2s;

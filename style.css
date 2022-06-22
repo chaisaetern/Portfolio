@@ -634,7 +634,7 @@ body {
   align-items: center;
   overflow-x: hidden;
   margin-bottom: 0 !important;
-  background: linear-gradient(75deg, #0c0206, #0b0313, #000000);
+  background: #000;
   background-repeat: no-repeat;
   background-size: cover;
   transition: 2s;
@@ -1031,20 +1031,20 @@ body .site-title {
   top: 0;
   left: 0;
   z-index: 999;
-  animation: fade-in 2s ease, slide-right 1s ease-in-out both;
+  animation: fade-in 1s ease, slide-right 1s ease-in-out both;
   animation-delay: 1s;
   transition: 0.5s;
   height: 0%;
   width: 5rem;
   letter-spacing: 1px;
-  background: linear-gradient(30deg, transparent, rgba(0, 0, 0, 0.5), transparent);
+  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(200, 0, 255, 0.05) 150px, rgb(0, 0, 0) 2px);
   border: none;
-  border-top: 3px solid rgb(0, 255, 242);
-  border-bottom: 3px solid rgb(0, 255, 242);
+  border-top: 3px solid rgb(200, 0, 255);
+  border-bottom: 3px solid rgb(200, 0, 255);
+  padding-bottom: 2rem;
   border-radius: 0.2rem;
-  color: rgb(0, 255, 242);
-  text-shadow: 0 0 1px rgb(0, 255, 242);
-  font-size: 1.2rem;
+  color: rgb(200, 0, 255);
+  text-shadow: 0 0 3px #000000;
   transform-origin: 50% 5rem;
 }
 .socials-container .socials p {
@@ -1134,7 +1134,7 @@ body .site-title {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: rgb(0, 255, 242);
+  color: rgb(200, 0, 255);
   width: 100%;
   height: 0;
   text-decoration: none;
@@ -1207,7 +1207,8 @@ body .site-title {
   border-top: 3px solid red;
   border-bottom: 3px solid red;
   color: red;
-  text-shadow: 0 0 1px red;
+  text-shadow: none;
+  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(255, 0, 0, 0.05) 150px, rgb(0, 0, 0) 2px);
 }
 .home .socials-container .socials .socials-link {
   color: red;
@@ -1627,7 +1628,7 @@ body .site-title {
 }
 .main-container .main-wrapper .bg-container .bg-img {
   width: 100%;
-  min-width: 1800px;
+  min-width: 2400px;
   height: auto;
   min-height: 100%;
   transition: 2s;
@@ -1638,11 +1639,11 @@ body .site-title {
   max-width: 50vw;
   position: absolute;
   top: 10rem;
-  left: 5rem;
+  right: 5rem;
   padding: 0 1rem;
   text-align: center;
   font-size: calc(1rem + 4vw);
-  color: black;
+  color: #000000;
   text-shadow: 0 0 5px red;
   font-family: "Kaushan Script", sans-serif;
 }
@@ -1652,9 +1653,9 @@ body .site-title {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  height: 50vh;
+  height: 30vh;
   width: 100%;
-  background: #000;
+  background: #000000;
 }
 
 @keyframes fade-in {
@@ -1667,18 +1668,17 @@ body .site-title {
 }
 @keyframes scaleUpDown {
   0%, 100% {
-    transform: scale(1) skew(-0.5deg, 0.5deg);
+    transform: scale(1);
     filter: brightness(0.55) opacity(0.8) blur(0px);
-    opacity: 1;
   }
   50% {
-    transform: scale(1.05) skew(0.5deg, -0.5deg);
+    transform: scale(1.05);
     filter: brightness(0.45) opacity(0.8) blur(0px);
-    opacity: 0.5;
   }
 }
 .about-container {
   width: 100vw;
+  height: 100vh;
   background: transparent;
   display: flex;
   flex-direction: column;

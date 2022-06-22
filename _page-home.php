@@ -17,14 +17,14 @@
 
     <div class="main-wrapper">
 
-        <div class="banner-container">
-            
-
-        </div>
-
         <div class="bg-container">
             <img class="bg-img" src="<?php the_field("background_image_1"); ?>" alt="">
+            <h2>"Turn 7 to a 14, Double Up." -Nipsey Hussle</h2>
         </div>
+        
+        <div class="hero-container">
+        </div>
+        
     </div>
 </div>
 

@@ -8,7 +8,7 @@
 ?>
 <div class="loading-container">
 
-    <img class="loading-icon" src="<?php the_field('loading_icon'); ?>" alt="">
+    <!-- <img class="loading-icon" src="<?php the_field('loading_icon'); ?>" alt=""> -->
     
     <div class="loading-wrapper">
 

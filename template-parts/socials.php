@@ -11,7 +11,7 @@
     
     <div class="socials">
 
-        <p>Socials</p>
+        <p>"Socials"</p>
 
         <div class="socials-icon-wrapper">
 

@@ -1,71 +1,58 @@
 
+
+
 .main-container {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     transition: 2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    @include flex(column, center, center, false);
     .main-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex(column, center, flex-start, false);
         width: 100%;
         height: 100%;
         opacity: 0;
         animation: fade-in 2s ease-in both;
         animation-delay: 2s;
-        position: absolute;
-        .banner-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            .banner-title {
-                display: inline-block;
-                width: 100%;
-                animation: fade-in 2s ease both;
-                animation-delay: 3s;
-                position: relative;
-                    bottom: -15rem;
-                .typed-out {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    width: calc(100% + 5vw);
-                    overflow: hidden;
-                    white-space: nowrap;
-                    font-size: calc(5rem + 12.5vw);
-                    color: #000;
-                    text-shadow: 0 0 5px red;
-                    padding: 0 1rem;
-                    .letter {
-                        margin: 0;
-                        padding: 0;
-                    }
-                }
-            }
-        }
         .bg-container {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 100%;
+            height: 100vh;
+            @include flex(column, center, center, false);
             overflow: hidden;
-            position: absolute;
-                top: 0;
-                left: 0;
             .bg-img {
                 width: 100%;
+                min-width: 1800px;
                 height: auto;
+                min-height: 100%;
                 transition: 2s;
                 mix-blend-mode: difference;
                 animation: scaleUpDown 15s ease-in-out infinite;
             }
+            h2 {
+                max-width: 50vw;
+                position: absolute;
+                    top: 10rem;
+                    left: 5rem;
+                padding: 0 1rem;
+                text-align: center;
+                font-size: calc(1rem + 4vw);
+                color: black;
+                text-shadow: 0 0 5px red;
+                font-family: "Kaushan Script", sans-serif;
+            }
+        }
+        .hero-container {
+            @include flex(row, center, center, false);
+            height: 50vh;
+            width: 100%;
+            background: #000;
+            // h2 {
+            //     padding: 0 1rem;
+            //     text-align: center;
+            //     font-size: calc(1rem + 4vw);
+            //     color: none;
+            //     text-shadow: 0 0 5px #fff;
+            //     font-family: "Kaushan Script", sans-serif;
+            // }
         }
     }
 }
@@ -83,13 +70,13 @@
 // Scales the background image animation
 @keyframes scaleUpDown {
     0%, 100% {
-        transform: scale(1) skew(-0.5deg, 1deg);
+        transform: scale(1) skew(-0.5deg, 0.5deg);
         filter: brightness(0.55) opacity(0.8) blur(0px);
         opacity: 1;
     }
     50% {
-        transform: scale(1.1) skew(1deg, -0.5deg);
-        filter: brightness(0.65) opacity(0.8) blur(1px);
+        transform: scale(1.05) skew(0.5deg, -0.5deg);
+        filter: brightness(0.45) opacity(0.8) blur(0px);
         opacity: 0.5;
     }
 }

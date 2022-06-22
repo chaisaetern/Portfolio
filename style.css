@@ -619,22 +619,25 @@ textarea {
 --------------------------------------------------------------*/
 /* Custom
 --------------------------------------------- */
+html {
+  background: #000;
+}
+
 body {
   font-family: "Roboto Flex", sans-serif;
   color: #fff;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   overflow-x: hidden;
-  background: linear-gradient(45deg, rgb(0, 0, 0), rgb(2, 3, 12), rgb(0, 0, 0), rgb(0, 0, 0));
+  margin-bottom: 0 !important;
+  background: linear-gradient(75deg, #0c0206, #0b0313, #000000);
   background-repeat: no-repeat;
   background-size: cover;
   transition: 2s;
-  top: 0;
-  left: 0;
 }
 body h1, body h2, body h3, body h4 {
   font-family: "Roboto Flex", sans-serif;
@@ -852,22 +855,16 @@ body .site-title {
 }
 .loading-container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   animation: vanish 1ms ease-in-out both;
   animation-delay: 2s;
-  position: absolute;
-}
-.loading-container .loading-icon {
-  border-radius: 5px;
-  width: 100%;
-  max-width: 20rem;
-  filter: brightness(0.75);
-  position: relative;
-  bottom: -5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 .loading-container .loading-wrapper {
   display: flex;
@@ -876,7 +873,7 @@ body .site-title {
   align-items: center;
   width: 50%;
   transition: 1s;
-  position: relative;
+  position: absolute;
 }
 .loading-container .loading-wrapper h2 {
   display: flex;
@@ -991,7 +988,7 @@ body .site-title {
     width: 0%;
   }
   to {
-    width: 100%;
+    width: 200%;
   }
 }
 @keyframes vanish {
@@ -1327,10 +1324,10 @@ body .site-title {
   width: 100%;
 }
 .site-header .site-branding .site-title a {
-  color: rgb(0, 255, 242);
+  color: rgb(201, 0, 174);
   font-size: calc(100% + 1rem);
   text-decoration: none;
-  text-shadow: 0 0 3px rgb(0, 255, 242);
+  text-shadow: 0 0 3px rgb(201, 0, 174);
 }
 .site-header .site-branding .site-description {
   display: none;
@@ -1353,7 +1350,7 @@ body .site-title {
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
-  text-shadow: 0 0 3px rgb(0, 255, 242);
+  text-shadow: 0 0 3px rgb(201, 0, 174);
   text-transform: uppercase;
   letter-spacing: 2px;
   background: linear-gradient(30deg, transparent, rgba(0, 0, 0, 0.5), transparent);
@@ -1375,13 +1372,13 @@ body .site-title {
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(30deg, transparent, rgba(0, 255, 242, 0.95), transparent);
+  background: linear-gradient(30deg, transparent, rgba(201, 0, 174, 0.95), transparent);
   transition: 0.5s;
   transition-delay: 0.5s;
 }
 .site-header .main-navigation .menu .menu-item a:hover:after {
   left: 100%;
-  background: linear-gradient(30deg, transparent, rgba(0, 255, 242, 0.95), transparent);
+  background: linear-gradient(30deg, transparent, rgba(201, 0, 174, 0.95), transparent);
 }
 .site-header .main-navigation .menu .menu-item a span {
   position: absolute;
@@ -1393,37 +1390,37 @@ body .site-title {
   left: 0;
   width: 0;
   height: 1px;
-  background: rgb(0, 255, 242);
+  background: rgb(201, 0, 174);
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(2) {
   top: 0;
   left: 0;
   width: 1px;
   height: 0;
-  background: rgb(0, 255, 242);
+  background: rgb(201, 0, 174);
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(3) {
   bottom: 0;
   right: 0;
   width: 0;
   height: 1px;
-  background: rgb(0, 255, 242);
+  background: rgb(201, 0, 174);
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(4) {
   bottom: 0;
   right: 0;
   width: 1px;
   height: 0;
-  background: rgb(0, 255, 242);
+  background: rgb(201, 0, 174);
 }
 .site-header .main-navigation .menu .menu-item a .link-text {
   font-weight: normal;
-  color: rgb(0, 255, 242);
+  color: rgb(201, 0, 174);
   transition-delay: 0.5s;
 }
 .site-header .main-navigation .menu .menu-item a:hover {
   transition-delay: 0.5s;
-  background: rgba(0, 255, 242, 0.95);
+  background: rgba(201, 0, 174, 0.95);
 }
 .site-header .main-navigation .menu .menu-item a:hover .link-text {
   color: #000;
@@ -1433,22 +1430,22 @@ body .site-title {
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(1) {
   width: 100%;
   transform: translateX(100%);
-  background: rgb(0, 255, 242);
+  background: rgb(201, 0, 174);
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(2) {
   height: 100%;
   transform: translateY(100%);
-  background: rgb(0, 255, 242);
+  background: rgb(201, 0, 174);
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(3) {
   width: 100%;
   transform: translateX(-100%);
-  background: rgb(0, 255, 242);
+  background: rgb(201, 0, 174);
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(4) {
   height: 100%;
   transform: translateY(-100%);
-  background: rgb(0, 255, 242);
+  background: rgb(201, 0, 174);
 }
 
 .home .site-header .site-branding .site-title {
@@ -1549,7 +1546,7 @@ body .site-title {
   font-size: 1.5rem !important;
 }
 .toggled .menu-item a:hover {
-  box-shadow: 0 0px 5px rgb(0, 255, 242) inset !important;
+  box-shadow: 0 0px 5px rgb(201, 0, 174) inset !important;
 }
 
 .menu-toggle {
@@ -1597,74 +1594,67 @@ body .site-title {
 }
 
 .main-container {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   transition: 2s;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  flex-wrap: nowrap;
 }
 .main-container .main-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
   width: 100%;
   height: 100%;
   opacity: 0;
   animation: fade-in 2s ease-in both;
   animation-delay: 2s;
-  position: absolute;
-}
-.main-container .main-wrapper .banner-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-.main-container .main-wrapper .banner-container .banner-title {
-  display: inline-block;
-  width: 100%;
-  animation: fade-in 2s ease both;
-  animation-delay: 3s;
-  position: relative;
-  bottom: -15rem;
-}
-.main-container .main-wrapper .banner-container .banner-title .typed-out {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: calc(100% + 5vw);
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: calc(5rem + 12.5vw);
-  color: #000;
-  text-shadow: 0 0 5px red;
-  padding: 0 1rem;
-}
-.main-container .main-wrapper .banner-container .banner-title .typed-out .letter {
-  margin: 0;
-  padding: 0;
 }
 .main-container .main-wrapper .bg-container {
-  height: 100%;
+  width: 100%;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 .main-container .main-wrapper .bg-container .bg-img {
   width: 100%;
+  min-width: 1800px;
   height: auto;
+  min-height: 100%;
   transition: 2s;
   mix-blend-mode: difference;
   animation: scaleUpDown 15s ease-in-out infinite;
+}
+.main-container .main-wrapper .bg-container h2 {
+  max-width: 50vw;
+  position: absolute;
+  top: 10rem;
+  left: 5rem;
+  padding: 0 1rem;
+  text-align: center;
+  font-size: calc(1rem + 4vw);
+  color: black;
+  text-shadow: 0 0 5px red;
+  font-family: "Kaushan Script", sans-serif;
+}
+.main-container .main-wrapper .hero-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 50vh;
+  width: 100%;
+  background: #000;
 }
 
 @keyframes fade-in {
@@ -1677,49 +1667,46 @@ body .site-title {
 }
 @keyframes scaleUpDown {
   0%, 100% {
-    transform: scale(1) skew(-0.5deg, 1deg);
+    transform: scale(1) skew(-0.5deg, 0.5deg);
     filter: brightness(0.55) opacity(0.8) blur(0px);
     opacity: 1;
   }
   50% {
-    transform: scale(1.1) skew(1deg, -0.5deg);
-    filter: brightness(0.65) opacity(0.8) blur(1px);
+    transform: scale(1.05) skew(0.5deg, -0.5deg);
+    filter: brightness(0.45) opacity(0.8) blur(0px);
     opacity: 0.5;
   }
 }
 .about-container {
   width: 100vw;
-  height: 100vh;
   background: transparent;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   animation: fade-in 1s ease-in-out both;
   animation-delay: 2s;
   transition: 0.5s;
   transition-delay: 0.25s;
   letter-spacing: 2px;
-  padding-top: 12rem;
   position: relative;
-  top: 0;
-  left: -1rem;
+  top: 12rem;
 }
 .about-container .about-quote-block {
-  width: calc(35vw + 10rem);
-  background: rgba(0, 0, 0, 0.75);
+  background: white;
   text-align: center;
   color: rgb(0, 255, 242);
+  color: #000;
   font-size: 0.9rem;
-  padding-left: 1.25rem;
+  padding: 0 1rem;
 }
 .about-container .about-quote-block h2 {
   font-family: "Kaushan Script", cursive;
 }
 .about-container .about {
-  margin-top: 3rem;
-  width: 100%;
   height: 40vh;
+  position: relative;
+  top: 3rem;
 }
 .about-container .about .about-img-container {
   max-width: 30rem;
@@ -1728,7 +1715,6 @@ body .site-title {
 .about-container .about .about-img-container .about-img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
   box-shadow: 0 0 5px rgb(0, 0, 0);
 }
 

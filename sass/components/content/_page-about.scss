@@ -30,6 +30,7 @@
             rgba(100,0,255, 0.1),
             rgba(0,0,0,1), 
         );
+        margin: 10rem 0 15rem 0;
         // ADDED CONTAINER TO RESIZE
         .profile-card-container {
             height: 25vh;
@@ -98,3 +99,21 @@
 }
 
 
+@media only screen and (max-width: 992px) {
+    .about-header {
+        flex-direction: column !important;
+        padding: 1rem 0 2rem 0;
+        margin-bottom: 10rem !important;
+        .profile-card-container {
+            height: 40vh !important;
+            justify-content: center !important;
+        }
+        .profile-bio {
+            align-items: center !important;
+            padding-left: 0 !important;
+            p {
+                min-width: 300px;
+            }
+        }
+    }
+}

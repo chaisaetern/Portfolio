@@ -13,8 +13,8 @@
         <?php get_template_part('template-parts/socials') ?>
         <div class="profile-content">
             <h3>Chai Saetern</h3>
-            <h5>Web Developer</h5>
-            <p>Wordpress front-end apprentice</p>
+            <h5>WordPress Web Developer</h5>
+            <p>Wordpress front-end developer</p>
         </div>
     </div>
 </div>

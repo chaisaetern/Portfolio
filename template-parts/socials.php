@@ -31,9 +31,9 @@
 
                 <span class="socials-desc"><?php echo $links[$i]['name']; ?></span>
 
-                <a class="socials-link" href="<?php echo $links[$i]['link'] ?>">
+                <a class="socials-link" href="<?php echo $links[$i]['link']; ?>">
 
-                    <i class="fa-brands <?php echo $links[$i]['class'] ?>"></i>
+                    <i class="fa-brands <?php echo $links[$i]['class']; ?>"></i>
 
                 </a>
 

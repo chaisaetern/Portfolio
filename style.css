@@ -1258,7 +1258,7 @@ body .site-title {
 }
 .profile-container .profile-card .profile-content {
   position: absolute;
-  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(100, 0, 255, 0.15), rgb(0, 0, 0));
+  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(15, 14, 36, 0.5), rgb(0, 0, 0));
   color: #fff;
   width: 100%;
   height: 100%;
@@ -1286,7 +1286,7 @@ body .site-title {
   height: 100%;
   z-index: -1;
   transition: 0.5s ease;
-  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(100, 0, 255, 0.15), rgb(0, 0, 0));
+  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(15, 14, 36, 0.5), rgb(0, 0, 0));
   position: absolute;
   bottom: 0.5rem;
   right: 0.5rem;
@@ -1297,7 +1297,7 @@ body .site-title {
   height: 100%;
   z-index: -1;
   transition: 0.5s ease;
-  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(100, 0, 255, 0.15), rgb(0, 0, 0));
+  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(15, 14, 36, 0.5), rgb(0, 0, 0));
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
@@ -1309,13 +1309,13 @@ body .site-title {
   position: absolute;
   bottom: 0.5rem;
   right: 0.5rem;
-  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(100, 0, 255, 0.15), rgb(0, 0, 0));
+  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(15, 14, 36, 0.5), rgb(0, 0, 0));
 }
 .profile-container .profile-card:hover::after {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
-  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(100, 0, 255, 0.15), rgb(0, 0, 0));
+  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(15, 14, 36, 0.5), rgb(0, 0, 0));
 }
 .profile-container .profile-card:hover {
   border: 2px solid red;
@@ -1458,7 +1458,7 @@ body .site-title {
   text-shadow: 0 0 3px rgb(100, 0, 255);
   text-transform: uppercase;
   letter-spacing: 2px;
-  background: linear-gradient(30deg, transparent, rgba(0, 0, 0, 0.5), transparent);
+  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(100, 0, 255, 0.05), rgb(0, 0, 0));
   transition: 1.5s;
 }
 .site-header .main-navigation .menu .menu-item a::before {

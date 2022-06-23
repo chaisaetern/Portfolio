@@ -64,8 +64,7 @@ $primary_rgba: rgba(100, 0, 255, 0.95);
                     text-shadow: 0 0 3px $primary;
                     text-transform: uppercase;
                     letter-spacing: 2px;
-                    background: linear-gradient(30deg, transparent, 
-                    rgba(0, 0, 0, 0.5), transparent);
+                    background: linear-gradient(45deg, rgba(0,0,0, 1), rgba(100,0,255, 0.05), rgba(0,0,0, 1));
                     transition: 1.5s;
                     &::before {
                         content: '';

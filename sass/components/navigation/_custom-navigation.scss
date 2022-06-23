@@ -1,7 +1,7 @@
 
 // $primary: #08fdd8;
-$primary: rgb(201, 0, 174);
-$primary_rgba: rgba(201, 0, 174, 0.95);
+$primary: rgb(200, 0, 255);
+$primary_rgba: rgba(200, 0, 255, 0.95);
 
 
 
@@ -14,7 +14,7 @@ $primary_rgba: rgba(201, 0, 174, 0.95);
     justify-content: space-between;
     align-items: center;
     padding: 2rem 2rem;
-    position: fixed;
+    position: absolute;
         top: 1.25rem;
         left: 0;
     z-index: 99999;

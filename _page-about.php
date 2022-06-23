@@ -12,6 +12,8 @@
     <?php get_template_part('template-parts/socials') ?>
     
     <div class="about-container">
+
+        <?php get_template_part('template-parts/profile-card') ?>
         
         <div class="about-quote-block">
             <h2 class="about-quote">"My life is a movie even Hollywood can't produce."</h2>

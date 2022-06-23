@@ -1015,11 +1015,12 @@ body .site-title {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: calc(50% - 7rem);
+  flex-wrap: nowrap;
+  position: absolute;
+  top: calc(25% - 10rem);
   left: 1rem;
   opacity: 1;
-  z-index: 99;
+  z-index: 99999;
   height: 345px;
 }
 .socials-container .socials {
@@ -1027,6 +1028,7 @@ body .site-title {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   position: absolute;
   top: 0;
   left: 0;
@@ -1037,7 +1039,7 @@ body .site-title {
   height: 0%;
   width: 5rem;
   letter-spacing: 1px;
-  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(200, 0, 255, 0.05) 150px, rgb(0, 0, 0) 2px);
+  background: linear-gradient(-45deg, rgb(0, 0, 0), rgba(200, 0, 255, 0.05) 150px, rgb(0, 0, 0) 2px);
   border: none;
   border-top: 3px solid rgb(200, 0, 255);
   border-bottom: 3px solid rgb(200, 0, 255);
@@ -1045,13 +1047,16 @@ body .site-title {
   border-radius: 0.2rem;
   color: rgb(200, 0, 255);
   text-shadow: 0 0 3px #000000;
+  font-size: 1.1rem;
   transform-origin: 50% 5rem;
 }
 .socials-container .socials p {
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   position: absolute;
   top: 0;
   left: 0;
@@ -1081,7 +1086,7 @@ body .site-title {
   display: inline-block;
   width: 7rem;
   transition: 0.5s;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   animation: letter-space 1s ease both;
   animation-delay: 0.5s;
 }
@@ -1105,6 +1110,7 @@ body .site-title {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   transition: 1s;
   width: 100%;
   height: 100%;
@@ -1116,8 +1122,10 @@ body .site-title {
   margin: 1rem 0;
   z-index: 999;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   width: 100%;
   overflow: hidden;
 }
@@ -1125,7 +1133,7 @@ body .site-title {
   font-family: "Kaushan Script", cursive;
   opacity: 0;
   display: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
   position: absolute;
   left: 4rem;
 }
@@ -1134,6 +1142,7 @@ body .site-title {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   color: rgb(200, 0, 255);
   width: 100%;
   height: 0;
@@ -1186,7 +1195,7 @@ body .site-title {
 }
 @keyframes letter-space {
   0%, 100% {
-    letter-spacing: 5px;
+    letter-spacing: 4px;
   }
   50% {
     letter-spacing: 0px;
@@ -1215,6 +1224,85 @@ body .site-title {
 }
 .home .socials-container .socials .socials-link i {
   color: red;
+}
+
+/* ==============================
+    Profile Card
+============================== */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 100vh;
+}
+.profile-container .profile-card {
+  position: relative;
+  height: 500px;
+  display: flex;
+  z-index: 1;
+}
+.profile-container .profile-card .profile-content {
+  position: absolute;
+  background: rgba(37, 35, 92, 0.5);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: center;
+  gap: 10px;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+.profile-container .profile-card .profile-content h3 {
+  text-transform: uppercase;
+}
+.profile-container .profile-card .profile-content p {
+  font-size: 0.9rem;
+  width: 80%;
+}
+.profile-container .profile-card::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: 0.5s ease;
+  background: rgba(37, 35, 92, 0.5);
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.profile-container .profile-card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: 0.5s ease;
+  background: rgba(37, 35, 92, 0.5);
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.profile-container .profile-card:hover .profile-content {
+  opacity: 1;
+}
+.profile-container .profile-card:hover::before {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background: rgba(37, 35, 92, 0.5);
+}
+.profile-container .profile-card:hover::after {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: rgba(37, 35, 92, 0.5);
 }
 
 /* Navigation
@@ -1304,7 +1392,7 @@ body .site-title {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 2rem;
-  position: fixed;
+  position: absolute;
   top: 1.25rem;
   left: 0;
   z-index: 99999;
@@ -1325,10 +1413,10 @@ body .site-title {
   width: 100%;
 }
 .site-header .site-branding .site-title a {
-  color: rgb(201, 0, 174);
+  color: rgb(200, 0, 255);
   font-size: calc(100% + 1rem);
   text-decoration: none;
-  text-shadow: 0 0 3px rgb(201, 0, 174);
+  text-shadow: 0 0 3px rgb(200, 0, 255);
 }
 .site-header .site-branding .site-description {
   display: none;
@@ -1351,7 +1439,7 @@ body .site-title {
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
-  text-shadow: 0 0 3px rgb(201, 0, 174);
+  text-shadow: 0 0 3px rgb(200, 0, 255);
   text-transform: uppercase;
   letter-spacing: 2px;
   background: linear-gradient(30deg, transparent, rgba(0, 0, 0, 0.5), transparent);
@@ -1373,13 +1461,13 @@ body .site-title {
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(30deg, transparent, rgba(201, 0, 174, 0.95), transparent);
+  background: linear-gradient(30deg, transparent, rgba(200, 0, 255, 0.95), transparent);
   transition: 0.5s;
   transition-delay: 0.5s;
 }
 .site-header .main-navigation .menu .menu-item a:hover:after {
   left: 100%;
-  background: linear-gradient(30deg, transparent, rgba(201, 0, 174, 0.95), transparent);
+  background: linear-gradient(30deg, transparent, rgba(200, 0, 255, 0.95), transparent);
 }
 .site-header .main-navigation .menu .menu-item a span {
   position: absolute;
@@ -1391,37 +1479,37 @@ body .site-title {
   left: 0;
   width: 0;
   height: 1px;
-  background: rgb(201, 0, 174);
+  background: rgb(200, 0, 255);
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(2) {
   top: 0;
   left: 0;
   width: 1px;
   height: 0;
-  background: rgb(201, 0, 174);
+  background: rgb(200, 0, 255);
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(3) {
   bottom: 0;
   right: 0;
   width: 0;
   height: 1px;
-  background: rgb(201, 0, 174);
+  background: rgb(200, 0, 255);
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(4) {
   bottom: 0;
   right: 0;
   width: 1px;
   height: 0;
-  background: rgb(201, 0, 174);
+  background: rgb(200, 0, 255);
 }
 .site-header .main-navigation .menu .menu-item a .link-text {
   font-weight: normal;
-  color: rgb(201, 0, 174);
+  color: rgb(200, 0, 255);
   transition-delay: 0.5s;
 }
 .site-header .main-navigation .menu .menu-item a:hover {
   transition-delay: 0.5s;
-  background: rgba(201, 0, 174, 0.95);
+  background: rgba(200, 0, 255, 0.95);
 }
 .site-header .main-navigation .menu .menu-item a:hover .link-text {
   color: #000;
@@ -1431,22 +1519,22 @@ body .site-title {
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(1) {
   width: 100%;
   transform: translateX(100%);
-  background: rgb(201, 0, 174);
+  background: rgb(200, 0, 255);
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(2) {
   height: 100%;
   transform: translateY(100%);
-  background: rgb(201, 0, 174);
+  background: rgb(200, 0, 255);
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(3) {
   width: 100%;
   transform: translateX(-100%);
-  background: rgb(201, 0, 174);
+  background: rgb(200, 0, 255);
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(4) {
   height: 100%;
   transform: translateY(-100%);
-  background: rgb(201, 0, 174);
+  background: rgb(200, 0, 255);
 }
 
 .home .site-header .site-branding .site-title {
@@ -1547,7 +1635,7 @@ body .site-title {
   font-size: 1.5rem !important;
 }
 .toggled .menu-item a:hover {
-  box-shadow: 0 0px 5px rgb(201, 0, 174) inset !important;
+  box-shadow: 0 0px 5px rgb(200, 0, 255) inset !important;
 }
 
 .menu-toggle {
@@ -1644,7 +1732,7 @@ body .site-title {
   text-align: center;
   font-size: calc(1rem + 4vw);
   color: #000000;
-  text-shadow: 0 0 5px red;
+  text-shadow: 0 0 5px blue;
   font-family: "Kaushan Script", sans-serif;
 }
 .main-container .main-wrapper .hero-container {

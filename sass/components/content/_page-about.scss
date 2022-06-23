@@ -1,5 +1,6 @@
 // 
 
+
 .about-container {
     width: 100vw;
     height: 100vh;
@@ -11,24 +12,63 @@
     animation: fade-in 1s ease-in-out both;
     animation-delay: 2s;
     transition: 0.5s;
-    transition-delay: 0.25s;
+    // transition-delay: 0.25s;
     letter-spacing: 2px;
     position: relative;
-        top: 12rem;
-        // left: -1rem;
-    
-    .about-quote-block {
-        // width: calc(35vw + 10rem);
-        background: rgba($color: #fff, $alpha: 1);
-        // border-radius: 8px;
-        text-align: center;
-        color: rgb(0, 255, 242);
-        color: #000;
-        font-size: 0.9rem;
-        padding: 0 1rem;
-        // box-shadow: 0 0 5px rgb(0, 255, 242) inset;
-        h2 {
-            font-family: 'Kaushan Script', cursive;
+        top: 15rem;
+    .about-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+        background: linear-gradient(
+            225deg, 
+            rgba(0,0,0,1), 
+            rgba(100,0,255, 0.1),
+            rgba(0,0,0,1), 
+        );
+        // ADDED CONTAINER TO RESIZE
+        .profile-card-container {
+            height: 25vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 50%;
+        }
+        .profile-bio {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: center;
+            padding-left: 2rem;
+            width: 50%;
+            height: 25vh;
+            h3 {
+                // width: 100%;
+                font-size: 2rem;
+                font-family: "Kaushan Script", sans-serif;
+                padding: 0 1rem;
+                border-right: 0.2rem solid rgba(255,0,0, 1);
+                border-radius: 5px;
+                text-shadow: 0 0 3px #fff;
+                span {
+                    z-index: -1;
+                    border-left: 1.2rem solid rgba(255,0,0, 1);
+                    position: relative;
+                    padding-left: 0.5rem;
+                    box-shadow: 0 0 5px #000;
+                    border-radius: 5px;
+                }
+            }
+            p {
+                width: calc(45% + 10vw);
+            }
         }
     }
     .about {
@@ -38,12 +78,10 @@
             top: 3rem;
         .about-img-container {
             max-width: 30rem;
-            // height: inherit;
             position: relative;
             .about-img {
                 width: 100%;
                 height: auto;
-                // border-radius: 8px;
                 box-shadow: 0 0 5px rgb(0, 0, 0);
             }
         }
@@ -58,3 +96,5 @@
         opacity: 1;
     }
 }
+
+

@@ -1,38 +1,37 @@
-$primary: rgb(200, 0, 255);
+$primary: rgb(255, 255, 255);
 
 .socials-container {
     @include flex(row, center, center, false);
     position: absolute;
-        top: calc(25% - 10rem);
+        top: calc(44% - 10rem);
         left: 1rem;
     opacity: 1;
     z-index: 99999;
     height: 345px;
+    // display: none;
     .socials {
         @include flex(column, center, center, false);
         position: absolute;
-            top: 0;
+            top: -1.25rem;
             left: 0;
         z-index: 999;
         animation: fade-in 1s ease, slide-right 1s ease-in-out both;
         animation-delay: 1s;
         transition: 0.5s;
-        
         height: 0%;
         width: 5rem;
         letter-spacing: 1px;
 
         background: linear-gradient(
-                    -45deg,
-                    rgba(0, 0, 0, 1),
-                    rgba(200, 0, 255, .05) 150px,
-                    rgba(0, 0, 0, 1) 2px,
+                    45deg,
+                    rgba(255, 0, 0, 0.1),
+                    rgba(200, 0, 255, 0.1),
+                    rgba(255, 0, 0, 0.1),
         );
         
         border: none;
-        border-top: 3px solid $primary;
-        border-bottom: 3px solid $primary;
-        padding-bottom: 2rem;
+        border-top: 2px solid red;
+        border-bottom: 2px solid red;
         border-radius: 0.2rem;
         color: $primary;
         text-shadow: 0 0 3px $tertiary;
@@ -52,6 +51,9 @@ $primary: rgb(200, 0, 255);
             opacity: 1;
             transition: 0.5s;
             transition-delay: 0.5s;
+            // font-family: "Kaushan Script", cursive;
+            font-family: 'Roboto Flex', sans-serif;
+            color: red;
         }
         &:hover {
             height: 100%;
@@ -66,12 +68,20 @@ $primary: rgb(200, 0, 255);
                 &:hover {
                     .socials-desc {
                         opacity: 1;
+                        animation: fade-in 1s ease both;
                         display: inline-block;
                         width: 7rem;
                         transition: 0.5s;
-                        letter-spacing: 3px;
                         animation: letter-space 1s ease both;
                         animation-delay: 0.5s;
+                        text-align: center;
+                        background: rgba(0, 0, 0, 0.85);
+                        border-radius: 8px;
+                        padding: 0.25rem 0;
+                        font-style: italic;
+                        letter-spacing: 3px;
+                        color: red;
+                        text-shadow: 0 0 1px red;
                     }
                     .socials-link {
                         transition-delay: 0.5s;
@@ -106,7 +116,8 @@ $primary: rgb(200, 0, 255);
                 width: 100%;
                 overflow: hidden;
                 .socials-desc {
-                    font-family: 'Kaushan Script', cursive;
+                    // font-family: 'Kaushan Script', cursive;
+                    font-family: 'Roboto Flex', sans-serif;
                     opacity: 0;
                     display: none;
                     font-size: 1rem;

@@ -9,7 +9,10 @@
 <?php get_header(); ?>
 
     <div class="projects-container">
-        <h3>Projects</h3>
+        <h3 class="projects-title">
+            <img src="http://portfolio-3.local/wp-content/uploads/2022/06/70a552e8e955049c8587b2d7606cd6a6.gif" alt="" class="">
+            Projects
+        </h3>
         <div class="projects-wrapper">
 
             <?php 

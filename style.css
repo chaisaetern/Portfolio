@@ -655,14 +655,14 @@ body .site-title {
   height: 100%;
   background: transparent;
 }
-.projects-container .projects-title {
+.projects-container .projects-header {
   font-size: 2rem;
   font-family: "Kaushan Script", sans-serif;
   position: relative;
   bottom: 5rem;
   right: 3rem;
 }
-.projects-container .projects-title img {
+.projects-container .projects-header .projects-header-icon {
   width: 7rem;
   position: relative;
   top: 2rem;
@@ -846,6 +846,7 @@ body .site-title {
   flex-wrap: nowrap;
   color: #fff;
   text-align: left;
+  padding-bottom: 5rem;
 }
 .projects-container .projects-wrapper .project-card .project .project-title {
   margin: 2rem 0 2rem 6rem;

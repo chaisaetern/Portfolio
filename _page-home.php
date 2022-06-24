@@ -21,8 +21,10 @@
         </div>
         
         <div class="hero-container">
-            <h2>Hello World!</h2>
+            <!-- <h2>Hello World!</h2> -->
+            <?php get_template_part('template-parts/custom-btn') ?>
         </div>
+
         
     </div>
 </div>

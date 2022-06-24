@@ -625,6 +625,7 @@ html {
 
 body {
   font-family: "Gruppo", sans-serif;
+  font-size: 1.2rem;
   color: #fff;
   width: 100%;
   height: 100%;
@@ -640,7 +641,8 @@ body {
   transition: 2s;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
-  font-family: "Libre Barcode 128 Text", cursive;
+  font-family: "Smooch", cursive;
+  text-transform: lowercase;
 }
 body .site-title {
   font-family: "Gruppo", sans-serif;
@@ -658,7 +660,7 @@ body .site-title {
 .projects-container .projects-header {
   font-size: 4rem;
   font-weight: 100;
-  margin: 5rem 0 0 0;
+  margin: 0;
   position: relative;
   bottom: 2rem;
   right: 3rem;
@@ -1025,7 +1027,7 @@ body .site-title {
   position: absolute;
   top: calc(44% - 10rem);
   left: 1rem;
-  opacity: 0;
+  opacity: 1;
   z-index: 99999;
   height: 345px;
 }
@@ -1036,27 +1038,25 @@ body .site-title {
   align-items: center;
   flex-wrap: nowrap;
   position: absolute;
-  top: -1.25rem;
+  top: -1rem;
   left: 0;
   z-index: 999;
   animation: fade-in 1s ease, slide-right 1s ease-in-out both;
-  animation-delay: 1s;
+  animation-delay: 0.25s;
   transition: 0.5s;
   height: 0%;
   width: 5rem;
   letter-spacing: 1px;
-  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(100, 0, 255, 0.05), rgb(0, 0, 0));
   border: none;
-  border-top: 2px solid rgba(100, 0, 255, 0.6);
-  border-bottom: 2px solid rgba(100, 0, 255, 0.6);
   border-radius: 0.2rem;
   color: rgb(255, 255, 255);
   text-shadow: 0 0 3px #000000;
   font-size: 1.1rem;
   transform-origin: 50% 5rem;
 }
-.socials-container .socials p {
+.socials-container .socials .socials-title {
   text-align: center;
+  text-transform: capitalize;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1083,10 +1083,9 @@ body .site-title {
 }
 .socials-container .socials:hover .socials-icon {
   height: 100%;
-  animation: fade-in 2s ease both;
-  animation-delay: 1s;
+  animation: fade-in 0.5s ease both;
   transition: 0.5s;
-  transition-delay: 2s;
+  transition-delay: 0.5s;
 }
 .socials-container .socials:hover .socials-icon:hover .socials-desc {
   opacity: 1;
@@ -1116,7 +1115,7 @@ body .site-title {
 .socials-container .socials:hover .socials-icon:hover .socials-link i:hover {
   transform: scale(1.25);
 }
-.socials-container .socials:hover p {
+.socials-container .socials:hover .socials-title {
   opacity: 0;
   transition: 0.25s;
 }
@@ -1335,6 +1334,14 @@ body .site-title {
   opacity: 1;
 }
 
+.btn-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
@@ -1446,7 +1453,7 @@ body .site-title {
   color: rgb(255, 0, 0);
   font-size: calc(100% + 1rem);
   text-decoration: none;
-  text-shadow: 0 0 3px rgb(255, 0, 0);
+  text-shadow: 0 0 1px #000;
 }
 .site-header .site-branding .site-description {
   display: none;
@@ -1461,7 +1468,7 @@ body .site-title {
 .site-header .main-navigation .menu .menu-item {
   text-align: center;
   overflow: hidden;
-  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
 }
 .site-header .main-navigation .menu .menu-item a {
   font-family: "Libre Barcode 128 Text", sans-serif;
@@ -1573,7 +1580,7 @@ body .site-title {
 }
 .home .site-header .site-branding .site-title a {
   color: red;
-  text-shadow: 0 0 3px red;
+  text-shadow: 0 0 1px #000;
 }
 .home .site-header .main-navigation .menu .menu-item {
   text-align: center;
@@ -1581,7 +1588,7 @@ body .site-title {
   -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
 }
 .home .site-header .main-navigation .menu .menu-item a {
-  text-shadow: 0 0 3px red;
+  text-shadow: 0 0 1px #000;
 }
 .home .site-header .main-navigation .menu .menu-item a::after {
   content: "";
@@ -1661,12 +1668,18 @@ body .site-title {
   margin: 4rem 0;
   width: 100%;
   height: 100%;
+  transition: 0.5s !important;
+  transition-delay: 0.5s !important;
 }
 .toggled .menu-item a {
-  font-size: 1.5rem !important;
+  padding: 2.5rem 10rem !important;
+  font-size: 4rem !important;
 }
 .toggled .menu-item a:hover {
   box-shadow: 0 0px 5px rgb(255, 0, 0) inset !important;
+}
+.toggled .menu-item:hover {
+  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)) !important;
 }
 
 .menu-toggle {
@@ -1764,7 +1777,6 @@ body .site-title {
   font-size: calc(1rem + 4vw);
   color: #000000;
   text-shadow: 0 0 5px white;
-  font-family: "Kaushan Script", sans-serif;
 }
 .main-container .main-wrapper .bg-container h2 span {
   text-shadow: 0 0 5px blue;
@@ -1846,17 +1858,19 @@ body .site-title {
 .about-container .about-header .profile-bio h3 {
   font-size: 4rem;
   font-weight: 100;
-  padding: 0 1rem;
-  margin: 0;
-  border-radius: 5px;
-  text-shadow: 0 0 1px #000;
-}
-.about-container .about-header .profile-bio h3 span {
-  z-index: -1;
+  padding: 0;
+  margin: 0 0 0 1rem;
   position: relative;
-  padding-left: 0.5rem;
+  text-shadow: 0 0 3px #000;
+}
+.about-container .about-header .profile-bio h3 .profile-about-me-img {
+  width: 100%;
+  position: absolute;
+  top: -0.5rem;
+  left: -1rem;
+  z-index: -1;
   box-shadow: 0 0 5px #000;
-  border-radius: 5px;
+  opacity: 0.75;
 }
 .about-container .about-header .profile-bio p {
   width: calc(45% + 10vw);
@@ -1891,12 +1905,12 @@ body .site-title {
     margin-bottom: 10rem !important;
   }
   .about-header .profile-card-container {
-    height: 40vh !important;
     justify-content: center !important;
   }
   .about-header .profile-bio {
     align-items: center !important;
     padding-left: 0 !important;
+    height: 50vh !important;
   }
   .about-header .profile-bio p {
     min-width: 300px;

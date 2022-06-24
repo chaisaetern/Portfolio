@@ -28,11 +28,14 @@
 
             <!-- BEGINNING OF PROFILE-BIO -->
             <div class="profile-bio">
-                <h3><span></span>About Me</h3>
-                <p>
-                    Gamer. Gamer God. 
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ad porro facere. Laborum vel laudantium ipsa exercitationem soluta laboriosam, quaerat facilis minus explicabo aspernatur voluptates accusamus non sit sequi quis!
-               </p>
+                <h3>
+                    <!-- <span></span> -->
+                    <img src="<?php the_field('profile_about_me_img') ?>" alt="" class="profile-about-me-img">
+                    <?php the_field('profile_title'); ?>
+                </h3>
+                <p class="profile-desc">
+                    <?php the_field('profile_desc'); ?>
+                </p>
             </div>
             <!-- end of profile-bio -->
 

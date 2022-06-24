@@ -51,18 +51,18 @@
 
                 for($i = 0; $i < count($projects); ++$i) {
             ?>
-            <!-- Project Card -->
-            <div class="project-card">
-                <img src="<?php echo $projects[$i]['img']; ?>" alt="" class="project-img">
-                <div class="project-overlay"></div>
-                <a href="<?php echo $projects[$i]['link']; ?>" class="project-link">View Project</a>
-                <div class="project">
-                    <h3 class="project-title"><?php echo $projects[$i]['title']; ?></h3>
-                    <p class="project-desc">
-                        <?php echo $projects[$i]['desc']; ?>
-                    </p>
-                </div>
-            </div>
+                    <!-- Project Card -->
+                    <div class="project-card">
+                        <img src="<?php echo $projects[$i]['img']; ?>" alt="" class="project-img">
+                        <div class="project-overlay"></div>
+                        <a href="<?php echo $projects[$i]['link']; ?>" class="project-link">View Project</a>
+                        <div class="project">
+                            <h3 class="project-title"><?php echo $projects[$i]['title']; ?></h3>
+                            <p class="project-desc">
+                                <?php echo $projects[$i]['desc']; ?>
+                            </p>
+                        </div>
+                    </div>
 
             <?php
                 }

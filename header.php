@@ -22,6 +22,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Roboto+Flex:opsz,wght@8..144,300&family=Roboto:wght@300&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Smooch&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 

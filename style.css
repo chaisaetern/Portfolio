@@ -656,17 +656,18 @@ body .site-title {
   background: transparent;
 }
 .projects-container .projects-header {
-  font-size: 2rem;
-  font-family: "Kaushan Script", sans-serif;
+  font-size: 3rem;
+  text-shadow: 0 0 2px #fff;
+  font-family: "Smooch", cursive;
   position: relative;
-  bottom: 5rem;
+  bottom: 2rem;
   right: 3rem;
 }
 .projects-container .projects-header .projects-header-icon {
   width: 7rem;
   position: relative;
   top: 2rem;
-  left: 2.5rem;
+  left: 3rem;
   z-index: -1;
 }
 .projects-container .projects-wrapper {
@@ -694,26 +695,25 @@ body .site-title {
   overflow: hidden;
 }
 .projects-container .projects-wrapper .project-card:hover {
-  border: 1px solid rgb(100, 0, 255);
   transition: 0.5s;
 }
 .projects-container .projects-wrapper .project-card:hover::before {
   position: absolute;
-  top: -1rem;
-  left: -1rem;
+  top: -0.5rem;
+  left: -0.5rem;
   opacity: 1;
   z-index: 1;
   transition: 0.25s;
-  border: 1px solid rgb(100, 0, 255);
+  border: 1px solid rgba(100, 0, 255, 0.6);
 }
 .projects-container .projects-wrapper .project-card:hover::after {
   position: absolute;
-  bottom: -1rem;
-  right: -1rem;
+  bottom: -0.5rem;
+  right: -0.5rem;
   opacity: 1;
   z-index: 1;
   transition: 0.25s;
-  border: 1px solid rgb(100, 0, 255);
+  border: 1px solid rgba(100, 0, 255, 0.6);
 }
 .projects-container .projects-wrapper .project-card:hover .project-img {
   filter: brightness(30%);
@@ -744,7 +744,7 @@ body .site-title {
   right: -5px;
   z-index: -1;
   opacity: 1;
-  border: 1px solid purple;
+  border: 1px solid blue;
 }
 .projects-container .projects-wrapper .project-card:hover .project-overlay {
   top: 0;
@@ -792,9 +792,8 @@ body .site-title {
   top: 2.5rem;
   right: 2.5rem;
   padding: 1rem 2rem;
-  background: linear-gradient(45deg, rgba(100, 0, 255, 0.4), rgba(15, 14, 36, 0.65), rgb(0, 0, 0));
+  background: linear-gradient(45deg, rgba(100, 0, 255, 0.5), rgba(15, 14, 36, 0.65), rgb(0, 0, 0));
   z-index: 55;
-  opacity: 0;
   transition: 0.5s;
   border: 1px solid rgb(100, 0, 255);
 }
@@ -818,7 +817,7 @@ body .site-title {
   bottom: 0px;
   right: 0px;
   z-index: -1;
-  border: 1px solid purple;
+  border: 1px solid blue;
   opacity: 0;
   transition: 0.25s;
 }
@@ -829,7 +828,7 @@ body .site-title {
   position: absolute;
   top: 150%;
   left: 0;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(15, 14, 36, 0.5) 58%, rgba(15, 14, 36, 0) 2px);
+  background: linear-gradient(45deg, rgba(0, 0, 255, 0.05), rgba(9, 0, 22, 0.25) 58%, rgba(0, 0, 0, 0) 2px);
 }
 .projects-container .projects-wrapper .project-card .project {
   opacity: 0;
@@ -1046,10 +1045,10 @@ body .site-title {
   height: 0%;
   width: 5rem;
   letter-spacing: 1px;
-  background: linear-gradient(45deg, rgba(255, 0, 0, 0.1), rgba(200, 0, 255, 0.1), rgba(255, 0, 0, 0.1));
+  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(100, 0, 255, 0.05), rgb(0, 0, 0));
   border: none;
-  border-top: 2px solid red;
-  border-bottom: 2px solid red;
+  border-top: 2px solid rgba(100, 0, 255, 0.6);
+  border-bottom: 2px solid rgba(100, 0, 255, 0.6);
   border-radius: 0.2rem;
   color: rgb(255, 255, 255);
   text-shadow: 0 0 3px #000000;
@@ -1075,7 +1074,7 @@ body .site-title {
   transition: 0.5s;
   transition-delay: 0.5s;
   font-family: "Roboto Flex", sans-serif;
-  color: red;
+  color: #fff;
 }
 .socials-container .socials:hover {
   height: 100%;
@@ -1098,13 +1097,13 @@ body .site-title {
   animation: letter-space 1s ease both;
   animation-delay: 0.5s;
   text-align: center;
-  background: rgba(0, 0, 0, 0.85);
+  background: linear-gradient(45deg, rgba(100, 0, 255, 0.4), rgba(15, 14, 36, 0.65), rgb(0, 0, 0));
   border-radius: 8px;
   padding: 0.25rem 0;
   font-style: italic;
   letter-spacing: 3px;
-  color: red;
-  text-shadow: 0 0 1px red;
+  color: #fff;
+  text-shadow: 0 0 1px #fff;
 }
 .socials-container .socials:hover .socials-icon:hover .socials-link {
   transition-delay: 0.5s;
@@ -1278,6 +1277,7 @@ body .site-title {
   gap: 10px;
   transition: 0.5s ease;
   opacity: 0;
+  box-shadow: 0 0 5px #000;
 }
 .profile-container .profile-card .profile-content h3 {
   text-transform: uppercase;
@@ -1292,6 +1292,7 @@ body .site-title {
   height: 100%;
   z-index: -1;
   transition: 0.5s ease;
+  box-shadow: 0 0 5px #000;
   background: linear-gradient(45deg, rgb(0, 0, 0), rgba(15, 14, 36, 0.5), rgb(0, 0, 0));
   position: absolute;
   bottom: 0.5rem;
@@ -1303,6 +1304,7 @@ body .site-title {
   height: 100%;
   z-index: -1;
   transition: 0.5s ease;
+  box-shadow: 0 0 5px #000;
   background: linear-gradient(45deg, rgb(0, 0, 0), rgba(15, 14, 36, 0.5), rgb(0, 0, 0));
   position: absolute;
   top: 0.5rem;
@@ -1315,12 +1317,14 @@ body .site-title {
   position: absolute;
   bottom: 0.5rem;
   right: 0.5rem;
+  box-shadow: 0 0 5px #000;
   background: linear-gradient(45deg, rgb(0, 0, 0), rgba(15, 14, 36, 0.5), rgb(0, 0, 0));
 }
 .profile-container .profile-card:hover::after {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
+  box-shadow: 0 0 5px #000;
   background: linear-gradient(45deg, rgb(0, 0, 0), rgba(15, 14, 36, 0.5), rgb(0, 0, 0));
 }
 .profile-container .profile-card:hover {
@@ -1435,10 +1439,10 @@ body .site-title {
   width: 100%;
 }
 .site-header .site-branding .site-title a {
-  color: rgb(100, 0, 255);
+  color: rgb(255, 0, 0);
   font-size: calc(100% + 1rem);
   text-decoration: none;
-  text-shadow: 0 0 3px rgb(100, 0, 255);
+  text-shadow: 0 0 3px rgb(255, 0, 0);
 }
 .site-header .site-branding .site-description {
   display: none;
@@ -1461,7 +1465,7 @@ body .site-title {
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
-  text-shadow: 0 0 3px rgb(100, 0, 255);
+  text-shadow: 0 0 3px rgb(255, 0, 0);
   text-transform: uppercase;
   letter-spacing: 2px;
   background: linear-gradient(45deg, rgb(0, 0, 0), rgba(100, 0, 255, 0.05), rgb(0, 0, 0));
@@ -1483,13 +1487,13 @@ body .site-title {
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(30deg, transparent, rgba(100, 0, 255, 0.95), transparent);
+  background: linear-gradient(30deg, transparent, rgba(255, 0, 0, 0.95), transparent);
   transition: 0.5s;
   transition-delay: 0.5s;
 }
 .site-header .main-navigation .menu .menu-item a:hover:after {
   left: 100%;
-  background: linear-gradient(30deg, transparent, rgba(100, 0, 255, 0.95), transparent);
+  background: linear-gradient(30deg, transparent, rgba(255, 0, 0, 0.95), transparent);
 }
 .site-header .main-navigation .menu .menu-item a span {
   position: absolute;
@@ -1501,37 +1505,37 @@ body .site-title {
   left: 0;
   width: 0;
   height: 1px;
-  background: rgb(100, 0, 255);
+  background: rgb(255, 0, 0);
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(2) {
   top: 0;
   left: 0;
   width: 1px;
   height: 0;
-  background: rgb(100, 0, 255);
+  background: rgb(255, 0, 0);
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(3) {
   bottom: 0;
   right: 0;
   width: 0;
   height: 1px;
-  background: rgb(100, 0, 255);
+  background: rgb(255, 0, 0);
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(4) {
   bottom: 0;
   right: 0;
   width: 1px;
   height: 0;
-  background: rgb(100, 0, 255);
+  background: rgb(255, 0, 0);
 }
 .site-header .main-navigation .menu .menu-item a .link-text {
   font-weight: normal;
-  color: rgb(100, 0, 255);
+  color: rgb(255, 0, 0);
   transition-delay: 0.5s;
 }
 .site-header .main-navigation .menu .menu-item a:hover {
   transition-delay: 0.5s;
-  background: rgba(100, 0, 255, 0.95);
+  background: rgba(255, 0, 0, 0.95);
 }
 .site-header .main-navigation .menu .menu-item a:hover .link-text {
   color: #000;
@@ -1541,22 +1545,22 @@ body .site-title {
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(1) {
   width: 100%;
   transform: translateX(100%);
-  background: rgb(100, 0, 255);
+  background: rgb(255, 0, 0);
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(2) {
   height: 100%;
   transform: translateY(100%);
-  background: rgb(100, 0, 255);
+  background: rgb(255, 0, 0);
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(3) {
   width: 100%;
   transform: translateX(-100%);
-  background: rgb(100, 0, 255);
+  background: rgb(255, 0, 0);
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(4) {
   height: 100%;
   transform: translateY(-100%);
-  background: rgb(100, 0, 255);
+  background: rgb(255, 0, 0);
 }
 
 .home .site-header .site-branding .site-title {
@@ -1657,7 +1661,7 @@ body .site-title {
   font-size: 1.5rem !important;
 }
 .toggled .menu-item a:hover {
-  box-shadow: 0 0px 5px rgb(100, 0, 255) inset !important;
+  box-shadow: 0 0px 5px rgb(255, 0, 0) inset !important;
 }
 
 .menu-toggle {

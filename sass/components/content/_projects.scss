@@ -7,16 +7,17 @@
     height: 100%;
     background: transparent;
     .projects-header {
-        font-size: 2rem;
-        font-family: "Kaushan Script", sans-serif;
+        font-size: 3rem;
+        text-shadow: 0 0 2px #fff;
+        font-family: 'Smooch', cursive;
         position: relative;
-            bottom: 5rem;
+            bottom: 2rem;
             right: 3rem;
         .projects-header-icon {
             width: 7rem;
             position: relative;
                 top: 2rem;
-                left: 2.5rem;
+                left: 3rem;
             z-index: -1;
         }
     }
@@ -43,29 +44,34 @@
             transition: 0.5s;
             overflow: hidden;
             &:hover {
-                border: 1px solid rgb(100, 0, 255);
+                // border-top: 1px solid #6400ff99;
+                // border-bottom: 1px solid #6400ff99;
                 transition: 0.5s;
                 &::before {
                     position: absolute;
-                        top: -1rem;
-                        left: -1rem;
+                        top: -0.5rem;
+                        left: -0.5rem;
                         // top: -18.77rem;
                         // left: -13.6rem;
                     opacity: 1;
                     z-index: 1;
                     transition: 0.25s;
-                    border: 1px solid rgb(100, 0, 255);
+                    border: 1px solid #6400ff99;
+                    // box-shadow: 0 0 5px blue inset;
+                    
                 }
                 &::after {
                     position: absolute;
-                        bottom: -1rem;
-                        right: -1rem;
+                        bottom: -0.5rem;
+                        right: -0.5rem;
                     //     bottom: -18.77rem;
                     //     right: -13.6rem;
                     opacity: 1;
                     z-index: 1;
                     transition: 0.25s;
-                    border: 1px solid rgb(100, 0, 255);
+                    border: 1px solid #6400ff99;
+                    // box-shadow: 0 0 5px blue inset;
+                    
                 }
                 .project-img {
                     filter: brightness(30%);
@@ -73,6 +79,9 @@
                 .project-link {
                     opacity: 1;
                     &:hover {
+                        // border: none;
+                        // border-left: 1px solid blueviolet;
+                        // border-right: 1px solid blueviolet;
                         background: linear-gradient(45deg, rgba(0,0,0, 1), rgba(15, 14, 36, 0.5), rgba(0,0,0, 1));
                         &::before {
                             content: '';
@@ -84,6 +93,8 @@
                             z-index: -1;
                             opacity: 1;
                             border: 1px solid blueviolet;
+                            // border-left: 1px solid blueviolet;
+                            // border-top: 1px solid blueviolet;
                         }
                         &::after {
                             content: '';
@@ -94,7 +105,9 @@
                                 right: -5px;
                             z-index: -1;
                             opacity: 1;
-                            border: 1px solid purple;
+                            border: 1px solid blue;
+                            // border-right: 1px solid purple;
+                            // border-bottom: 1px solid purple;
                         }
                     }
                 }
@@ -145,9 +158,9 @@
                     top: 2.5rem;
                     right: 2.5rem;
                 padding: 1rem 2rem;
-                background: linear-gradient(45deg, rgba(100,0,255, 0.4), rgba(15, 14, 36, 0.65), rgba(0,0,0, 1));
+                background: linear-gradient(45deg, rgba(100,0,255, 0.5), rgba(15, 14, 36, 0.65), rgba(0,0,0, 1));
                 z-index: 55;
-                opacity: 0;
+                // opacity: 1;
                 transition: 0.5s;
                 border: 1px solid rgb(100, 0, 255);
                 &::before {
@@ -159,6 +172,8 @@
                         left: 0px;
                     z-index: -1;
                     border: 1px solid blueviolet;
+                    // border-top: 1px solid blueviolet;
+                    // border-left: 1px solid blueviolet;
                     opacity: 0;
                     transition: 0.25s;
                 }
@@ -170,7 +185,9 @@
                         bottom: 0px;
                         right: 0px;
                     z-index: -1;
-                    border: 1px solid purple;
+                    border: 1px solid blue;
+                    // border-right: 1px solid purple;
+                    // border-bottom: 1px solid purple;
                     opacity: 0;
                     transition: 0.25s;
                 }
@@ -184,9 +201,9 @@
                     left: 0;
                 background: linear-gradient(
                     45deg, 
-                    rgba(0,0,0, 0.5), 
-                    rgba(15, 14, 36, 0.5) 58%, 
-                    rgba(15, 14, 36, 0) 2px,
+                    rgba(0,0,255, 0.05), 
+                    rgba(9, 0, 22, 0.25) 58%, 
+                    rgba(0,0,0, 0) 2px,
                 );
             }
             .project {

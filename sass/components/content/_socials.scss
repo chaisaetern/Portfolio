@@ -24,14 +24,14 @@ $primary: rgb(255, 255, 255);
 
         background: linear-gradient(
                     45deg,
-                    rgba(255, 0, 0, 0.1),
-                    rgba(200, 0, 255, 0.1),
-                    rgba(255, 0, 0, 0.1),
+                    rgba(0, 0, 0, 1),
+                    rgba(100, 0, 255, 0.05),
+                    rgba(0, 0, 0, 1),
         );
         
         border: none;
-        border-top: 2px solid red;
-        border-bottom: 2px solid red;
+        border-top: 2px solid #6400ff99;
+        border-bottom: 2px solid #6400ff99;
         border-radius: 0.2rem;
         color: $primary;
         text-shadow: 0 0 3px $tertiary;
@@ -53,7 +53,7 @@ $primary: rgb(255, 255, 255);
             transition-delay: 0.5s;
             // font-family: "Kaushan Script", cursive;
             font-family: 'Roboto Flex', sans-serif;
-            color: red;
+            color: #fff;
         }
         &:hover {
             height: 100%;
@@ -75,13 +75,13 @@ $primary: rgb(255, 255, 255);
                         animation: letter-space 1s ease both;
                         animation-delay: 0.5s;
                         text-align: center;
-                        background: rgba(0, 0, 0, 0.85);
+                        background: linear-gradient(45deg, rgba(100,0,255, 0.4), rgba(15, 14, 36, 0.65), rgba(0,0,0, 1));
                         border-radius: 8px;
                         padding: 0.25rem 0;
                         font-style: italic;
                         letter-spacing: 3px;
-                        color: red;
-                        text-shadow: 0 0 1px red;
+                        color: #fff;
+                        text-shadow: 0 0 1px #fff;
                     }
                     .socials-link {
                         transition-delay: 0.5s;

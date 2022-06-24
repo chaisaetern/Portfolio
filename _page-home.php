@@ -17,7 +17,7 @@
 
         <div class="bg-container">
             <img class="bg-img" src="<?php the_field("background_image_1"); ?>" alt="">
-            <h2>"We're not the cause, <br>we're the effect." <br><span>-Nipsey Hussle</span></h2>
+            <h2>"You must be shapeless, <br>formless, like water." <br><span>-Bruce Lee</span></h2>
         </div>
         
         <div class="hero-container">

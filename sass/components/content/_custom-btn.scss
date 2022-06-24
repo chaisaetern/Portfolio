@@ -1,12 +1,97 @@
 
 .btn-container {
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    background: rgb(9, 11, 31);
+    background: transparent;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: transparentize($color: rgba(0,0,0,0.6), $amount: 0.4);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(30deg, transparent, 
+        rgba(0,0,0,0.5), transparent);
+        transition: 0.5s;
+    }
     .btn {
-        
+        color: #fff;
+        text-decoration: none;
+        border: 1px solid #6400ff40;
+        position: relative;
+        padding: 1rem 5rem;
+        overflow: hidden;
+        span {
+            position: absolute;
+            display: block;
+            transition: 0.5s ease;
+            &:nth-child(1) {
+                top: 0;
+                left: 3rem;
+                width: 3rem;
+                height: 2px;
+                background: #6400ff99;
+            }
+            &:nth-child(2) {
+                top: 2rem;
+                left: 0;
+                width: 2px;
+                height: 1rem;
+                background: #6400ff99;
+            }
+            &:nth-child(3) {
+                bottom: 0;
+                right: 3rem;
+                width: 3rem;
+                height: 2px;
+                background: #6400ff99;
+            }
+            &:nth-child(4) {
+                bottom: 2rem;
+                right: 0;
+                width: 2px;
+                height: 1rem;
+                background: #6400ff99;
+            }
+        }
+        &:hover {
+            transition: 0.5s;
+            background: linear-gradient(15deg, rgba(0,0,0,0.25), transparent,transparent, rgba(0,0,0,0.25));
+            cursor: crosshair;
+            span {
+                &:nth-child(1) {
+                    width: 100%;
+                    transform: translateX(70%);
+                    background: #6400ff99;
+                }
+                &:nth-child(2) {
+                    height: 100%;
+                    transform: translateY(25%);
+                    background: #6400ff99;
+                }
+                &:nth-child(3) {
+                    width: 100%;
+                    transform: translateX(-70%);
+                    background: #6400ff99;
+                }
+                &:nth-child(4) {
+                    height: 100%;
+                    transform: translateY(-25%);
+                    background: #6400ff99;
+                }
+            }
+        }
     }
 }

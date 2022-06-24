@@ -54,6 +54,7 @@
                         left: 1.75rem;
                     opacity: 1;
                     z-index: 1;
+                    transition: 0.25s;
                     border: 1px solid rgb(100, 0, 255);
                 }
                 &::after {
@@ -62,6 +63,7 @@
                         right: 1.75rem;
                     opacity: 1;
                     z-index: 1;
+                    transition: 0.25s;
                     border: 1px solid rgb(100, 0, 255);
                 }
                 .project-img {
@@ -70,16 +72,16 @@
                 .project-link {
                     opacity: 1;
                     &:hover {
-                        background: linear-gradient(45deg, rgba(100,0,255, 0.5), rgba(15, 14, 36, 0.5), rgba(0,0,0, 1));
+                        background: linear-gradient(45deg, rgba(0,0,0, 1), rgba(15, 14, 36, 0.5), rgba(0,0,0, 1));
                         &::before {
                             content: '';
                             width: 100%;
                             height: 100%;
                             position: absolute;
-                                top: -1px;
-                                left: -1px;
+                                top: -5px;
+                                left: -5px;
                             z-index: -1;
-                            // opacity: 1;
+                            opacity: 1;
                             border: 1px solid blueviolet;
                         }
                         &::after {
@@ -87,10 +89,10 @@
                             width: 100%;
                             height: 100%;
                             position: absolute;
-                                bottom: -1px;
-                                right: -1px;
+                                bottom: -5px;
+                                right: -5px;
                             z-index: -1;
-                            // opacity: 1;
+                            opacity: 1;
                             border: 1px solid purple;
                         }
                     }
@@ -142,31 +144,34 @@
                     top: 2.5rem;
                     right: 2.5rem;
                 padding: 1rem 2rem;
-                background: linear-gradient(45deg, rgba(0,0,0, 1), rgba(15, 14, 36, 1), rgba(0,0,0, 1));
+                background: linear-gradient(45deg, rgba(100,0,255, 0.4), rgba(15, 14, 36, 0.65), rgba(0,0,0, 1));
                 z-index: 55;
                 opacity: 0;
                 transition: 0.5s;
+                border: 1px solid rgb(100, 0, 255);
                 &::before {
                     content: '';
                     width: 100%;
                     height: 100%;
                     position: absolute;
-                        top: -5px;
-                        left: -5px;
+                        top: 0px;
+                        left: 0px;
                     z-index: -1;
                     border: 1px solid blueviolet;
-                    // opacity: 0;
+                    opacity: 0;
+                    transition: 0.25s;
                 }
                 &::after {
                     content: '';
                     width: 100%;
                     height: 100%;
                     position: absolute;
-                        bottom: -5px;
-                        right: -5px;
+                        bottom: 0px;
+                        right: 0px;
                     z-index: -1;
                     border: 1px solid purple;
-                    // opacity: 0;
+                    opacity: 0;
+                    transition: 0.25s;
                 }
             }
             .project-overlay {

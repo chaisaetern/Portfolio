@@ -687,8 +687,8 @@ body .site-title {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 550px;
-  width: 400px;
+  height: 600px;
+  width: 435px;
   position: relative;
   transition: 0.5s;
   overflow: hidden;
@@ -699,8 +699,8 @@ body .site-title {
 }
 .projects-container .projects-wrapper .project-card:hover::before {
   position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
+  top: -1rem;
+  left: -1rem;
   opacity: 1;
   z-index: 1;
   transition: 0.25s;
@@ -708,8 +708,8 @@ body .site-title {
 }
 .projects-container .projects-wrapper .project-card:hover::after {
   position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
+  bottom: -1rem;
+  right: -1rem;
   opacity: 1;
   z-index: 1;
   transition: 0.25s;
@@ -848,13 +848,14 @@ body .site-title {
   text-align: left;
 }
 .projects-container .projects-wrapper .project-card .project .project-title {
-  margin: 2rem 0 0 6rem;
+  margin: 2rem 0 2rem 6rem;
   width: 100%;
   text-shadow: 0 0 2px #fff;
 }
 .projects-container .projects-wrapper .project-card .project .project-desc {
   padding: 0 3rem 1rem 3rem;
   margin-top: 0;
+  font-style: italic;
 }
 
 .loading-container {

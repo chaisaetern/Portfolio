@@ -52,15 +52,16 @@
             height: 25vh;
             h3 {
                 // width: 100%;
-                font-size: 2rem;
-                font-family: "Kaushan Script", sans-serif;
+                font-size: 4rem;
+                font-weight: 100;
                 padding: 0 1rem;
-                border-right: 0.2rem solid rgba(255,0,0, 1);
+                margin: 0;
+                // border-right: 0.2rem solid rgba(255,0,0, 1);
                 border-radius: 5px;
-                text-shadow: 0 0 3px #fff;
+                text-shadow: 0 0 1px #000;
                 span {
                     z-index: -1;
-                    border-left: 1.2rem solid rgba(255,0,0, 1);
+                    // border-left: 1.2rem solid rgba(255,0,0, 1);
                     position: relative;
                     padding-left: 0.5rem;
                     box-shadow: 0 0 5px #000;

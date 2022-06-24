@@ -12,9 +12,9 @@
         <img src="<?php the_field('profile_img'); ?>" alt="" class="profile-img">
         <?php get_template_part('template-parts/socials') ?>
         <div class="profile-content">
-            <h3>Chai Saetern</h3>
-            <h5>WordPress Web Developer</h5>
-            <p>Wordpress front-end developer</p>
+            <h3 class="profile-text">Chai Saetern</h3>
+            <h5 class="profile-text">WordPress</h5>
+            <p class="profile-text">Front-End Developer</p>
         </div>
     </div>
 </div>

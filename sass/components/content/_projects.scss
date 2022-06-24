@@ -7,9 +7,10 @@
     height: 100%;
     background: transparent;
     .projects-header {
-        font-size: 3rem;
-        text-shadow: 0 0 2px #fff;
-        font-family: 'Smooch', cursive;
+        font-size: 4rem;
+        font-weight: 100;
+        margin: 5rem 0 0 0;
+        // text-shadow: 0 0 2px #fff;
         position: relative;
             bottom: 2rem;
             right: 3rem;
@@ -221,7 +222,8 @@
                 .project-title {
                     margin: 2rem 0 2rem 6rem;
                     width: 100%;
-                    text-shadow: 0 0 2px #fff;
+                    // text-shadow: 0 0 2px #fff;
+                    font-family: 'Gruppo', sans-serif;
                 }
                 .project-desc {
                     padding: 0 3rem 1rem 3rem;

@@ -9,12 +9,10 @@
     animation: fade-in 1s ease-in-out both;
     animation-delay: 2s;
     transition: 2s;
-    // transition-delay: 0.25s;
     letter-spacing: 2px;
     .contact-bg {
         width: 100%;
         height: auto;
-        // min-height: 800px;
         min-width: calc(112.5rem + 2vh);
         filter: brightness(0.5);
         position: fixed;
@@ -31,7 +29,7 @@
             top: 7.5rem;
         mix-blend-mode: overlay;
         .coming {
-            font-family: 'Kaushan Script', cursive;
+            font-family: "Gruppo", sans-serif;
             font-size: calc(1rem + 5vw);
             text-shadow: 0 0 5px #fff;
             color: #fff;

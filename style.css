@@ -624,7 +624,7 @@ html {
 }
 
 body {
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "Gruppo", sans-serif;
   color: #fff;
   width: 100%;
   height: 100%;
@@ -639,11 +639,11 @@ body {
   background-size: cover;
   transition: 2s;
 }
-body h1, body h2, body h3, body h4 {
-  font-family: "Roboto Flex", sans-serif;
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Libre Barcode 128 Text", cursive;
 }
 body .site-title {
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "Gruppo", sans-serif;
 }
 
 .projects-container {
@@ -656,9 +656,9 @@ body .site-title {
   background: transparent;
 }
 .projects-container .projects-header {
-  font-size: 3rem;
-  text-shadow: 0 0 2px #fff;
-  font-family: "Smooch", cursive;
+  font-size: 4rem;
+  font-weight: 100;
+  margin: 5rem 0 0 0;
   position: relative;
   bottom: 2rem;
   right: 3rem;
@@ -850,7 +850,7 @@ body .site-title {
 .projects-container .projects-wrapper .project-card .project .project-title {
   margin: 2rem 0 2rem 6rem;
   width: 100%;
-  text-shadow: 0 0 2px #fff;
+  font-family: "Gruppo", sans-serif;
 }
 .projects-container .projects-wrapper .project-card .project .project-desc {
   padding: 0 3rem 1rem 3rem;
@@ -1025,7 +1025,7 @@ body .site-title {
   position: absolute;
   top: calc(44% - 10rem);
   left: 1rem;
-  opacity: 1;
+  opacity: 0;
   z-index: 99999;
   height: 345px;
 }
@@ -1073,7 +1073,7 @@ body .site-title {
   opacity: 1;
   transition: 0.5s;
   transition-delay: 0.5s;
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "Gruppo", sans-serif;
   color: #fff;
 }
 .socials-container .socials:hover {
@@ -1145,7 +1145,7 @@ body .site-title {
   overflow: hidden;
 }
 .socials-container .socials .socials-icon-wrapper .socials-icon .socials-desc {
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "Gruppo", sans-serif;
   opacity: 0;
   display: none;
   font-size: 1rem;
@@ -1279,8 +1279,9 @@ body .site-title {
   opacity: 0;
   box-shadow: 0 0 5px #000;
 }
-.profile-container .profile-card .profile-content h3 {
+.profile-container .profile-card .profile-content .profile-text {
   text-transform: uppercase;
+  font-family: "Gruppo", sans-serif;
 }
 .profile-container .profile-card .profile-content p {
   font-size: 0.9rem;
@@ -1329,6 +1330,9 @@ body .site-title {
 }
 .profile-container .profile-card:hover {
   border: 2px solid red;
+}
+.profile-container .profile-card:hover .socials-container {
+  opacity: 1;
 }
 
 /* Navigation
@@ -1460,12 +1464,13 @@ body .site-title {
   -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
 }
 .site-header .main-navigation .menu .menu-item a {
+  font-family: "Libre Barcode 128 Text", sans-serif;
   padding: 1.25rem 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.1rem;
-  text-shadow: 0 0 3px rgb(255, 0, 0);
+  font-size: 2.5rem;
+  text-shadow: 0 0 1px #000;
   text-transform: uppercase;
   letter-spacing: 2px;
   background: linear-gradient(45deg, rgb(0, 0, 0), rgba(100, 0, 255, 0.05), rgb(0, 0, 0));
@@ -1529,7 +1534,7 @@ body .site-title {
   background: rgb(255, 0, 0);
 }
 .site-header .main-navigation .menu .menu-item a .link-text {
-  font-weight: normal;
+  font-weight: bolder;
   color: rgb(255, 0, 0);
   transition-delay: 0.5s;
 }
@@ -1839,16 +1844,15 @@ body .site-title {
   height: 25vh;
 }
 .about-container .about-header .profile-bio h3 {
-  font-size: 2rem;
-  font-family: "Kaushan Script", sans-serif;
+  font-size: 4rem;
+  font-weight: 100;
   padding: 0 1rem;
-  border-right: 0.2rem solid rgb(255, 0, 0);
+  margin: 0;
   border-radius: 5px;
-  text-shadow: 0 0 3px #fff;
+  text-shadow: 0 0 1px #000;
 }
 .about-container .about-header .profile-bio h3 span {
   z-index: -1;
-  border-left: 1.2rem solid rgb(255, 0, 0);
   position: relative;
   padding-left: 0.5rem;
   box-shadow: 0 0 5px #000;
@@ -1930,7 +1934,7 @@ body .site-title {
   mix-blend-mode: overlay;
 }
 .contact-container .coming-soon .coming {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Gruppo", sans-serif;
   font-size: calc(1rem + 5vw);
   text-shadow: 0 0 5px #fff;
   color: #fff;

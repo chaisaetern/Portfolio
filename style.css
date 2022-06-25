@@ -656,10 +656,12 @@ body .site-title {
   width: 100%;
   height: 100%;
   background: transparent;
+  position: relative;
 }
 .projects-container .projects-header {
   font-size: 4rem;
   font-weight: 100;
+  text-shadow: 0 0 2px #000;
   margin: 0;
   position: relative;
   bottom: 2rem;
@@ -670,7 +672,16 @@ body .site-title {
   position: relative;
   top: 2rem;
   left: 3rem;
+  z-index: -2;
+  filter: brightness(75%);
+}
+.projects-container .projects-header .projects-header-bg {
+  position: absolute;
+  top: -1rem;
+  left: 7rem;
   z-index: -1;
+  width: 10rem;
+  filter: brightness(75%);
 }
 .projects-container .projects-wrapper {
   width: 100%;
@@ -735,7 +746,7 @@ body .site-title {
   left: -5px;
   z-index: -1;
   opacity: 1;
-  border: 1px solid blueviolet;
+  border: 1px solid red;
 }
 .projects-container .projects-wrapper .project-card:hover .project-link:hover::after {
   content: "";
@@ -1066,7 +1077,7 @@ body .site-title {
   top: 0;
   left: 0;
   animation: wiggle 2s linear infinite;
-  animation-delay: 3s;
+  animation-delay: 1s;
   width: 100%;
   margin: 0.25rem 0;
   padding: 0;
@@ -1078,12 +1089,13 @@ body .site-title {
 }
 .socials-container .socials:hover {
   height: 100%;
-  transition: 1s;
+  transition: 0.5s;
   transition-delay: 0.25s;
 }
 .socials-container .socials:hover .socials-icon {
   height: 100%;
   animation: fade-in 0.5s ease both;
+  animation-delay: 0.25s;
   transition: 0.5s;
   transition-delay: 0.5s;
 }
@@ -1108,9 +1120,10 @@ body .site-title {
   transition-delay: 0.5s;
   animation: rotate 2s infinite;
   animation-delay: 0.5s;
+  transition: 0.5s;
 }
 .socials-container .socials:hover .socials-icon:hover .socials-link i {
-  transition: 0.35s;
+  transition: 0.5s;
 }
 .socials-container .socials:hover .socials-icon:hover .socials-link i:hover {
   transform: scale(1.25);
@@ -1125,7 +1138,7 @@ body .site-title {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  transition: 1s;
+  transition: 0.5s;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1343,6 +1356,7 @@ body .site-title {
   background: transparent;
 }
 .btn-container::before {
+  overflow: hidden;
   content: "";
   position: absolute;
   top: 0;
@@ -1426,6 +1440,12 @@ body .site-title {
   height: 100%;
   transform: translateY(-25%);
   background: rgba(100, 0, 255, 0.6);
+}
+
+.skills-container {
+  width: 100%;
+  height: 25vh;
+  background: rgba(100, 0, 255, 0.25);
 }
 
 /* Navigation
@@ -1549,7 +1569,7 @@ body .site-title {
   mix-blend-mode: exclusion;
 }
 .site-header .main-navigation .menu {
-  gap: 0.5rem;
+  gap: 2rem;
 }
 .site-header .main-navigation .menu .menu-item {
   text-align: center;
@@ -1558,7 +1578,7 @@ body .site-title {
 }
 .site-header .main-navigation .menu .menu-item a {
   font-family: "Libre Barcode 128 Text", sans-serif;
-  padding: 1.25rem 5rem;
+  padding: 1.5rem 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1842,7 +1862,9 @@ body .site-title {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  background: #000;
   overflow: hidden;
+  box-shadow: 0 5rem 10rem rgb(0, 0, 0);
 }
 .main-container .main-wrapper .bg-container .bg-img {
   width: 100%;
@@ -1873,9 +1895,29 @@ body .site-title {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  height: 30vh;
+  height: 50vh;
   width: 100%;
-  background: #000000;
+  overflow: hidden;
+}
+.main-container .main-wrapper .hero-container .hero-bg-container {
+  position: sticky;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .main-wrapper .hero-container .hero-bg-container .hero-bg {
+  width: 100%;
+  height: 100vh;
+  filter: brightness(40%);
+}
+.main-container .main-wrapper .test-container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, rgb(0, 0, 0), rgb(0, 0, 0));
+  box-shadow: 0 -5rem 10rem rgb(0, 0, 0);
 }
 
 @keyframes fade-in {

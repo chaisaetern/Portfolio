@@ -10,8 +10,9 @@
 
     <div class="projects-container">
         <h3 class="projects-header">
-            <img src="<?php the_field('projects_header_icon') ?>" alt="" class="projects-header-icon">
-            Projects
+            <img src="<?php the_field('projects_header_icon'); ?>" alt="" class="projects-header-icon">
+            <img src="<?php the_field('projects_header_bg'); ?>" alt="" class="projects-header-bg">
+Projects
         </h3>
         <div class="projects-wrapper">
 

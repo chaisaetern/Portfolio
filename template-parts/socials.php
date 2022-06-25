@@ -17,11 +17,21 @@
 
             <?php
                 $links = array(
-                    array('name' => 'Steam', 'class' => 'fa-steam-symbol', 'link' => '#'),
-                    array('name' => 'Discord', 'class' => 'fa-discord', 'link' => '#'),
-                    array('name' => 'Linked In', 'class' => 'fa-linkedin-in', 'link' => '#'),
-                    array('name' => 'Github', 'class' => 'fa-github', 'link' => '#'),
-                    array('name' => 'Email', 'class' => 'fa-solid fa-envelope', 'link' => '#'),
+                    array('name' => 'Codepen', 'class' => 'fa-codepen', 
+                    'link' => get_field('social_link_1')
+                ),
+                    array('name' => 'Discord', 'class' => 'fa-discord', 
+                    'link' => get_field('social_link_2')
+                ),
+                    array('name' => 'Linked In', 'class' => 'fa-linkedin-in', 
+                    'link' => get_field('social_link_3')
+                ),
+                    array('name' => 'Github', 'class' => 'fa-github', 
+                    'link' => get_field('social_link_4')
+                ),
+                    array('name' => 'Email', 'class' => 'fa-solid fa-envelope', 
+                    'link' => get_field('social_link_5')
+                ),
                 );
 
                 for($i = 0; $i < count($links); ++$i) {

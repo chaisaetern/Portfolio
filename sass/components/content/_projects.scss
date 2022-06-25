@@ -7,20 +7,21 @@
     height: 100%;
     background: transparent;
     position: relative;
+        top: 5rem;
     .projects-header {
         font-size: 4rem;
         font-weight: 100;
         text-shadow: 0 0 2px #000;
         margin: 0;
         position: relative;
-            bottom: 2rem;
+            bottom: 3rem;
             right: 3rem;
         .projects-header-icon {
             width: 7rem;
             position: relative;
                 top: 2rem;
                 left: 3rem;
-            z-index: -2;
+            z-index: -1;
             filter: brightness(75%);
         }
         .projects-header-bg {
@@ -223,4 +224,14 @@
             }
         }
     }
+}
+
+
+@media only screen and (max-width: 992px) {
+
+    .project-card {
+        width: 90vw !important;
+        height: 60vh !important;
+    }
+
 }

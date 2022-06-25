@@ -9,7 +9,7 @@
         position: relative;
         max-height: 450px;
         min-width: 350px;
-        width: calc(450px - 5vh);
+        width: calc(400px - 20vw);
         display: flex;
         z-index: 1;
         transition: 0.5s ease;
@@ -23,7 +23,6 @@
             padding: 25px;
             @include flex(column, flex-end, center, false);
             text-align: center;
-            gap: 10px;
             transition: 0.5s ease;
             opacity: 0;
             box-shadow: 0 0 5px #000;

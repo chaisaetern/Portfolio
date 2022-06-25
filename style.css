@@ -657,6 +657,7 @@ body .site-title {
   height: 100%;
   background: transparent;
   position: relative;
+  top: 5rem;
 }
 .projects-container .projects-header {
   font-size: 4rem;
@@ -664,7 +665,7 @@ body .site-title {
   text-shadow: 0 0 2px #000;
   margin: 0;
   position: relative;
-  bottom: 2rem;
+  bottom: 3rem;
   right: 3rem;
 }
 .projects-container .projects-header .projects-header-icon {
@@ -672,7 +673,7 @@ body .site-title {
   position: relative;
   top: 2rem;
   left: 3rem;
-  z-index: -2;
+  z-index: -1;
   filter: brightness(75%);
 }
 .projects-container .projects-header .projects-header-bg {
@@ -871,6 +872,12 @@ body .site-title {
   font-style: italic;
 }
 
+@media only screen and (max-width: 992px) {
+  .project-card {
+    width: 90vw !important;
+    height: 60vh !important;
+  }
+}
 .loading-container {
   width: 100%;
   height: 100vh;
@@ -1268,7 +1275,7 @@ body .site-title {
   position: relative;
   max-height: 450px;
   min-width: 350px;
-  width: calc(450px - 5vh);
+  width: calc(400px - 20vw);
   display: flex;
   z-index: 1;
   transition: 0.5s ease;
@@ -1286,7 +1293,6 @@ body .site-title {
   align-items: center;
   flex-wrap: nowrap;
   text-align: center;
-  gap: 10px;
   transition: 0.5s ease;
   opacity: 0;
   box-shadow: 0 0 5px #000;
@@ -1444,8 +1450,23 @@ body .site-title {
 
 .skills-container {
   width: 100%;
-  height: 50vh;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #000;
+}
+.skills-container .skill-header {
+  font-size: 8rem;
+  margin: 0;
+  text-align: left;
+  position: relative;
+  top: 12rem;
+  transform: rotate(-30deg);
+  filter: brightness(1);
+  text-shadow: 0 0 150px rgba(155, 0, 155, 0.5);
+  color: black;
 }
 .skills-container .skills-wrapper {
   width: 100%;
@@ -1454,6 +1475,9 @@ body .site-title {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: -10rem;
+  left: 0;
 }
 .skills-container .skills-wrapper .skill {
   display: flex;
@@ -1468,7 +1492,8 @@ body .site-title {
   cursor: crosshair;
 }
 .skills-container .skills-wrapper .skill:hover .skill-title {
-  color: rgb(255, 0, 100);
+  transition: 0.25s ease;
+  color: rgb(255, 0, 200);
 }
 .skills-container .skills-wrapper .skill .skill-title {
   width: 100%;
@@ -1479,16 +1504,20 @@ body .site-title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  text-shadow: 0 0 2px #000;
 }
 .skills-container .skills-wrapper .skill .skill-title .skill-effc {
-  color: rgb(255, 0, 100);
+  color: rgb(255, 0, 200);
+  text-shadow: 0 0 2px #000;
 }
 .skills-container .skills-wrapper .skill .skill-bar {
   width: 100%;
   height: 0.5rem;
-  background: #fff;
+  background: rgba(100, 0, 255, 0.25);
   position: relative;
+  border-radius: 0px 5px 5px 0;
   transition: 0.5s ease;
+  text-shadow: 0 0 2px #000;
 }
 .skills-container .skills-wrapper .skill .skill-bar .bar {
   width: 0%;
@@ -1496,9 +1525,16 @@ body .site-title {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgb(255, 0, 100);
+  background: rgb(100, 0, 255);
+  text-shadow: 0 0 2px #000;
+  border-radius: 0px 5px 5px 0;
 }
 
+@media only screen and (max-width: 992px) {
+  .skills-container {
+    overflow: hidden;
+  }
+}
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
@@ -1585,16 +1621,15 @@ body .site-title {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 2rem;
   position: absolute;
-  top: 1.25rem;
+  top: 5rem;
   left: 0;
   z-index: 99999;
 }
 .site-header .site-branding {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 .site-header .site-branding .custom-logo-link {
@@ -1605,12 +1640,14 @@ body .site-title {
 }
 .site-header .site-branding .site-title {
   width: 100%;
+  margin: 0;
 }
 .site-header .site-branding .site-title a {
-  color: rgb(255, 0, 0);
+  color: rgb(255, 0, 100);
   font-size: calc(100% + 1rem);
   text-decoration: none;
   text-shadow: 0 0 1px #000;
+  font-family: "Smooch", sans-serif;
 }
 .site-header .site-branding .site-description {
   display: none;
@@ -1656,13 +1693,13 @@ body .site-title {
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(30deg, transparent, rgba(255, 0, 0, 0.95), transparent);
+  background: linear-gradient(30deg, transparent, rgba(255, 0, 100, 0.95), transparent);
   transition: 0.5s;
   transition-delay: 0.5s;
 }
 .site-header .main-navigation .menu .menu-item a:hover:after {
   left: 100%;
-  background: linear-gradient(30deg, transparent, rgba(255, 0, 0, 0.95), transparent);
+  background: linear-gradient(30deg, transparent, rgba(255, 0, 100, 0.95), transparent);
 }
 .site-header .main-navigation .menu .menu-item a span {
   position: absolute;
@@ -1674,37 +1711,37 @@ body .site-title {
   left: 0;
   width: 0;
   height: 1px;
-  background: rgb(255, 0, 0);
+  background: rgb(255, 0, 100);
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(2) {
   top: 0;
   left: 0;
   width: 1px;
   height: 0;
-  background: rgb(255, 0, 0);
+  background: rgb(255, 0, 100);
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(3) {
   bottom: 0;
   right: 0;
   width: 0;
   height: 1px;
-  background: rgb(255, 0, 0);
+  background: rgb(255, 0, 100);
 }
 .site-header .main-navigation .menu .menu-item a span:nth-child(4) {
   bottom: 0;
   right: 0;
   width: 1px;
   height: 0;
-  background: rgb(255, 0, 0);
+  background: rgb(255, 0, 100);
 }
 .site-header .main-navigation .menu .menu-item a .link-text {
   font-weight: bolder;
-  color: rgb(255, 0, 0);
+  color: rgb(255, 0, 100);
   transition-delay: 0.5s;
 }
 .site-header .main-navigation .menu .menu-item a:hover {
   transition-delay: 0.5s;
-  background: rgba(255, 0, 0, 0.95);
+  background: rgba(255, 0, 100, 0.95);
 }
 .site-header .main-navigation .menu .menu-item a:hover .link-text {
   color: #000;
@@ -1714,22 +1751,22 @@ body .site-title {
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(1) {
   width: 100%;
   transform: translateX(100%);
-  background: rgb(255, 0, 0);
+  background: rgb(255, 0, 100);
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(2) {
   height: 100%;
   transform: translateY(100%);
-  background: rgb(255, 0, 0);
+  background: rgb(255, 0, 100);
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(3) {
   width: 100%;
   transform: translateX(-100%);
-  background: rgb(255, 0, 0);
+  background: rgb(255, 0, 100);
 }
 .site-header .main-navigation .menu .menu-item a:hover span:nth-child(4) {
   height: 100%;
   transform: translateY(-100%);
-  background: rgb(255, 0, 0);
+  background: rgb(255, 0, 100);
 }
 
 .home .site-header .site-branding .site-title {
@@ -1822,18 +1859,19 @@ body .site-title {
   z-index: 9999999 !important;
 }
 .toggled .menu-item {
-  margin: 4rem 0;
+  margin: 3rem 0;
   width: 100%;
   height: 100%;
   transition: 0.5s !important;
   transition-delay: 0.5s !important;
 }
 .toggled .menu-item a {
-  padding: 2.5rem 10rem !important;
-  font-size: 4rem !important;
+  font-family: "Gruppo", sans-serif !important;
+  font-size: 1.7rem !important;
+  color: rgb(255, 0, 100) !important;
 }
 .toggled .menu-item a:hover {
-  box-shadow: 0 0px 5px rgb(255, 0, 0) inset !important;
+  box-shadow: 0 0px 5px rgb(255, 0, 100) inset !important;
 }
 .toggled .menu-item:hover {
   -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)) !important;
@@ -1841,7 +1879,7 @@ body .site-title {
 
 .menu-toggle {
   position: fixed;
-  top: 3rem;
+  top: 0.5rem;
   right: 3rem;
   float: right;
   background: transparent;
@@ -2013,7 +2051,7 @@ body .site-title {
   width: 100%;
   position: relative;
   background: linear-gradient(225deg, rgb(0, 0, 0), rgba(100, 0, 255, 0.1), rgb(0, 0, 0));
-  margin: 10rem 0 15rem 0;
+  margin: 0;
 }
 .about-container .about-header .profile-card-container {
   height: 25vh;
@@ -2080,7 +2118,6 @@ body .site-title {
 @media only screen and (max-width: 992px) {
   .about-header {
     flex-direction: column !important;
-    padding: 1rem 0 2rem 0;
     margin-bottom: 10rem !important;
   }
   .about-header .profile-card-container {
@@ -2091,8 +2128,16 @@ body .site-title {
     padding-left: 0 !important;
     height: 50vh !important;
   }
+  .about-header .profile-bio h3 {
+    top: 3rem;
+    z-index: 1;
+    font-size: 3rem !important;
+  }
   .about-header .profile-bio p {
     min-width: 300px;
+    z-index: 1;
+    position: relative;
+    top: 2rem;
   }
 }
 .contact-container {

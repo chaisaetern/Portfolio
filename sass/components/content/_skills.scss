@@ -1,6 +1,79 @@
 
+
 .skills-container {
     width: 100%;
-    height: 25vh;
-    background: rgba(100,0,255,0.25);
+    height: 100vh;
+    background: #111;
+    .skills-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .skill {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 25vw;
+            &:hover {
+                .skill-bar{
+                    &::before {
+                        width: 50%;
+                        background: blue;
+                        transition: 0.5s ease;
+                        content: counter(count);
+                        animation: counter 2s ease;
+                        counter-reset: count 0;
+                    }
+                }
+            }
+            .skill-title {
+                width: 100%;
+                margin: 0;
+                text-align: left;
+                font-family: 'Gruppo', sans-serif;
+                font-size: 1.5rem;
+            }
+            .skill-bar {
+                width: 100%;
+                height: 0.5rem;
+                background: #fff;
+                position: relative;
+                transition: 0.5s ease;
+                &::before {
+                    content: '0%';
+                    width: 0%;
+                    height: 0.5rem;
+                    background: blue;
+                    position: absolute;
+                        top: 0;
+                        left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+// need to loop to 100
+// @keyframes counter {
+//     0% {
+//       counter-increment: count 0;
+//     }
+//     100% {
+//       counter-increment: count 50;
+//     }
+//   }
+
+@keyframes counter {
+
+    @for $c from 1 through 100 {
+        
+    }
+
 }

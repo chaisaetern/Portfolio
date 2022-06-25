@@ -35,9 +35,15 @@
             </div>
             <!-- end of profile-bio -->
 
+            <?php get_template_part('template-parts/skills') ?>
         </div>
         <!-- end of about-header -->
 
+
+
+
+
+        
         <!-- BEGINNING OF PROJECTS CONTAINER -->
         <?php get_template_part('template-parts/projects') ?>
         <!-- end of projects-container -->

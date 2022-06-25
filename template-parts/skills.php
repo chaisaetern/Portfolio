@@ -6,12 +6,15 @@
  *
  */
 ?>
-<?php get_header(); ?>
+
 
 <div class="skills-container">
     <div class="skills-wrapper">
         
+        <div class="skill">
+            <h3 class="skill-title">HTML</h3>
+            <div class="skill-bar"></div>
+        </div>
+
     </div>
 </div>
-
-<?php get_footer(); ?>

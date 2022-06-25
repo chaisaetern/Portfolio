@@ -137,6 +137,14 @@ add_action( 'widgets_init', 'portfolio_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+// include custom jQuery
+function portfolio_include_custom_jquery() {
+
+	wp_deregister_script('jquery');
+	wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
+
+}
+add_action('wp_enqueue_scripts', 'portfolio_include_custom_jquery');
 function portfolio_scripts() {
 	wp_enqueue_style( 'portfolio-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'portfolio-style', 'rtl', 'replace' );

@@ -14,7 +14,7 @@ $primary_rgba: rgba(255,0,100, 0.95);
     justify-content: space-between;
     align-items: center;
     position: absolute;
-        top: 5rem;
+        top: 0.5rem;
         left: 0;
     z-index: 99999;
     .site-branding {
@@ -31,6 +31,9 @@ $primary_rgba: rgba(255,0,100, 0.95);
         .site-title {
             width: 100%;
             margin: 0;
+            position: relative;
+            top: 0.25rem;
+            left: -1rem;
             a {
                 color: $primary;
                 font-size: calc(100% + 1rem);

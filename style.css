@@ -702,7 +702,7 @@ body .site-title {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 600px;
+  height: 525px;
   width: 435px;
   position: relative;
   transition: 0.5s;
@@ -874,8 +874,9 @@ body .site-title {
 
 @media only screen and (max-width: 992px) {
   .project-card {
-    width: 90vw !important;
-    height: 60vh !important;
+    width: 95vw !important;
+    height: 600px !important;
+    max-height: 600px !important;
   }
 }
 .loading-container {
@@ -1622,7 +1623,7 @@ body .site-title {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: 5rem;
+  top: 0.5rem;
   left: 0;
   z-index: 99999;
 }
@@ -1641,6 +1642,9 @@ body .site-title {
 .site-header .site-branding .site-title {
   width: 100%;
   margin: 0;
+  position: relative;
+  top: 0.25rem;
+  left: -1rem;
 }
 .site-header .site-branding .site-title a {
   color: rgb(255, 0, 100);
@@ -1849,7 +1853,6 @@ body .site-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   float: right;
   position: fixed;
   top: 0;
@@ -1880,19 +1883,18 @@ body .site-title {
 .menu-toggle {
   position: fixed;
   top: 0.5rem;
-  right: 3rem;
+  right: 1.15rem;
   float: right;
   background: transparent;
   border: none;
   border-radius: 5px;
-  color: gold;
+  color: rgb(255, 0, 100);
   transition: 0.5s;
 }
 .menu-toggle:hover {
   cursor: pointer;
   border-radius: 5px;
-  color: gold;
-  transform: scale(1.2);
+  color: rgb(255, 0, 100);
 }
 
 /* Posts and pages

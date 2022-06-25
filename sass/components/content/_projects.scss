@@ -50,7 +50,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 600px;
+            height: 525px;
             width: 435px;
             position: relative;
             transition: 0.5s;
@@ -230,8 +230,9 @@
 @media only screen and (max-width: 992px) {
 
     .project-card {
-        width: 90vw !important;
-        height: 60vh !important;
+        width: 95vw !important;
+        height: 600px !important;
+        max-height: 600px !important;
     }
 
 }

@@ -1552,6 +1552,14 @@ body .site-title {
     overflow: hidden;
   }
 }
+.shown {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
 /* Navigation
 --------------------------------------------- */
 .main-navigation {

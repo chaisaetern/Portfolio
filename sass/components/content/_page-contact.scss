@@ -10,32 +10,61 @@
     animation-delay: 2s;
     transition: 2s;
     letter-spacing: 2px;
+    position: relative;
     .contact-bg {
         width: 100%;
+        min-width: 1800px;
         height: auto;
-        min-width: calc(112.5rem + 2vh);
-        filter: brightness(0.5);
         position: fixed;
+        filter: brightness(0.5);
     }
-    .coming-soon {
-        width: 100%;
-        height: 100%;
+    .wpcf7 {
+        // width: 50vw;
+        // height: 90vh;
+        z-index: 1;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
-        position: fixed;
-            top: 7.5rem;
-        mix-blend-mode: overlay;
-        .coming {
-            font-family: "Gruppo", sans-serif;
-            font-size: calc(1rem + 5vw);
-            text-shadow: 0 0 5px #fff;
-            color: #fff;
-            &:nth-child(2) {
-                color: gold;
+        position: absolute;
+        background: rgba(0,0,0, 0.8);
+        p {
+            font-weight: bold;
+            color: rgb(251, 5, 122);
+            // color: rgb(158, 205, 238);
+            width: 100%;
+        }
+        .wpcf7-form-control-wrap {
+            margin-bottom: 1rem;
+        }
+        .wpcf7-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        .wpcf7-text, .wpcf7-textarea {
+            border: none;
+            border-radius: 0px;
+            background: #eee;
+            box-shadow: 1px 1px 1px #000;
+        }
+        .wpcf7-submit {
+            border: none;
+            border-radius: 0px;
+            background: #eee;
+            padding: 1rem 4rem;
+            cursor: pointer;
+            box-shadow: 1px 1px 1px #000;
+            position: relative;
+            transition: 0.5s ease;
+            &:hover {
+                // color: rgb(158, 205, 238);
+                color: rgb(251, 5, 122);
+                background: rgba(0,0,0,0.05);
             }
+            
         }
     }
 }

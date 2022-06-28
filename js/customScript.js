@@ -52,3 +52,13 @@ $skill.map($i => {
     setSkill($skillValue, 3000);
     
 });
+
+
+
+
+/*
+    Hover effect for Socials
+*/
+const $socials  = $('.socials-wrapper');
+const $sIcons = $('.socials-icon');
+

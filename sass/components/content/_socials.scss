@@ -1,229 +1,46 @@
-$primary: rgb(255, 255, 255);
+
 
 .socials-container {
-    @include flex(row, center, center, false);
     position: absolute;
-        top: calc(44% - 10rem);
-        left: 1rem;
-    opacity: 1;
-    z-index: 99999;
-    height: 345px;
-    // display: none;
+    z-index: 1;
     .socials {
-        @include flex(column, center, center, false);
-        position: absolute;
-            top: -1rem;
-            left: 0;
-        z-index: 999;
-        animation: fade-in 1s ease, slide-right 1s ease-in-out both;
-        animation-delay: 0.25s;
-        transition: 0.5s;
-        height: 0%;
-        width: 5rem;
-        letter-spacing: 1px;
-
-        // background: linear-gradient(
-        //             45deg,
-        //             rgba(0, 0, 0, 1),
-        //             rgba(100, 0, 255, 0.05),
-        //             rgba(0, 0, 0, 1),
-        // );
-        
-        border: none;
-        // border-top: 2px solid #6400ff99;
-        // border-bottom: 2px solid #6400ff99;
-        border-radius: 0.2rem;
-        color: $primary;
-        text-shadow: 0 0 3px $tertiary;
-        font-size: 1.1rem;
-        transform-origin: 50% 5rem;
-        .socials-title {
-            text-align: center;
-            text-transform: capitalize;
-            @include flex(column, center, center, false);
-            position: absolute;
-                top: 0;
-                left: 0;
-            animation: wiggle 2s linear infinite;
-            animation-delay: 1s;
-            width: 100%;
-            margin: 0.25rem 0;
-            padding: 0;
-            opacity: 1;
-            transition: 0.5s;
-            transition-delay: 0.5s;
-            font-family: 'Gruppo', sans-serif;
-            color: #fff;
-        }
-        &:hover {
-            height: 100%;
-            transition: 0.5s;
-            transition-delay: 0.25s;
-            .socials-icon {
-                height: 100%; ///
-                animation: fade-in 0.5s ease both;
-                animation-delay: 0.25s;
-                transition: 0.5s;
-                transition-delay: 0.5s;
-                &:hover {
-                    .socials-desc {
-                        opacity: 1;
-                        animation: fade-in 1s ease both;
-                        display: inline-block;
-                        width: 7rem;
-                        transition: 0.5s;
-                        animation: letter-space 1s ease both;
-                        animation-delay: 0.5s;
-                        text-align: center;
-                        background: linear-gradient(45deg, rgba(100,0,255, 0.4), rgba(15, 14, 36, 0.65), rgba(0,0,0, 1));
-                        border-radius: 8px;
-                        padding: 0.25rem 0;
-                        font-style: italic;
-                        letter-spacing: 3px;
-                        color: #fff;
-                        text-shadow: 0 0 1px #fff;
-                    }
-                    .socials-link {
-                        transition-delay: 0.5s;
-                        animation: rotate 2s infinite;
-                        animation-delay: 0.5s;
-                        transition: 0.5s;
-                        i {
-                            transition: 0.5s;
-                            &:hover {    
-                                transform: scale(1.25);
-                            }
-                        }
-                    }
-                }
-            }
-            .socials-title {
-                opacity: 0;
-                transition: 0.25s;
-            }
-        }
-        .socials-icon-wrapper {
-            @include flex(column, center, center, false);
-            transition: 0.5s;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-                top: 0;
-                left: 0;
-           .socials-icon {
-                margin: 1rem 0;
-                z-index: 999;
-                @include flex(column, center, center, false);
-                width: 100%;
-                overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .socials-icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
                 .socials-desc {
-                    font-family: 'Gruppo', sans-serif;
-                    opacity: 0;
-                    display: none;
-                    font-size: 1rem;
-                    position: absolute;
-                        left: 4rem;
+                    display: inline-block;
+                    z-index: 2;
+                    right: 3.5rem;
                 }
-                .socials-link {
-                    @include flex(row, center, center, false);
-                    color: $primary;
-                    width: 100%;
-                    height: 0;
-                    text-decoration: none;
-                    i {
-                        transition: 0.35s;
-                        transform: scale(1.15);
-                    }
-                }
-           }
-        }
-    }
-
-}
-  
-  /* Keyframes */
-@keyframes wiggle {
-    0%, 7% {
-        transform: rotateZ(0);
-    }
-    15% {
-        transform: rotateZ(-10deg);
-    }
-    20% {
-        transform: rotateZ(10deg);
-    }
-    25% {
-        transform: rotateZ(-10deg);
-    }
-    30% {
-        transform: rotateZ(6deg);
-    }
-    35% {
-        transform: rotateZ(-4deg);
-    }
-    40%, 100% {
-        transform: rotateZ(0);
-    }
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes slide-right {
-    0% {
-        transform: translateX(-150%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-@keyframes letter-space {
-    0%, 100% {
-        letter-spacing: 4px;
-    }
-    50% {
-        letter-spacing: 0px;
-    }
-}
-
-@keyframes rotate {
-    0%, 100% {
-        transform: rotate(0deg);
-    }
-    33% {
-        transform: rotate(15deg);
-    }
-    66% {
-        transform: rotate(-15deg);
-    }
-}
-
-
-// For home page color
-.home {
-    .socials-container {
-        .socials {
-            border-top: 3px solid red;
-            border-bottom: 3px solid red;
-            color: red;
-            text-shadow: none;
-            background: linear-gradient(
-                    45deg,
-                    rgba(0, 0, 0, 1),
-                    rgba(255, 0, 0, .05) 150px,
-                    rgba(0, 0, 0, 1) 2px,
-            );
+            }
+            .socials-desc {
+                display: none;
+                position: absolute;
+                right: 7rem;
+                min-width: 7.5rem;
+                text-align: center;
+                background: #000;
+                border-left: 5px solid rgb(255,0,100);
+                z-index: -1;
+            }
             .socials-link {
-                color: red;
-                i {
-                    color: red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                color: #fff;
+                .socials-icon {
+                    padding: 0.5rem 0.5rem;
+                    transition: 0.25s;
+                    &:hover {
+                        color: rgba(255,0,100,1);
+                    }
                 }
             }
         }

@@ -11,7 +11,7 @@
     
     <div class="socials">
 
-        <h3 class="socials-title">"Socials"</h3>
+        <!-- <h3 class="socials-title">"Socials"</h3> -->
 
         <div class="socials-icon-wrapper">
 
@@ -37,15 +37,15 @@
                 for($i = 0; $i < count($links); ++$i) {
             ?>
 
-            <div class="socials-icon">
-
-                <span class="socials-desc"><?php echo $links[$i]['name']; ?></span>
-
+            <div class="socials-icon-container">
+                
                 <a class="socials-link" href="<?php echo $links[$i]['link']; ?>">
-
-                    <i class="fa-brands <?php echo $links[$i]['class']; ?>"></i>
-
+                    
+                    <i class="socials-icon fa-brands <?php echo $links[$i]['class']; ?>"></i>
+                    
                 </a>
+                
+                <span class="socials-desc"><?php echo $links[$i]['name']; ?></span>
 
             </div>
 

@@ -66,7 +66,7 @@ $primary_rgba: rgba(255,0,100, 0.95);
                     text-shadow: 0 0 1px #000;
                     text-transform: uppercase;
                     letter-spacing: 2px;
-                    background: linear-gradient(45deg, rgba(0,0,0, 1), rgba(100,0,255, 0.05), rgba(0,0,0, 1));
+                    // background: linear-gradient(45deg, rgba(0,0,0, 1), rgba(100,0,255, 0.05), rgba(0,0,0, 1));
                     transition: 1.5s;
                     &::before {
                         content: '';
@@ -76,7 +76,7 @@ $primary_rgba: rgba(255,0,100, 0.95);
                         width: 50%;
                         height: 100%;
                         // border-left: 5px solid red;
-                        background: transparentize($color: rgba(0,0,0,0.6), $amount: 0.4);
+                        // background: transparentize($color: rgba(0,0,0,0.6), $amount: 0.4);
                     }
                     &::after {
                         content: '';
@@ -171,13 +171,13 @@ $primary_rgba: rgba(255,0,100, 0.95);
     }
 }
 
-.home {
+.contact {
     .site-header {
         .site-branding {
             .site-title {
                 width: 100%;
                 a {
-                    color: red;
+                    color: green;
                     text-shadow: 0 0 1px #000;
                 }
             }
@@ -193,47 +193,47 @@ $primary_rgba: rgba(255,0,100, 0.95);
                         &::after {
                             content: '';
                             background: linear-gradient(30deg, transparent, 
-                            red, transparent);
+                            green, transparent);
                         }
                         &:hover:after {
                             background: linear-gradient(30deg, transparent, 
-                                red, transparent);
+                                green, transparent);
                         }
                         span {
                             &:nth-child(1) {
-                                background: red;
+                                background: green;
                             }
                             &:nth-child(2) {
-                                background: red;
+                                background: green;
                             }
                             &:nth-child(3) {
-                                background: red;
+                                background: green;
                             }
                             &:nth-child(4) {
-                                background: red;
+                                background: green;
                             }
                         }
                         .link-text {
-                            color: red;
+                            color: green;
                         }
                         &:hover {
-                            background: red;
+                            background: green;
                             .link-text {
                                 color: #000;
                                 text-shadow: 0 0 2px #000;
                             }
                             span {
                                 &:nth-child(1) {
-                                    background: red;
+                                    background: green;
                                 }
                                 &:nth-child(2) {
-                                    background: red;
+                                    background: green;
                                 }
                                 &:nth-child(3) {
-                                    background: red;
+                                    background: green;
                                 }
                                 &:nth-child(4) {
-                                    background: red;
+                                    background: green;
                                 }
                             }
                         }
@@ -261,5 +261,3 @@ $primary_rgba: rgba(255,0,100, 0.95);
         transform: translateY(0);
     }
 }
-
-

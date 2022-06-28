@@ -9,8 +9,9 @@
 
 
 <div class="skills-container">
-    <h3 class="skill-header">Skills &amp;</h3>
-    <h3 class="skill-header">Proficiency</h3>
+
+    <h3 class="skill-header">Skills</h3>
+
     <div class="skills-wrapper">
 
     <?php
@@ -19,26 +20,48 @@
             array('lang' => 'CSS3 | SCSS', 'effc' => '65', 'icon' => 'fa-brands fa-css3'),
             array('lang' => 'JavaScript | ES6+ | jQuery', 'effc' => '57', 'icon' => 'fa-brands fa-js-square'),
             array('lang' => 'PHP | WordPress', 'effc' => '42', 'icon' => 'fa-brands fa-wordpress'),
-            array('lang' => 'Engrish ', 'effc' => '-99', 'icon' => 'fa-solid fa-poop'),
+            array('lang' => 'Learning', 'effc' => '99', 'icon' => 'fa-solid fa-chalkboard-user'),
+            array('lang' => 'Engrish', 'effc' => '-99', 'icon' => 'fa-solid fa-poop'),
+        );
+        $skillTypes2 = array(
+            array('name' => 'Focus', 'effc' => '68', 'icon' => 'fa-solid fa-crosshairs'),
+            array('name' => 'Time Spent Googling', 'effc' => '65', 'icon' => 'fa-brands fa-google'),
+            array('name' => 'Cups of Coffee', 'effc' => '57', 'icon' => 'fa-solid fa-mug-hot'),
+            array('name' => 'Head Scratches', 'effc' => '42', 'icon' => 'fa-solid fa-face-dizzy'),
+            array('name' => 'Portfolio Hours', 'effc' => '99', 'icon' => 'fa-solid fa-hourglass'),
+            array('name' => 'Sleep', 'effc' => '-99', 'icon' => 'fa-solid fa-code'),
         );
 
         for($s = 0; $s < count($skillTypes); ++$s) {
     ?>
-        
+    
         <div class="skill">
-            <h3 class="skill-title">
-                    <div class="skill-icon">
-                        <div class="skill-icon <?php echo $skillTypes[$s]['icon']; ?>"></div>
+
+            <div class="skill-title-container">
+
+                <div class="skill-icon-container">
+
+                    <i class="skill-icon <?php echo $skillTypes[$s]['icon']; ?>"></i>
+                    
+                    <h3 class="skill-title" 
+                        data-lang="<?php echo $skillTypes[$s]['lang']; ?>" 
+                        data-name="<?php echo $skillTypes2[$s]['name']; ?>"
+                    >
                         <?php echo $skillTypes[$s]['lang']; ?>
-                    </div>
-                <span value="<?php echo $skillTypes[$s]['effc']; ?>" class="skill-effc">0%</span>
-            </h3>
-            <div class="skill-bar">
-                <div class="bar"></div>
+                    </h3>
+
+                </div>
+
+                <span data-value="<?php echo $skillTypes[$s]['effc']; ?>" class="skill-effc">0%</span>
+            
             </div>
+
+            <div class="skill-bar"><div class="bar"></div></div>
+
         </div>
 
     <?php }; ?>
 
     </div>
+    
 </div>

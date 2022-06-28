@@ -1451,33 +1451,34 @@ body .site-title {
 
 .skills-container {
   width: 100%;
-  height: 60vh;
+  height: 75vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   background: #000;
+  position: relative;
 }
 .skills-container .skill-header {
   font-size: 8rem;
   margin: 0;
   text-align: left;
-  position: relative;
+  position: absolute;
   top: 12rem;
   transform: rotate(-30deg);
   filter: brightness(1);
-  text-shadow: 0 0 150px rgba(155, 0, 155, 0.5);
+  text-shadow: 0 0 3px rgba(255, 0, 155, 0.5);
   color: black;
 }
 .skills-container .skills-wrapper {
-  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  top: -10rem;
+  top: 0;
   left: 0;
 }
 .skills-container .skills-wrapper .skill {
@@ -1492,11 +1493,11 @@ body .site-title {
 .skills-container .skills-wrapper .skill:hover {
   cursor: crosshair;
 }
-.skills-container .skills-wrapper .skill:hover .skill-title {
+.skills-container .skills-wrapper .skill:hover .skill-title-container {
   transition: 0.25s ease;
   color: rgb(255, 0, 200);
 }
-.skills-container .skills-wrapper .skill .skill-title {
+.skills-container .skills-wrapper .skill .skill-title-container {
   width: 100%;
   margin: 0;
   text-align: left;
@@ -1507,7 +1508,22 @@ body .site-title {
   justify-content: space-between;
   text-shadow: 0 0 2px #000;
 }
-.skills-container .skills-wrapper .skill .skill-title .skill-effc {
+.skills-container .skills-wrapper .skill .skill-title-container .skill-icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.skills-container .skills-wrapper .skill .skill-title-container .skill-icon-container .skill-icon {
+  padding: 0;
+  margin: 0 0.5rem 0 0;
+}
+.skills-container .skills-wrapper .skill .skill-title-container .skill-icon-container .skill-title {
+  font-family: "Gruppo", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.skills-container .skills-wrapper .skill .skill-title-container .skill-effc {
   color: rgb(255, 0, 200);
   text-shadow: 0 0 2px #000;
 }
@@ -1980,30 +1996,6 @@ body .site-title {
 .main-container .main-wrapper .bg-container h2 span {
   text-shadow: 0 0 5px blue;
 }
-.main-container .main-wrapper .hero-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  height: 50vh;
-  width: 100%;
-  overflow: hidden;
-}
-.main-container .main-wrapper .hero-container .hero-bg-container {
-  position: sticky;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.main-container .main-wrapper .hero-container .hero-bg-container .hero-bg {
-  width: 100%;
-  height: 100vh;
-  filter: brightness(40%);
-}
 .main-container .main-wrapper .test-container {
   width: 100%;
   height: 100vh;
@@ -2093,6 +2085,7 @@ body .site-title {
 }
 .about-container .about-header .profile-bio p {
   width: calc(45% + 10vw);
+  margin: 0;
 }
 .about-container .about {
   height: 40vh;

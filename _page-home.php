@@ -19,17 +19,6 @@
             <img class="bg-img" src="<?php the_field("background_image_1"); ?>" alt="">
             <h2>"You must be shapeless, <br>formless, like water." <br><span>-Bruce Lee</span></h2>
         </div>
-        
-        
-        <div class="hero-container">
-
-            <div class="hero-bg-container">
-                <img src="<?php the_field('hero_background'); ?>" alt="" class="hero-bg">
-            </div>
-
-            <!-- <h2>Hello World!</h2> -->
-
-        </div>
 
         <div class="test-container">
             

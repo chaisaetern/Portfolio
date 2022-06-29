@@ -1482,7 +1482,8 @@ body .site-title {
   display: flex;
 }
 .site-header .site-branding .custom-logo-link .custom-logo {
-  width: 7rem;
+  width: 15rem;
+  height: auto;
 }
 .site-header .site-branding .site-title {
   width: 100%;
@@ -1490,6 +1491,7 @@ body .site-title {
   position: relative;
   top: 0.25rem;
   left: -1rem;
+  display: none;
 }
 .site-header .site-branding .site-title a {
   color: rgb(255, 0, 100);
@@ -1973,7 +1975,9 @@ body .site-title {
   animation-delay: 2s;
   transition: 2s;
   letter-spacing: 2px;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .contact-container .contact-bg {
   width: 100%;
@@ -1982,49 +1986,77 @@ body .site-title {
   position: fixed;
   filter: brightness(0.5);
 }
+.contact-container .contact-header {
+  color: rgb(255, 0, 0);
+  position: absolute;
+  top: 4rem;
+  left: calc(45% - 20vw);
+  font-family: "Smooch", "Gruppo", sans-serif;
+  font-size: 5rem;
+  margin: 0;
+}
 .contact-container .wpcf7 {
   z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.8);
+  position: relative;
+  border-radius: 8px;
 }
 .contact-container .wpcf7 p {
   font-weight: bold;
-  color: rgb(251, 5, 122);
+  color: rgb(255, 255, 255);
   width: 100%;
 }
 .contact-container .wpcf7 .wpcf7-form-control-wrap {
   margin-bottom: 1rem;
+}
+.contact-container .wpcf7 .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+  position: absolute;
+  color: rgb(255, 0, 0) !important;
+  border-left: 5px solid red;
+  padding: 0.25rem;
+  margin: 0.25rem;
 }
 .contact-container .wpcf7 .wpcf7-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0;
 }
 .contact-container .wpcf7 .wpcf7-text, .contact-container .wpcf7 .wpcf7-textarea {
-  border: none;
-  border-radius: 0px;
-  background: #eee;
-  box-shadow: 1px 1px 1px #000;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(100, 0, 255);
+  padding: 0.25rem 0.5rem;
+  color: rgb(255, 255, 255);
 }
 .contact-container .wpcf7 .wpcf7-submit {
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
   border: none;
   border-radius: 0px;
-  background: #eee;
   padding: 1rem 4rem;
-  cursor: pointer;
+  margin-bottom: 1rem;
   box-shadow: 1px 1px 1px #000;
   position: relative;
   transition: 0.5s ease;
+  background: rgba(100, 0, 255, 0.5);
 }
 .contact-container .wpcf7 .wpcf7-submit:hover {
-  color: rgb(251, 5, 122);
-  background: rgba(0, 0, 0, 0.05);
+  color: rgb(100, 0, 255);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px/0px 40px;
+}
+.contact-container .wpcf7 .wpcf7-response-output {
+  position: absolute;
+  bottom: -6.5rem;
+  color: red;
+  border: none !important;
+  border-left: 5px solid red !important;
+  background: rgba(0, 0, 0, 0.5) !important;
 }
 
 @keyframes fade-in {

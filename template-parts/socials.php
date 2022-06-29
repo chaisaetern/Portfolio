@@ -20,9 +20,9 @@
                     array('name' => 'Codepen', 'class' => 'fa-codepen', 
                     'link' => get_field('social_link_1')
                 ),
-                    array('name' => 'Discord', 'class' => 'fa-discord', 
-                    'link' => get_field('social_link_2')
-                ),
+                //     array('name' => 'Discord', 'class' => 'fa-discord', 
+                //     'link' => get_field('social_link_2')
+                // ),
                     array('name' => 'Linked In', 'class' => 'fa-linkedin-in', 
                     'link' => get_field('social_link_3')
                 ),

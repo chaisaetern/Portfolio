@@ -3,15 +3,18 @@
 .socials-container {
     position: absolute;
     z-index: 1;
+    padding: 0.25rem;
     .socials {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0.25rem;
         .socials-icon-container {
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 0.25rem;
             &:hover {
                 .socials-desc {
                     display: inline-block;

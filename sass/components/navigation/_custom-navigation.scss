@@ -22,6 +22,9 @@ $primary_rgba: rgba(255,0,100, 0.95);
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        top: 3rem;
+        // opacity: 0;
         .custom-logo-link {
             display: flex;
             .custom-logo {
@@ -173,13 +176,16 @@ $primary_rgba: rgba(255,0,100, 0.95);
     }
 }
 
-.contact {
+
+
+// Color theme for home page
+.home {
     .site-header {
         .site-branding {
             .site-title {
                 width: 100%;
                 a {
-                    color: green;
+                    color: gold;
                     text-shadow: 0 0 1px #000;
                 }
             }
@@ -195,47 +201,47 @@ $primary_rgba: rgba(255,0,100, 0.95);
                         &::after {
                             content: '';
                             background: linear-gradient(30deg, transparent, 
-                            green, transparent);
+                            gold, transparent);
                         }
                         &:hover:after {
                             background: linear-gradient(30deg, transparent, 
-                                green, transparent);
+                                gold, transparent);
                         }
                         span {
                             &:nth-child(1) {
-                                background: green;
+                                background: gold;
                             }
                             &:nth-child(2) {
-                                background: green;
+                                background: gold;
                             }
                             &:nth-child(3) {
-                                background: green;
+                                background: gold;
                             }
                             &:nth-child(4) {
-                                background: green;
+                                background: gold;
                             }
                         }
                         .link-text {
-                            color: green;
+                            color: gold;
                         }
                         &:hover {
-                            background: green;
+                            background: gold;
                             .link-text {
                                 color: #000;
                                 text-shadow: 0 0 2px #000;
                             }
                             span {
                                 &:nth-child(1) {
-                                    background: green;
+                                    background: gold;
                                 }
                                 &:nth-child(2) {
-                                    background: green;
+                                    background: gold;
                                 }
                                 &:nth-child(3) {
-                                    background: green;
+                                    background: gold;
                                 }
                                 &:nth-child(4) {
-                                    background: green;
+                                    background: gold;
                                 }
                             }
                         }

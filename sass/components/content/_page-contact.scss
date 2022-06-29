@@ -21,7 +21,7 @@
         filter: brightness(0.5);
     }
     .contact-header {
-        color: rgb(255,0,0);
+        color: #5A4FCF;
         position: absolute;
             top: 4rem;
             left: calc(45% - 20vw);
@@ -39,8 +39,6 @@
         position: relative;
         // background: rgba(0,0,0, 0.8);
         border-radius: 8px;
-        // max-width: 500px;
-        // min-width: 500px;
         p {
             font-weight: bold;
             color: rgb(255, 255, 255);
@@ -66,7 +64,7 @@
         .wpcf7-text, .wpcf7-textarea {
             background: rgba(0, 0, 0, 0.5);
             // background: rgba(54, 69, 79, 0.5);
-            border: 1px solid rgb(100, 0, 255);
+            border: 1px solid rgb(90, 79, 207);
             // border-radius: 10px/0px 40px;
             // border: none;
             padding: 0.25rem 0.5rem;
@@ -83,7 +81,7 @@
             box-shadow: 1px 1px 1px #000;
             position: relative;
             transition: 0.5s ease;
-            background: rgba(100, 0, 255, 0.5);
+            background: rgba(90, 79, 207, 0.5);
             &:hover {
                 color: rgb(100, 0, 255);
                 background: rgba(0,0,0,0.5);

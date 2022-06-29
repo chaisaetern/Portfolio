@@ -15,17 +15,21 @@
 
     <div class="main-wrapper">
 
-        <div class="bg-container">
-            <img class="bg-img" src="<?php the_field("background_image_1"); ?>" alt="">
-            <h2>"You must be shapeless, <br>formless, like water." <br><span>-Bruce Lee</span></h2>
+        <div class="hero-container">
+            <h3 class="hero-title">The Sky is the Limit...</h3>
+            <div class="hero-wrapper">
+                <div class="hero"></div>
+                <div class="hero"></div>
+                <div class="hero"></div>
+                <div class="hero"></div>
+                <div class="hero"></div>
+                <div class="hero"></div>
+                <div class="hero"></div>
+            </div>
         </div>
-
-        <div class="test-container">
-            
-        </div>
-
         
     </div>
+    
 </div>
 
 <?php get_footer(); ?>

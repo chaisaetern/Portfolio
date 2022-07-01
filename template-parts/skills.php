@@ -39,7 +39,7 @@
                         <?php echo $skillTypes1[$s1]['lang']; ?>
                     </h3>
                 </div>
-      
+
                 <span 
                     data-value="<?php echo $skillTypes1[$s1]['effc']; ?>"
                     class="skill-effc"

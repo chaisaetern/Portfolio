@@ -17,6 +17,8 @@
         <h3 class="contact-header">Contact</h3>
 
         <?php echo do_shortcode('[contact-form-7 id="531" title="Contact form 1"]'); ?>
+
+        <?php get_template_part('template-parts/particles') ?>
         
     </div>
     

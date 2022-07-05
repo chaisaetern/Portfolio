@@ -1,7 +1,7 @@
 
 .main-container {
-    background: #36454F !important;
-    height: 200vh;
+    background: #0A0A0A !important;
+    height: 100vh;
     width: 100vw;
     transition: 0.5s;
     @include flex(column, center, center, false);
@@ -11,9 +11,10 @@
         height: 100%;
         animation: fade-in 1s ease-in both;
         animation-delay: 2s;
+        // padding: 3rem;
         .background-image-1-container {
             display: none;
-            width: 100vw;
+            width: 100%;
             height: 100%;
             position: absolute;
             z-index: 1;
@@ -30,10 +31,11 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            height: 100vh;
-            background: #000;
+            height: 100%;
+            background: #1f262a;
             position: relative;
-            // overflow: hidden !important;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #1f262a;
             .hero-background-container {
                 width: 100%;
                 height: 100%;
@@ -52,115 +54,20 @@
                 justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
-                width: 100%;
-                height: 100vh;
+                // width: 100%;
+                // height: 100vh;
                 background: #000 !important;
-                position: absolute;
-                &:hover {
-                    .hero {
-                        height: 50vh;
-                        &:nth-child(1) {
-                            width: 7rem;
-                            right: 3rem;
-                            bottom: 3rem;
-                        }
-                        &:nth-child(2) {
-                            width: 5rem;
-                            right: 2rem;
-                            bottom: 2rem;
-                        }
-                        &:nth-child(3) {
-                            width: 7rem;
-                            right: 1rem;
-                            bottom: 1rem;
-                        }
-                        &:nth-child(4) {
-                            width: 50rem;
-                        }
-                        &:nth-child(5) {
-                            width: 7rem;
-                            left: 1rem;
-                            top: 1rem;
-                        }
-                        &:nth-child(6) {
-                            width: 5rem;
-                            left: 2rem;
-                            top: 2rem;
-                        }
-                        &:nth-child(7) {
-                            width: 7rem;
-                            left: 3rem;
-                            top: 3rem;
-                        }
-                    }
-                }
+                position: relative;
                 .hero-text-container {
-                    // width: 50rem;
                     position: absolute;
-                        // top: 33rem;
-                    // margin-right: 20rem;
                     text-shadow: 0 0 3px #000;
                     .hero-title {
                         text-transform: capitalize;
-                        color: yellow;
                         font-size: 5rem;
                         font-family: 'Stick No Bills', sans-serif;
                         letter-spacing: 2px;
                         mix-blend-mode: overlay;
                         margin: 1rem 0;
-                    }
-                }
-                .hero {
-                    width: 3rem;
-                    height: 250px;
-                    // background-image: url(https://r4.wallpaperflare.com/wallpaper/705/826/351/digital-digital-art-artwork-illustration-ricodz-hd-wallpaper-6f1e7b05312ce81c142ec6e56da30f1e.jpg);
-                    // background-image: url(https://r4.wallpaperflare.com/wallpaper/474/858/376/star-celestial-body-space-light-wallpaper-c9c0d8fd119aed0be6d7285f2051f67d.jpg);
-                    background-image: url(https://r4.wallpaperflare.com/wallpaper/786/670/384/night-artwork-futuristic-city-science-fiction-wallpaper-18d69d3800d09c5860ac51aed852a4fa.jpg);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-attachment: fixed;
-                    filter: brightness(0.75);
-                    background-size: 90% 100%;
-
-                    border-top: 5px solid yellow;
-                    border-bottom: 5px solid yellow;
-                    // border-radius: 5px;
-                    position: relative !important;
-                    &:nth-child(1) {
-                        width: 7rem;
-                        right: 0;
-                        bottom: 0;
-                        transition: 0.25s ease;
-                    }
-                    &:nth-child(2) {
-                        right: 0;
-                        bottom: 0;
-                        transition: 0.25s ease;
-                    }
-                    &:nth-child(3) {
-                        right: 0;
-                        bottom: 0;
-                        transition: 0.25s ease;
-                    }
-                    &:nth-child(4) {
-                        width: 50rem;
-                        transition: 0.25s ease;
-                    }
-                    &:nth-child(5) {
-                        left: 0;
-                        transition: 0.25s ease;
-                        top: 0;
-                    }
-                    &:nth-child(6) {
-                        left: 0;
-                        top: 0;
-                        transition: 0.25s ease;
-                    }
-                    &:nth-child(7) {
-                        width: 7rem;
-                        left: 0;
-                        top: 0;
-                        transition: 0.25s ease;
                     }
                 }
             }
@@ -174,7 +81,7 @@
                 font-size: 3rem;
                 &:hover {
                     i {
-                        color: #fff;
+                        color: yellow;
                     }
                 }
                 > i {
@@ -182,7 +89,6 @@
                     transition: 0.25s ease;
                     cursor: pointer;
                     position: relative;
-                    color: yellow;
                 }
             }
         }
